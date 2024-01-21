@@ -3,9 +3,8 @@
 
     <q-header class="bg-white text-primary" height-hint="80">
       <q-toolbar>
-        <q-toolbar-title class="text-subtitle1">
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">
+        <q-toolbar-title class="text-H6 items-center">
+          <q-avatar icon="bi-file-bar-graph-fill" font-size="36px">
           </q-avatar>
           Island Coyote Tech Inc.
         </q-toolbar-title>
@@ -26,7 +25,7 @@
         </q-btn>
       </q-toolbar>
     </q-header>
-    <q-page-container>
+    <q-page-container class="q-ma-lg">
       <!--q-chip color="primary" text-color="white" icon="event">
         Add to calendar
       </q-chip-->
@@ -82,5 +81,6 @@ function onResize(size) {
   max-width: 1200px;
   margin: auto;
   background-color: grey-4;
+  box-shadow: 10px 0 15px -10px rgba(0, 0, 0, 0.1), -10px 0 15px -10px rgba(0, 0, 0, 0.1);
 }
 </style>

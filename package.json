@@ -1,8 +1,8 @@
 {
   "name": "island_coyote_website",
   "version": "0.0.1",
-  "description": "company website",
-  "productName": "IslandCoyote",
+  "description": "Island Coyote Tech Inc. A tech company based on Prince Edward Island, Canada., which provides software develoment, web development, data analysis, and other IT services.",
+  "productName": "Island Coyote Tech Inc.",
   "author": "denglinghua",
   "private": true,
   "scripts": {
