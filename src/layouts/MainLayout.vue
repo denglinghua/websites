@@ -1,20 +1,30 @@
 <template>
   <q-layout view="hHh lpR fFf" container class="layout-container">
-
     <q-header class="bg-white text-primary" height-hint="80">
       <q-toolbar>
         <q-toolbar-title class="text-H6 items-center">
-          <q-avatar icon="bi-file-bar-graph-fill" font-size="36px">
-          </q-avatar>
+          <q-avatar icon="bi-file-bar-graph-fill" font-size="36px"> </q-avatar>
           Island Coyote Tech Inc.
         </q-toolbar-title>
         <q-tabs align="right" v-if="largeScreen">
-          <q-route-tab v-for="m in menus" :to="m.route" :label="m.name" :icon="m.icon" :key="m.name" />
+          <q-route-tab
+            v-for="m in menus"
+            :to="m.route"
+            :label="m.name"
+            :icon="m.icon"
+            :key="m.name"
+          />
         </q-tabs>
         <q-btn flat color="primary" icon="bi-list" v-else>
           <q-menu>
             <q-list style="min-width: 100px">
-              <q-item clickable v-close-popup v-for="m in menus" :to="m.route" :key="m.name">
+              <q-item
+                clickable
+                v-close-popup
+                v-for="m in menus"
+                :to="m.route"
+                :key="m.name"
+              >
                 <q-item-section avatar>
                   <q-icon color="primary" :name="m.icon" />
                 </q-item-section>
@@ -25,7 +35,7 @@
         </q-btn>
       </q-toolbar>
     </q-header>
-    <q-page-container class="q-ma-lg">
+    <q-page-container class="q-ma-lg" style="height: 90vh">
       <!--q-chip color="primary" text-color="white" icon="event">
         Add to calendar
       </q-chip-->
@@ -46,30 +56,30 @@
   </q-layout>
 </template>
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 const largeScreen = ref(false);
 const menus = [
   {
-    name: 'Home',
-    icon: 'bi-house-door-fill',
-    route: '/'
+    name: "Home",
+    icon: "bi-house-door-fill",
+    route: "/",
   },
   {
-    name: 'About',
-    icon: 'bi-file-code-fill',
-    route: '/about'
+    name: "About",
+    icon: "bi-file-code-fill",
+    route: "/about",
   },
   {
-    name: 'Services',
-    icon: 'bi-box-fill',
-    route: '/services'
+    name: "Services",
+    icon: "bi-box-fill",
+    route: "/services",
   },
   {
-    name: 'Contact',
-    icon: 'bi-person-lines-fill',
-    route: '/contact'
+    name: "Contact",
+    icon: "bi-person-lines-fill",
+    route: "/contact",
   },
-]
+];
 
 function onResize(size) {
   largeScreen.value = size.width > 1000;
@@ -81,6 +91,7 @@ function onResize(size) {
   max-width: 1200px;
   margin: auto;
   background-color: grey-4;
-  box-shadow: 10px 0 15px -10px rgba(0, 0, 0, 0.1), -10px 0 15px -10px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 0 15px -10px rgba(0, 0, 0, 0.1),
+    -10px 0 15px -10px rgba(0, 0, 0, 0.1);
 }
 </style>
