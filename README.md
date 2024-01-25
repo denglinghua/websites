@@ -2,6 +2,12 @@
 
 island coyote tech company website
 
+## Install yarn, node required.
+npm install --global yarn
+
+## Install quasar
+yarn global add @quasar/cli
+
 ## Install the dependencies
 ```bash
 yarn
