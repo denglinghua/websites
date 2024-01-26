@@ -3,8 +3,7 @@
   <q-resize-observer @resize="onResize" />
 </template>
 <script setup>
-import { onUnmounted } from "vue";
-import { ref, onMounted, nextTick } from "vue";
+import { ref, onMounted, onUnmounted, nextTick } from "vue";
 const canvas = ref(null); // Reference to canvas element
 let ctx = null; // Context of canvas element
 let time = 1;
@@ -63,7 +62,7 @@ function getTime() {
 function onResize(size) {
   console.log("resize", size);
   canvas.value.width = size.width;
-  // padding 36px
+  // padding 16 * 2 = 32px
   canvas.value.height = size.height - 36;
 }
 

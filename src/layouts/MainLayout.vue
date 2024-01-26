@@ -3,10 +3,10 @@
     <q-header class="bg-white text-primary" height-hint="80">
       <q-toolbar>
         <q-toolbar-title class="text-H6 items-center">
-          <q-avatar icon="bi-file-bar-graph-fill" font-size="36px"> </q-avatar>
+          <q-avatar icon="bi-c-circle-fill" font-size="28px"> </q-avatar>
           Island Coyote Tech Inc.
         </q-toolbar-title>
-        <q-tabs align="right" v-if="largeScreen">
+        <q-tabs align="right" inline-label v-if="largeScreen">
           <q-route-tab
             v-for="m in menus"
             :to="m.route"
@@ -52,13 +52,24 @@
         <q-btn flat color="primary" icon="bi-facebook" />
         <q-btn flat color="primary" icon="bi-twitter-x" />
         <q-btn flat color="primary" icon="bi-linkedin" />
+        <q-btn
+          flat
+          color="primary"
+          icon="bi-heart-fill"
+          @click="showThanks = true"
+        />
       </q-toolbar>
     </q-footer>
     <q-resize-observer @resize="onResize" />
+    <q-dialog v-model="showThanks">
+      <open-source />
+    </q-dialog>
   </q-layout>
 </template>
 <script setup>
+import { QDialog } from "quasar";
 import { ref } from "vue";
+import OpenSource from "./OpenSource.vue";
 const largeScreen = ref(false);
 const menus = [
   {
@@ -86,6 +97,8 @@ const menus = [
 function onResize(size) {
   largeScreen.value = size.width > 1000;
 }
+
+const showThanks = ref(false);
 </script>
 <style scoped>
 .layout-container {

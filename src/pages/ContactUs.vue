@@ -21,7 +21,7 @@
 
         <q-item-section>
           <q-item-label>Phone</q-item-label>
-          <q-item-label caption>(902) 330-9999</q-item-label>
+          <q-item-label caption>(902) 000-0000</q-item-label>
         </q-item-section>
       </q-item>
 
