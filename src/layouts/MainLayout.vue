@@ -35,11 +35,13 @@
         </q-btn>
       </q-toolbar>
     </q-header>
-    <q-page-container class="q-ma-lg" style="height: 90vh">
+    <q-page-container>
       <!--q-chip color="primary" text-color="white" icon="event">
         Add to calendar
       </q-chip-->
-      <router-view />
+      <q-page class="q-pa-md">
+        <router-view />
+      </q-page>
     </q-page-container>
     <q-footer class="bg-white text-primary q-mb-md">
       <q-toolbar>

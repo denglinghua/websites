@@ -1,15 +1,14 @@
 <template>
-  <canvas ref="canvas" style="width: 100%; height: 100%" />
+  <canvas ref="canvas" style="height: 100%; width: 100%" />
   <q-resize-observer @resize="onResize" />
 </template>
 <script setup>
 import { onUnmounted } from "vue";
-import { ref, onMounted, reactive, nextTick } from "vue";
+import { ref, onMounted, nextTick } from "vue";
 const canvas = ref(null); // Reference to canvas element
 let ctx = null; // Context of canvas element
 let time = 1;
 
-// Function to clear canvas
 function clearCanvas() {
   ctx.clearRect(0, 0, canvas.value.width, canvas.value.height);
 }
@@ -58,35 +57,18 @@ function startDraw() {
 
 function getTime() {
   time = time + 0.001;
-  /*
-  time = time + 1;
-  if (time > 100) {
-    time = 0;
-  }
-  return time / 100;
-  */
   return time;
 }
 
-function onResize({ width, height }) {
-  console.log("resize", width, height);
-  //cw = width;
-  //ch = height;
-  canvas.value.width = width;
-  canvas.value.height = height;
+function onResize(size) {
+  console.log("resize", size);
+  canvas.value.width = size.width;
+  // padding 36px
+  canvas.value.height = size.height - 36;
 }
 
 onMounted(() => {
   const cvs = canvas.value;
-  //cvs.style.width = "100%";
-  //cvs.style.height = "100%";
-  // Set the dimensions to match the parent
-  //dimensions.width = cvs.offsetWidth;
-  //dimensions.height = cvs.offsetHeight === 0 ? 800 : cvs.offsetHeight;
-
-  //console.log(dimensions);
-
-  // Get canvas and context
   ctx = cvs.getContext("2d");
 
   nextTick(function () {
