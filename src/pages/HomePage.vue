@@ -4,15 +4,16 @@
 </template>
 <script setup>
 import { ref, onMounted, onUnmounted, nextTick } from "vue";
-const canvas = ref(null); // Reference to canvas element
+import pixelText from "../scripts/pixelText.js";
+
+const canvas = ref(null); // Reference to canvas DOM element
 let ctx = null; // Context of canvas element
-let time = 1;
 
 function clearCanvas() {
   ctx.clearRect(0, 0, canvas.value.width, canvas.value.height);
 }
 
-function draw() {
+function testTransform() {
   const ct = getTime();
   const cw = canvas.value.width;
   const ch = canvas.value.height;
@@ -49,13 +50,51 @@ function transform(width, height, x, y, t) {
   return [x + d * Math.cos(angle) * t, y + d * Math.sin(angle) * t];
 }
 
-let intervalId = null;
-function startDraw() {
-  intervalId = setInterval(draw, 50);
+const { drawPixelText, stringSize } = pixelText();
+const text = "Island Coyote Tech Inc.";
+const subText = "Innovation at every step";
+function drawText() {
+  const cw = canvas.value.width;
+  const ch = canvas.value.height;
+
+  clearCanvas();
+
+  const trans = {
+    trans: transform,
+    width: cw,
+    height: ch,
+    time: getTime,
+  };
+
+  const [textW, textH] = stringSize(text, 1); // 1 is one pixel
+  const pixels = (cw * 0.8) / textW;
+  const x = cw / 2 - (textW * pixels) / 2;
+  // two lines
+  const y = ch / 2 - textH * pixels;
+
+  drawPixelText(text, canvas.value, x, y, pixels, trans);
+
+  const [textW1, textH1] = stringSize(subText, 1);
+  const pixels1 = 0.6 * pixels;
+  const x1 = cw / 2 - (textW1 * pixels1) / 2;
+  const y1 = y + textH * pixels + pixels1 + 20;
+
+  drawPixelText(subText, canvas.value, x1, y1, pixels1, trans);
+
+  if (time < 0.001) {
+    clearInterval(intervalId);
+  }
 }
 
+let intervalId = null;
+function startDraw() {
+  //drawText();
+  intervalId = setInterval(drawText, 15);
+}
+
+let time = 2;
 function getTime() {
-  time = time + 0.001;
+  time = time - 0.002;
   return time;
 }
 
@@ -64,6 +103,7 @@ function onResize(size) {
   canvas.value.width = size.width;
   // padding 16 * 2 = 32px
   canvas.value.height = size.height - 36;
+  //drawText();
 }
 
 onMounted(() => {
