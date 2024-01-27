@@ -27,6 +27,15 @@ function testTransform() {
   }
 }
 
+function transform(width, height, x, y, t) {
+  const cx = width / 2;
+  const cy = height / 2;
+  const d = Math.sqrt((x - cx) ** 2 + (y - cy) ** 2);
+
+  const angle = d;
+  return [x + d * Math.cos(angle) * t, y + d * Math.sin(angle) * t];
+}
+
 function transform1(width, height, x, y, t) {
   const cx = width / 2;
   const cy = height / 2;
@@ -41,18 +50,10 @@ function transform1(width, height, x, y, t) {
   return [cx + Math.cos(newAngle) * dist, cy + Math.sin(newAngle) * dist];
 }
 
-function transform(width, height, x, y, t) {
-  const cx = width / 2;
-  const cy = height / 2;
-  const d = Math.sqrt((x - cx) ** 2 + (y - cy) ** 2);
-
-  const angle = d;
-  return [x + d * Math.cos(angle) * t, y + d * Math.sin(angle) * t];
-}
-
-const { drawPixelText, stringSize } = pixelText();
+const { stringSize, createPixelText, createAsciiText } = pixelText();
 const text = "Island Coyote Tech Inc.";
 const subText = "Innovation at every step";
+
 function drawText() {
   const cw = canvas.value.width;
   const ch = canvas.value.height;
@@ -67,29 +68,48 @@ function drawText() {
   };
 
   const [textW, textH] = stringSize(text, 1); // 1 is one pixel
-  const pixels = (cw * 0.8) / textW;
-  const x = cw / 2 - (textW * pixels) / 2;
+  const pixelSize = (cw * 0.8) / textW; // 80% of width
+  const x = cw / 2 - (textW * pixelSize) / 2;
   // two lines
-  const y = ch / 2 - textH * pixels;
+  const y = ch / 2 - textH * pixelSize;
 
-  drawPixelText(text, canvas.value, x, y, pixels, trans);
+  drawLineText(text, x, y, pixelSize, trans);
 
   const [textW1, textH1] = stringSize(subText, 1);
-  const pixels1 = 0.6 * pixels;
-  const x1 = cw / 2 - (textW1 * pixels1) / 2;
-  const y1 = y + textH * pixels + pixels1 + 20;
+  const pixelsSize1 = 0.6 * pixelSize;
+  const x1 = cw / 2 - (textW1 * pixelsSize1) / 2;
+  const y1 = y + textH * pixelSize + pixelsSize1 + 20;
 
-  drawPixelText(subText, canvas.value, x1, y1, pixels1, trans);
+  drawLineText(subText, x1, y1, pixelsSize1, trans);
 
   if (time < 0.001) {
     clearInterval(intervalId);
   }
 }
 
+function drawLineText(string, x, y, size, transformer) {
+  const pixels = createPixelText(string, x, y, size);
+  const tr = transformer;
+  const time = tr.time();
+  pixels.forEach((p) => {
+    const [tx, ty] = tr.trans(tr.width, tr.height, p.x, p.y, time);
+    //const [tx, ty] = [p.x, p.y];
+    ctx.fillStyle = p.color;
+    ctx.fillRect(tx, ty, p.size, p.size);
+  });
+}
+
+function printConsoleText() {
+  const lines = createAsciiText(text);
+  lines.forEach((line) => {
+    console.log(line);
+  });
+}
+
 let intervalId = null;
 function startDraw() {
   //drawText();
-  intervalId = setInterval(drawText, 15);
+  intervalId = setInterval(drawText, 10);
 }
 
 let time = 2;
@@ -99,11 +119,11 @@ function getTime() {
 }
 
 function onResize(size) {
-  console.log("resize", size);
+  // console.log("resize", size);
   canvas.value.width = size.width;
   // padding 16 * 2 = 32px
   canvas.value.height = size.height - 36;
-  //drawText();
+  // drawText();
 }
 
 onMounted(() => {
@@ -113,6 +133,8 @@ onMounted(() => {
   nextTick(function () {
     startDraw();
   });
+
+  printConsoleText();
 });
 
 onUnmounted(() => {

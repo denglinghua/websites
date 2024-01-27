@@ -226,12 +226,12 @@ export default function () {
     ],
   };
 
-  function drawPixelText(string, canvas, x, y, size, transform = null) {
+  function drawPixelText(string, x, y, size, transformer = null) {
     let letters = getAvailableLetters(string);
-    const [width, height] = stringSize(string, size);
     let context = canvas.getContext("2d");
+    //const [width, height] = stringSize(string, size);
     //context.clearRect(x, y, width, height);
-    let time = transform ? transform.time() : 0;
+    let time = transformer ? transformer.time() : 0;
 
     let currX = x;
     for (let i = 0; i < letters.length; i++) {
@@ -245,10 +245,10 @@ export default function () {
           if (row[c]) {
             const px = currX + c * size;
             const py = currY;
-            context.fillStyle = color; //, 50%, 50%)`;
+            context.fillStyle = color;
             let [tx, ty] = [px, py];
-            if (transform) {
-              const t = transform;
+            if (transformer) {
+              const t = transformer;
               [tx, ty] = t.trans(t.width, t.height, px, py, time);
             }
             context.fillRect(tx, ty, size, size);
@@ -257,8 +257,66 @@ export default function () {
         addX = Math.max(addX, row.length * size);
         currY += size;
       }
+      currX += size + addX; // size represents the space between letters
+    }
+  }
+
+  function createPixelText(string, x, y, size) {
+    const pixels = [];
+    let letters = getAvailableLetters(string);
+
+    let currX = x;
+    for (let i = 0; i < letters.length; i++) {
+      let letter = letters[i];
+      let currY = y;
+      let addX = 0;
+      const color = pickColor();
+      for (let r = 0; r < letter.length; r++) {
+        let row = letter[r];
+        for (let c = 0; c < row.length; c++) {
+          if (row[c]) {
+            const px = currX + c * size;
+            const py = currY;
+            pixels.push({ x: px, y: py, color: color, size: size });
+          }
+        }
+        addX = Math.max(addX, row.length * size);
+        currY += size;
+      }
       currX += size + addX;
     }
+
+    return pixels;
+  }
+
+  function createAsciiText(string) {
+    const lines = [];
+    let letters = getAvailableLetters(string);
+
+    for (let i = 0; i < 5; i++) {
+      lines.push("");
+    }
+
+    for (let i = 0; i < letters.length; i++) {
+      let letter = letters[i];
+      const lens = letter.map((row) => row.length);
+      const maxW = Math.max(...lens);
+      for (let r = 0; r < letter.length; r++) {
+        let row = letter[r];
+        for (let c = 0; c < maxW; c++) {
+          if (row[c]) {
+            lines[r] += "*";
+          } else {
+            lines[r] += " ";
+          }
+        }
+      }
+      lines.forEach((line, i) => {
+        lines[i] += "  ";
+      });
+    }
+
+    return lines;
   }
 
   function stringSize(string, size) {
@@ -290,5 +348,5 @@ export default function () {
     return needed;
   }
 
-  return { drawPixelText, stringSize };
+  return { drawPixelText, createPixelText, createAsciiText, stringSize };
 }
