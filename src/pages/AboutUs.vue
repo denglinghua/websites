@@ -21,24 +21,9 @@
     transformation journey or seeking personalized tech solutions, our team is
     here to turn your ideas into reality.
   </p>
-  <p class="text-h6">Why Choose Island Coyote Tech Inc.?</p>
-  <p>
-    <b>Passionate Expertise: </b>Our team consists of seasoned developers who
-    are not just professionals but enthusiasts deeply passionate about
-    technology. This fervor drives us to stay ahead of industry trends, ensuring
-    that our clients benefit from cutting-edge solutions.
-  </p>
-  <p>
-    <b>Tailored Solutions: </b>We understand that every business and individual
-    has unique needs. That's why we specialize in crafting customized, flexible
-    solutions that align seamlessly with your goals. Our commitment to
-    adaptability ensures that our services evolve with your requirements.
-  </p>
-  <p>
-    <b>Client Satisfaction: </b>Your satisfaction is not just a goal; it's our
-    top priority. We believe in building lasting partnerships, and every project
-    we undertake is infused with dedication, attention to detail, and a
-    relentless pursuit of excellence.
+  <p class="text-h6">Why Choose Us?</p>
+  <p v-for="s in strengths" :key="s.title">
+    <b>{{ s.title }}: </b>{{ s.text }}
   </p>
   <p class="text-h6">Embark on a Journey with Us:</p>
   <p>
@@ -59,5 +44,21 @@
   />
 </template>
 <script setup>
-import { ref, onMounted, onUnmounted, nextTick } from "vue";
+const strengths = [
+  {
+    title: "Competitive Pricing",
+    icon: "bi-currency-dollar",
+    text: "We believe in providing exceptional value without breaking the bank. Our commitment to affordability ensures that you get top-notch services without compromising your budget.",
+  },
+  {
+    title: "Speed and Efficiency",
+    icon: "bi-clock-history",
+    text: "Time is of the essence, and we understand the importance of prompt solutions. Our team is dedicated to delivering fast and efficient services, ensuring that your projects are completed on schedule.",
+  },
+  {
+    title: "Flexibility",
+    icon: "bi-people",
+    text: "We recognize that every client is unique, and so are their needs. Our services are designed with flexibility in mind, allowing us to adapt to your specific requirements and provide tailored solutions that align with your goals.",
+  },
+];
 </script>
