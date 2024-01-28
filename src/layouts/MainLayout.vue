@@ -70,7 +70,7 @@
 <script setup>
 import { QDialog } from "quasar";
 import { ref } from "vue";
-import OpenSource from "./OpenSource.vue";
+import OpenSource from "../components/OpenSource.vue";
 const largeScreen = ref(false);
 const menus = [
   {
