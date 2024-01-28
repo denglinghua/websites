@@ -1,4 +1,4 @@
-export default function () {
+export default function usePixelText(colors) {
   const letters = {
     A: [
       [, 1],
@@ -226,42 +226,7 @@ export default function () {
     ],
   };
 
-  function drawPixelText(string, x, y, size, transformer = null) {
-    let letters = getAvailableLetters(string);
-    let context = canvas.getContext("2d");
-    //const [width, height] = stringSize(string, size);
-    //context.clearRect(x, y, width, height);
-    let time = transformer ? transformer.time() : 0;
-
-    let currX = x;
-    for (let i = 0; i < letters.length; i++) {
-      let letter = letters[i];
-      let currY = y;
-      let addX = 0;
-      let color = pickColor();
-      for (let r = 0; r < letter.length; r++) {
-        let row = letter[r];
-        for (let c = 0; c < row.length; c++) {
-          if (row[c]) {
-            const px = currX + c * size;
-            const py = currY;
-            context.fillStyle = color;
-            let [tx, ty] = [px, py];
-            if (transformer) {
-              const t = transformer;
-              [tx, ty] = t.trans(t.width, t.height, px, py, time);
-            }
-            context.fillRect(tx, ty, size, size);
-          }
-        }
-        addX = Math.max(addX, row.length * size);
-        currY += size;
-      }
-      currX += size + addX; // size represents the space between letters
-    }
-  }
-
-  function createPixelText(string, x, y, size) {
+  function createTextPixels(string, x, y, size) {
     const pixels = [];
     let letters = getAvailableLetters(string);
 
@@ -289,7 +254,7 @@ export default function () {
     return pixels;
   }
 
-  function createAsciiText(string) {
+  function createTextAscii(string) {
     const lines = [];
     let letters = getAvailableLetters(string);
 
@@ -319,7 +284,7 @@ export default function () {
     return lines;
   }
 
-  function stringSize(string, size) {
+  function measureText(string, size) {
     let letters = getAvailableLetters(string);
     let width = 0;
     let height = 0;
@@ -331,7 +296,6 @@ export default function () {
     return [width, height];
   }
 
-  const colors = ["red", "orange", "green", "blue", "purple"];
   function pickColor() {
     return colors[Math.floor(Math.random() * colors.length)];
   }
@@ -348,5 +312,5 @@ export default function () {
     return needed;
   }
 
-  return { drawPixelText, createPixelText, createAsciiText, stringSize };
+  return { createTextPixels, createTextAscii, measureText };
 }
