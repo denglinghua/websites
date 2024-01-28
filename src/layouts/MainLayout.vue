@@ -21,6 +21,7 @@
               <q-item
                 clickable
                 v-close-popup
+                exact
                 v-for="m in menus"
                 :to="m.route"
                 :key="m.name"
