@@ -10,10 +10,12 @@
     <div v-for="s in services" :key="s.title">
       <q-card style="width: 240px; height: 280px">
         <q-card-section align="center">
-          <q-avatar :icon="s.icon"> </q-avatar>
+          <q-avatar :icon="s.icon" class="text-primary" />
         </q-card-section>
         <q-card-section align="center" class="q-pt-none">
-          <q-item-label class="text-weight-bold">{{ s.title }}</q-item-label>
+          <q-item-label class="text-weight-bold text-primary">{{
+            s.title
+          }}</q-item-label>
         </q-card-section>
         <q-card-section>
           <p>{{ s.text }}</p>

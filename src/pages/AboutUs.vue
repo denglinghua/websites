@@ -1,5 +1,5 @@
 <template>
-  <p class="text-h6 q-mt-md">Welcome to Island Coyote Tech Inc.</p>
+  <p class="text-h6 q-mt-md text-primary">Welcome to Island Coyote Tech Inc.</p>
 
   <p>
     Established in 2024 on the picturesque Prince Edward Island, Canada, Island
@@ -13,7 +13,7 @@
     island, just like the coyotes. We also aspire for our company to emulate the
     qualities of coyotes – being agile, collaborative, resilient, and fearless.
   </p>
-  <p class="text-h6">Our Commitment:</p>
+  <p class="text-h6 text-primary">Our Commitment:</p>
   <p>
     At Island Coyote Tech Inc., we embody a commitment to excellence. Our
     mission is to provide fast, flexible, and diverse IT services tailored for
@@ -21,11 +21,11 @@
     transformation journey or seeking personalized tech solutions, our team is
     here to turn your ideas into reality.
   </p>
-  <p class="text-h6">Why Choose Us?</p>
+  <p class="text-h6 text-primary">Why Choose Us?</p>
   <p v-for="s in strengths" :key="s.title">
     <b>{{ s.title }}: </b>{{ s.text }}
   </p>
-  <p class="text-h6">Embark on a Journey with Us:</p>
+  <p class="text-h6 text-primary">Embark on a Journey with Us:</p>
   <p>
     Island Coyote Tech Inc. invites you to embark on a technological journey
     where innovation meets reliability, and where your aspirations are met with
