@@ -2,9 +2,11 @@
   <q-layout view="hHh lpR fFf" container class="layout-container">
     <q-header class="bg-white text-primary" height-hint="80">
       <q-toolbar>
-        <q-toolbar-title class="text-subtitle1 items-center text-uppercase">
-          <q-avatar icon="bi-c-circle-fill" font-size="24px"> </q-avatar>
-          Island Coyote Tech Inc.
+        <q-toolbar-title class="items-center">
+          <q-icon name="bi-c-circle-fill" />
+          <span class="text-uppercase text-subtitle1 q-ml-sm"
+            >Island Coyote Tech Inc.</span
+          >
         </q-toolbar-title>
         <q-tabs align="right" inline-label v-if="largeScreen">
           <q-route-tab
