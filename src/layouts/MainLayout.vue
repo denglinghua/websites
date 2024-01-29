@@ -1,6 +1,6 @@
 <template>
   <q-layout view="hHh lpR fFf" container class="layout-container">
-    <q-header class="bg-white text-primary" height-hint="80">
+    <q-header class="header_footer text-primary" height-hint="80">
       <q-toolbar>
         <q-toolbar-title class="items-center">
           <q-icon name="bi-c-circle-fill" />
@@ -46,7 +46,7 @@
         <router-view />
       </q-page>
     </q-page-container>
-    <q-footer class="bg-white text-primary q-mb-md">
+    <q-footer class="header_footer text-primary q-mb-md">
       <q-toolbar>
         <q-toolbar-title class="text-caption">
           Copyright © 2024 Island Coyote Tech Inc.
@@ -103,7 +103,7 @@ function onResize(size) {
 
 const showThanks = ref(false);
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .layout-container {
   height: 100vh;
   max-width: 1200px;
@@ -111,5 +111,13 @@ const showThanks = ref(false);
   background-color: grey-4;
   box-shadow: 10px 0 15px -10px rgba(0, 0, 0, 0.1),
     -10px 0 15px -10px rgba(0, 0, 0, 0.1);
+}
+
+.body--light .header_footer {
+  background-color: white;
+}
+
+.body--dark .header_footer {
+  background-color: $dark;
 }
 </style>
