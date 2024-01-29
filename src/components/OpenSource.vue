@@ -1,8 +1,8 @@
 <template>
   <q-card>
     <q-card-section class="q-pb-none">
-      With deep gratitude to the open-source community, whose invaluable
-      contributions empower the construction of this website.
+      With deep appreciation for the open-source community, whose invaluable
+      contributions have greatly facilitated the development of this website.
     </q-card-section>
     <q-card-section>
       <q-list :bordered="false">
