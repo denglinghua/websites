@@ -40,6 +40,7 @@
     flat
     icon-right="bi-arrow-right-square"
     label="Contact Us"
+    dense
     to="contact"
   />
 </template>
