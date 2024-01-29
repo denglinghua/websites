@@ -31,7 +31,8 @@ function preparePixels() {
   pixels = [];
 
   const [textW, textH] = measureText(text, 1); // 1 is one pixel
-  const pixelSize = (cw * 0.8) / textW; // 80% of width
+  const textScreenWith = cw > 600 ? cw * 0.8 : cw - 16; // 80% of width or 16 px padding
+  const pixelSize = textScreenWith / textW;
   const x = cw / 2 - (textW * pixelSize) / 2;
   // two lines : text + subText
   const y = ch / 2 - textH * pixelSize;
@@ -83,7 +84,7 @@ function startLightPoints() {
 
 function drawText() {
   const time = getTime();
-  if (time < 0) {
+  if (time < 0.0001) {
     clearInterval(intervalId);
     startLightPoints();
     return;
@@ -125,7 +126,8 @@ function resetTime() {
 }
 
 function getTime() {
-  time = time - 0.002;
+  const decayFactor = 0.99;
+  time = time * decayFactor;
   return time;
 }
 
