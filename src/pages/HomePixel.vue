@@ -84,7 +84,7 @@ function startLightPoints() {
 
 function drawText() {
   const time = getTime();
-  if (time < 0.0001) {
+  if (time < 0.001) {
     clearInterval(intervalId);
     startLightPoints();
     return;
