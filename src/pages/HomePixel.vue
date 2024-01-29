@@ -117,7 +117,7 @@ function startDraw() {
   if (intervalId) {
     clearInterval(intervalId);
   }
-  intervalId = setInterval(drawText, 10);
+  intervalId = setInterval(drawText, 5);
 }
 
 let time = 0;
@@ -126,8 +126,7 @@ function resetTime() {
 }
 
 function getTime() {
-  const decayFactor = 0.99;
-  time = time * decayFactor;
+  time = time - 0.002;
   return time;
 }
 
