@@ -8,10 +8,12 @@
       <q-list :bordered="false">
         <q-item v-for="d in data" :key="d.title">
           <q-item-section avatar>
-            <q-icon color="primary" name="bi-file-code" />
+            <q-icon class="op-link" name="bi-code" />
           </q-item-section>
           <q-item-section
-            ><a :href="d.link" target="blank"> {{ d.title }}</a></q-item-section
+            ><a :href="d.link" target="blank" class="op-link">
+              {{ d.title }}</a
+            ></q-item-section
           >
         </q-item>
       </q-list>
@@ -55,3 +57,12 @@ const data = [
   },
 ].sort((a, b) => a.title.localeCompare(b.title));
 </script>
+<style lang="scss" scoped>
+.body--light .op-link {
+  color: $primary;
+}
+
+.body--dark .op-link {
+  color: $positive;
+}
+</style>
