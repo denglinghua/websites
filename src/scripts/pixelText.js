@@ -226,7 +226,7 @@ export default function usePixelText(colors) {
     ],
   };
 
-  function createTextPixels(string, x, y, size) {
+  function createTextPixels(string, x, y, size, color = null) {
     const pixels = [];
     let letters = getAvailableLetters(string);
 
@@ -235,14 +235,14 @@ export default function usePixelText(colors) {
       let letter = letters[i];
       let currY = y;
       let addX = 0;
-      const color = pickColor();
+      const pColor = color ? color : pickColor();
       for (let r = 0; r < letter.length; r++) {
         let row = letter[r];
         for (let c = 0; c < row.length; c++) {
           if (row[c]) {
             const px = currX + c * size;
             const py = currY;
-            pixels.push({ x: px, y: py, color: color, size: size });
+            pixels.push({ x: px, y: py, color: pColor, size: size });
           }
         }
         addX = Math.max(addX, row.length * size);

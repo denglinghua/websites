@@ -44,12 +44,48 @@ function preparePixels() {
   const y1 = y + textH * pixelSize + pixelsSize1 + 20;
 
   pixels.push(...createTextPixels(subText, x1, y1, pixelsSize1));
+
+  pixels.push(...createLinePoints(y, textH, pixelSize));
+}
+
+let linePoints = [];
+function createLinePoints(y, textH, size) {
+  const py = y - textH * size * 2; //above text
+  const points = ". . . . . . ";
+  const [pw, ph] = measureText(points, 1);
+  const px = cw / 2 - (pw * size) / 2;
+  linePoints = createTextPixels(
+    points,
+    px,
+    py,
+    size,
+    getPaletteColor("grey-4")
+  );
+  return linePoints;
+}
+
+let lightCount = 0;
+function lightLinePoints() {
+  if (lightCount >= linePoints.length) {
+    lightCount = 0;
+  }
+  linePoints.forEach((p, idx) => {
+    ctx.fillStyle = idx === lightCount ? getPaletteColor("primary") : p.color;
+    ctx.fillRect(p.x, p.y, p.size, p.size);
+  });
+  lightCount++;
+}
+
+function startLightPoints() {
+  lightCount = 0;
+  setInterval(lightLinePoints, 500);
 }
 
 function drawText() {
   const time = getTime();
   if (time < 0) {
     clearInterval(intervalId);
+    startLightPoints();
     return;
   }
 
