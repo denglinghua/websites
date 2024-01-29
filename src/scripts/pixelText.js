@@ -270,9 +270,9 @@ export default function usePixelText(colors) {
         let row = letter[r];
         for (let c = 0; c < maxW; c++) {
           if (row[c]) {
-            lines[r] += "*";
+            lines[r] += "88";
           } else {
-            lines[r] += " ";
+            lines[r] += "  ";
           }
         }
       }

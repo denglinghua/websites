@@ -66,7 +66,7 @@ function drawText() {
 }
 
 function printConsoleText() {
-  const lines = createTextAscii(text);
+  const lines = createTextAscii("HELLO");
   lines.forEach((line) => {
     console.log(line);
   });
