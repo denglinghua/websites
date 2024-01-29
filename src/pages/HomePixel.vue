@@ -77,6 +77,9 @@ function startDraw() {
   preparePixels();
   resetTime();
   //drawText();
+  if (intervalId) {
+    clearInterval(intervalId);
+  }
   intervalId = setInterval(drawText, 10);
 }
 
