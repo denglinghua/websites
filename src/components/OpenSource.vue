@@ -48,5 +48,10 @@ const data = [
     icon: "bi-code-slash",
     link: "https://code.visualstudio.com/",
   },
-];
+  {
+    title: "Yarn",
+    icon: "bi-github",
+    link: "https://yarnpkg.com/",
+  },
+].sort((a, b) => a.title.localeCompare(b.title));
 </script>
