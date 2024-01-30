@@ -33,7 +33,7 @@
         <q-item-section>
           <q-item-label>Email</q-item-label>
           <q-item-label caption>
-            <a :href="'mailto:' + email">{{ email }}</a>
+            <a :href="'mailto:' + email" class="link">{{ email }}</a>
           </q-item-label>
         </q-item-section>
       </q-item>
