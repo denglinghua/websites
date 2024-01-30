@@ -32,7 +32,9 @@
 
         <q-item-section>
           <q-item-label>Email</q-item-label>
-          <q-item-label caption>hello@islandcoyotetech.com</q-item-label>
+          <q-item-label caption>
+            <a :href="'mailto:' + email">{{ email }}</a>
+          </q-item-label>
         </q-item-section>
       </q-item>
     </q-list>
@@ -51,3 +53,6 @@
     </q-card-section>
   </q-card>
 </template>
+<script setup>
+const email = "hello" + "@" + "islandcoyotetech.com";
+</script>
