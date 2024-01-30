@@ -53,8 +53,8 @@
         </q-toolbar-title>
         <q-space />
         <q-btn flat color="primary" icon="bi-facebook" />
-        <q-btn flat color="primary" icon="bi-twitter-x" />
         <q-btn flat color="primary" icon="bi-linkedin" />
+        <DarkModeToggle />
         <q-btn
           flat
           color="primary"
@@ -73,6 +73,8 @@
 import { QDialog } from "quasar";
 import { ref } from "vue";
 import OpenSource from "../components/OpenSource.vue";
+import DarkModeToggle from "src/components/DarkModeToggle.vue";
+
 const largeScreen = ref(false);
 const menus = [
   {
