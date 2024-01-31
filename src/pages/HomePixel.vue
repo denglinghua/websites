@@ -83,8 +83,8 @@ function startLightPoints() {
 }
 
 function drawText() {
-  const time = getTime();
-  if (time < 0.001) {
+  let time = getTime();
+  if (time < 0.005) {
     clearInterval(intervalId);
     startLightPoints();
     return;
@@ -93,6 +93,7 @@ function drawText() {
   clearCanvas();
 
   const tr = transform;
+  if (time < 0.01) time = 0; // make letters edge smooth
 
   pixels.forEach((p) => {
     const [tx, ty] = tr(cw, ch, p.x, p.y, time);
