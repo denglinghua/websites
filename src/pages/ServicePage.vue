@@ -8,7 +8,7 @@
   </div>
   <div class="row q-gutter-lg justify-center">
     <div v-for="s in services" :key="s.title">
-      <q-card style="width: 250px; height: 290px">
+      <q-card class="service-card">
         <q-card-section align="center">
           <q-avatar :icon="s.icon" class="text-primary" />
         </q-card-section>
@@ -77,6 +77,6 @@ const strengths = [
 </script>
 <style lang="sass" scoped>
 .service-card
-  width: 240px
-  height: 250px
+  width: 250px
+  height: 290px
 </style>

@@ -1,8 +1,26 @@
 // app global css in SCSS form
-.body--light .link {
-  color: $primary;
+.body--light {
+  --link-color: var(--q-primary);
+  --header-footer-bg: white;
+  --source-link-color: var(--q-primary);
+  --q-primary: #1976d2;
 }
 
-.body--dark .link {
-  color: $primary;
+.body--dark {
+  --link-color: var(--q-primary);
+  --header-footer-bg: var(--q-dark);
+  --source-link-color: var(--q-positive);
+  --q-primary: #00b0ff;
+}
+
+.link {
+  color: var(--link-color);
+}
+
+.header-footer {
+  background-color: var(--header-footer-bg);
+}
+
+.source-link {
+  color: var(--source-link-color);
 }
