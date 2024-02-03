@@ -54,13 +54,13 @@
         <q-space />
         <q-btn flat color="primary" icon="bi-facebook" />
         <q-btn flat color="primary" icon="bi-linkedin" />
-        <DarkModeToggle />
         <q-btn
           flat
           color="primary"
           icon="bi-heart-fill"
           @click="showThanks = true"
         />
+        <DarkModeToggle />
       </q-toolbar>
     </q-footer>
     <q-resize-observer @resize="onResize" />
