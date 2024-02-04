@@ -3,31 +3,16 @@
     <q-header class="header-footer text-primary" height-hint="80">
       <q-toolbar>
         <q-toolbar-title class="items-center">
-          <q-icon name="bi-c-circle-fill" />
-          <span class="text-uppercase text-subtitle1 q-ml-sm"
-            >Island Coyote Tech Inc.</span
-          >
+          <q-icon name="img:icons/favicon-32x32.png" />
+          <span class="text-uppercase text-subtitle1 q-ml-sm">Island Coyote Tech Inc.</span>
         </q-toolbar-title>
         <q-tabs align="right" inline-label v-if="largeScreen">
-          <q-route-tab
-            v-for="m in menus"
-            :to="m.route"
-            :label="m.name"
-            :icon="m.icon"
-            :key="m.name"
-          />
+          <q-route-tab v-for="m in menus" :to="m.route" :label="m.name" :icon="m.icon" :key="m.name" />
         </q-tabs>
         <q-btn flat color="primary" icon="bi-list" v-else>
           <q-menu>
             <q-list style="min-width: 100px">
-              <q-item
-                clickable
-                v-close-popup
-                exact
-                v-for="m in menus"
-                :to="m.route"
-                :key="m.name"
-              >
+              <q-item clickable v-close-popup exact v-for="m in menus" :to="m.route" :key="m.name">
                 <q-item-section avatar>
                   <q-icon color="primary" :name="m.icon" />
                 </q-item-section>
@@ -54,12 +39,7 @@
         <q-space />
         <q-btn flat color="primary" icon="bi-facebook" />
         <q-btn flat color="primary" icon="bi-linkedin" />
-        <q-btn
-          flat
-          color="primary"
-          icon="bi-heart-fill"
-          @click="showThanks = true"
-        />
+        <q-btn flat color="primary" icon="bi-heart-fill" @click="showThanks = true" />
         <DarkModeToggle />
       </q-toolbar>
     </q-footer>
