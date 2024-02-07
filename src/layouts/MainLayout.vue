@@ -39,7 +39,8 @@
         <q-space />
         <q-btn flat color="primary" icon="bi-facebook" />
         <q-btn flat color="primary" icon="bi-linkedin" />
-        <q-btn flat color="primary" icon="bi-heart-fill" @click="showThanks = true" />
+        <icon-button flat color="primary" icon="bi-heart-fill" @click="showThanks = true"
+          tooltip="Thanks to open source" />
         <DarkModeToggle />
       </q-toolbar>
     </q-footer>
@@ -54,6 +55,7 @@ import { QDialog } from "quasar";
 import { ref } from "vue";
 import OpenSource from "../components/OpenSource.vue";
 import DarkModeToggle from "src/components/DarkModeToggle.vue";
+import IconButton from "src/components/IconButton.vue";
 
 const largeScreen = ref(false);
 const menus = [

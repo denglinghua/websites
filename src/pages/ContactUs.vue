@@ -8,9 +8,11 @@
 
         <q-item-section>
           <q-item-label>Address</q-item-label>
-          <q-item-label caption
-            >155 Queen Street, Lower Level Room 3A, Charlottetown, PEI, C1A 4B4
-          </q-item-label>
+          <div class="row items-center">
+            <q-item-label caption>{{ address }}</q-item-label>
+            <icon-button icon="bi-copy" size="xs" flat @click="copyToClipboard(address)"
+              tooltip="Copy address to clipboard" />
+          </div>
         </q-item-section>
       </q-item>
 
@@ -43,16 +45,16 @@
     <q-card-section class="q-pa-sm">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2759.7807981024735!2d-63.1312319241054!3d46.23470368170146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b5e52e0f814d261%3A0xff997adf42023187!2s155%20Queen%20St%2C%20Charlottetown%2C%20PE%20C1A%204B4!5e0!3m2!1sen!2sca!4v1706220916063!5m2!1sen!2sca"
-        width="100%"
-        height="360"
-        style="border: 0"
-        allowfullscreen="false"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
+        width="100%" height="360" style="border: 0" allowfullscreen="false" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </q-card-section>
   </q-card>
 </template>
 <script setup>
+import { copyToClipboard } from 'quasar'
+import IconButton from 'src/components/IconButton.vue'
+
 const email = "hello" + "@" + "islandcoyotetech.com";
+const address = "155 Queen Street, Lower Level Room 3A, Charlottetown, PEI, C1A 4B4";
+
 </script>

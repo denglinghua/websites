@@ -1,6 +1,6 @@
 <template>
   <q-card>
-    <q-card-section class="q-pb-none">
+    <q-card-section>
       With deep appreciation for the open-source community, whose invaluable
       contributions have greatly facilitated the development of this website.
     </q-card-section>
@@ -10,20 +10,19 @@
           <q-item-section avatar>
             <q-icon class="source-link" name="bi-code" />
           </q-item-section>
-          <q-item-section
-            ><a :href="d.link" target="blank" class="source-link">
-              {{ d.title }}</a
-            ></q-item-section
-          >
+          <q-item-section><a :href="d.link" target="blank" class="source-link">
+              {{ d.title }}</a></q-item-section>
         </q-item>
       </q-list>
     </q-card-section>
     <q-card-actions align="right">
-      <q-btn flat icon="bi-hand-thumbs-up-fill" color="primary" v-close-popup />
+      <icon-button flat icon="bi-hand-thumbs-up-fill" color="primary" tooltip="OK" v-close-popup />
     </q-card-actions>
   </q-card>
 </template>
 <script setup>
+import IconButton from "src/components/IconButton.vue";
+
 const data = [
   {
     title: "Node.js",
