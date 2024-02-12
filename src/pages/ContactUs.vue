@@ -23,7 +23,9 @@
 
         <q-item-section>
           <q-item-label>Phone</q-item-label>
-          <q-item-label caption>+1 (902) 330-8387</q-item-label>
+          <q-item-label caption>
+            <a href="tel:+19023308387" class="link">+1 (902) 330-8387</a>
+          </q-item-label>
         </q-item-section>
       </q-item>
 
