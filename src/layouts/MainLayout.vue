@@ -1,7 +1,7 @@
 <template>
   <q-layout view="hHh lpR fFf" container class="layout-container">
     <q-header class="header-footer text-primary" height-hint="80">
-      <q-toolbar>
+      <!--q-toolbar>
         <q-toolbar-title class="items-center">
           <q-icon name="img:icons/favicon-32x32.png" />
           <span class="text-uppercase text-subtitle1 q-ml-sm">Island Coyote Tech Inc.</span>
@@ -21,7 +21,7 @@
             </q-list>
           </q-menu>
         </q-btn>
-      </q-toolbar>
+      </q-toolbar-->
     </q-header>
     <q-page-container>
       <!--q-chip color="primary" text-color="white" icon="event">
@@ -32,7 +32,7 @@
       </q-page>
     </q-page-container>
     <q-footer class="header-footer text-primary q-mb-md">
-      <q-toolbar>
+      <!--q-toolbar>
         <q-toolbar-title class="text-caption">
           Copyright © 2024 Island Coyote Tech Inc.
         </q-toolbar-title>
@@ -42,7 +42,7 @@
         <icon-button flat color="primary" icon="bi-heart-fill" @click="showThanks = true"
           tooltip="Thanks to open source" />
         <DarkModeToggle />
-      </q-toolbar>
+      </q-toolbar-->
     </q-footer>
     <q-resize-observer @resize="onResize" />
     <q-dialog v-model="showThanks">
