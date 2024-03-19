@@ -16,23 +16,23 @@ export default {
   about: {
     title_welcome: "Bienvenue chez Island Coyote Tech Inc.",
     body_welcome_1:
-      "Established in 2024 on Prince Edward Island, Canada, Island Coyote Tech Inc. isn't just a company; it's a result of our passion and skill. We're a small but strong team of experienced developers who love exploring new technology.",
-    body_welcome_2_1: 'Why "Island Coyote Tech Inc.?"',
+      "Fondée en 2024 sur l’île du Prince-Édouard, au Canada, Island Coyote Tech Inc. n’est pas seulement une entreprise ; c’est le fruit de notre passion et de notre expertise. Nous sommes une petite équipe solide de développeurs expérimentés qui adorent explorer les nouvelles technologies.",
+    body_welcome_2_1: "Pourquoi “Island Coyote Tech Inc.” ?",
     body_welcome_2_2:
-      "Coyotes have been on the island for decades. We hope that our startup company can survive and thrive on the island, just like the coyotes. We also aspire for our company to emulate the qualities of coyotes – being agile, collaborative, resilient, and fearless.",
-    title_commitment: "Our Commitment",
+      "Les coyotes peuplent l’île depuis des décennies. Nous espérons que notre start-up pourra survivre et prospérer sur l’île, tout comme les coyotes. Nous aspirons également à ce que notre entreprise incarne les qualités de ces créatures : agilité, collaboration, résilience et intrépidité.",
+    title_commitment: "Notre Engagement",
     body_commitment:
-      "At Island Coyote Tech Inc., we embody a commitment to excellence. Our mission is to provide fast, flexible, and diverse IT services tailored for small businesses and individuals. Whether you're embarking on a digital transformation journey or seeking personalized tech solutions, our team is here to turn your ideas into reality.",
-    title_why: "Why Choose Us?",
-    sub_why_1: "Competitive Pricing",
+      "Chez Island Coyote Tech Inc., nous incarnons l’excellence. Notre mission est de fournir des services informatiques rapides, flexibles et diversifiés, adaptés aux petites entreprises et aux particuliers. Que vous entrepreniez un voyage de transformation numérique ou que vous recherchiez des solutions technologiques personnalisées, notre équipe est là pour concrétiser vos idées.",
+    title_why: "Pourquoi Nous Choisir ?",
+    sub_why_1: "Tarifs Compétitifs",
     body_why_1:
-      "We believe in providing exceptional value without breaking the bank. Our commitment to affordability ensures that you get top-notch services without compromising your budget.",
-    sub_why_2: "Speed and Efficiency",
+      "Nous croyons en la valeur exceptionnelle sans vous ruiner. Notre engagement en matière d’accessibilité garantit que vous bénéficiez de services de haute qualité sans compromettre votre budget.",
+    sub_why_2: "Rapidité et Efficacité",
     body_why_2:
-      "Time is of the essence, and we understand the importance of prompt solutions. Our team is dedicated to delivering fast and efficient services, ensuring that your projects are completed on schedule.",
-    sub_why_3: "Flexibility",
+      "Le temps est essentiel, et nous comprenons l’importance de solutions rapides. Notre équipe s’engage à fournir des services rapides et efficaces, veillant à ce que vos projets soient menés à bien dans les délais.",
+    sub_why_3: "Flexibilité",
     body_why_3:
-      "We recognize that every client is unique, and so are their needs. Our services are designed with flexibility in mind, allowing us to adapt to your specific requirements and provide tailored solutions that align with your goals.",
+      "Nous reconnaissons que chaque client est unique, tout comme ses besoins. Nos services sont conçus avec souplesse, nous permettant de nous adapter à vos exigences spécifiques et de fournir des solutions sur mesure qui correspondent à vos objectifs.",
     contact: "Contact Us",
   },
   service: {
