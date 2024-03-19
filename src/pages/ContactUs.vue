@@ -7,11 +7,11 @@
         </q-item-section>
 
         <q-item-section>
-          <q-item-label>Address</q-item-label>
+          <q-item-label>{{ $t('contact.address') }}</q-item-label>
           <div class="row items-center">
             <q-item-label caption>{{ address }}</q-item-label>
             <icon-button icon="bi-copy" size="xs" flat @click="copyToClipboard(address)"
-              tooltip="Copy address to clipboard" />
+              :tooltip="$t('contact.copyTooltip')" />
           </div>
         </q-item-section>
       </q-item>
@@ -22,7 +22,7 @@
         </q-item-section>
 
         <q-item-section>
-          <q-item-label>Phone</q-item-label>
+          <q-item-label>{{ $t('contact.phone') }}</q-item-label>
           <q-item-label caption>
             <a href="tel:+19023308387" class="link">+1 (902) 330-8387</a>
           </q-item-label>
@@ -35,7 +35,7 @@
         </q-item-section>
 
         <q-item-section>
-          <q-item-label>Email</q-item-label>
+          <q-item-label>{{ $t('contact.email') }}</q-item-label>
           <q-item-label caption>
             <a :href="'mailto:' + email" class="link">{{ email }}</a>
           </q-item-label>

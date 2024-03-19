@@ -5,15 +5,17 @@
 import { useQuasar } from "quasar";
 import { computed } from "vue";
 import IconButton from "src/components/IconButton.vue";
+import useGlobal from "src/global";
 
 const $q = useQuasar();
+const $t = useGlobal().$t
 
 const icon = computed(() =>
   $q.dark.isActive ? "bi-brightness-high-fill" : "bi-moon-stars-fill"
 );
 
 const tooltip = computed(() =>
-  $q.dark.isActive ? "Light mode" : "Dark mode"
+  $q.dark.isActive ? $t("layout.lightMode") : $t("layout.darkMode")
 );
 
 function toggle() {

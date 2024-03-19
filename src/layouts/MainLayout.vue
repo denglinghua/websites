@@ -1,7 +1,7 @@
 <template>
   <q-layout view="hHh lpR fFf" container class="layout-container">
     <q-header class="header-footer text-primary" height-hint="80">
-      <!--q-toolbar>
+      <q-toolbar>
         <q-toolbar-title class="items-center">
           <q-icon name="img:icons/favicon-32x32.png" />
           <span class="text-uppercase text-subtitle1 q-ml-sm">Island Coyote Tech Inc.</span>
@@ -21,28 +21,25 @@
             </q-list>
           </q-menu>
         </q-btn>
-      </q-toolbar-->
+      </q-toolbar>
     </q-header>
     <q-page-container>
-      <!--q-chip color="primary" text-color="white" icon="event">
-        Add to calendar
-      </q-chip-->
       <q-page class="q-pa-md">
         <router-view />
       </q-page>
     </q-page-container>
     <q-footer class="header-footer text-primary q-mb-md">
-      <!--q-toolbar>
+      <q-toolbar>
         <q-toolbar-title class="text-caption">
-          Copyright © 2024 Island Coyote Tech Inc.
+          {{ $t("layout.copyright") }}
         </q-toolbar-title>
         <q-space />
-        <q-btn flat color="primary" icon="bi-facebook" />
-        <q-btn flat color="primary" icon="bi-linkedin" />
+        <IconButton flat color="primary" icon="bi-facebook" :tooltip="$t('layout.facebook')" />
+        <IconButton flat color="primary" icon="bi-linkedin" :tooltip="$t('layout.linkedin')" />
         <icon-button flat color="primary" icon="bi-heart-fill" @click="showThanks = true"
-          tooltip="Thanks to open source" />
+          :tooltip="$t('layout.openSource')" />
         <DarkModeToggle />
-      </q-toolbar-->
+      </q-toolbar>
     </q-footer>
     <q-resize-observer @resize="onResize" />
     <q-dialog v-model="showThanks">
@@ -56,26 +53,29 @@ import { ref } from "vue";
 import OpenSource from "../components/OpenSource.vue";
 import DarkModeToggle from "src/components/DarkModeToggle.vue";
 import IconButton from "src/components/IconButton.vue";
+import useGlobal from "src/global";
+
+const $t = useGlobal().$t
 
 const largeScreen = ref(false);
 const menus = [
   {
-    name: "Home",
+    name: $t("menu.home"),
     icon: "bi-house-door-fill",
     route: "/",
   },
   {
-    name: "About",
+    name: $t("menu.about"),
     icon: "bi-file-code-fill",
     route: "/about",
   },
   {
-    name: "Services",
+    name: $t("menu.services"),
     icon: "bi-box-fill",
     route: "/services",
   },
   {
-    name: "Contact",
+    name: $t("menu.contact"),
     icon: "bi-person-lines-fill",
     route: "/contact",
   },

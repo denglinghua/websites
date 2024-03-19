@@ -1,21 +1,20 @@
 export default {
   menu: {
-    home: "Home",
-    about: "About",
+    home: "Accueil",
+    about: "À propos",
     services: "Services",
-    contact: "Contact",
+    contact: "Contactez-nous",
   },
   layout: {
-    openSource: "Thanks to open source",
-    lightMode: "Light Mode",
-    darkMode: "Dark Mode",
-    copyright: "Copyright © 2024 Island Coyote Tech Inc.",
+    openSource: "Merci à l'open source",
+    lightMode: "Mode clair",
+    darkMode: "Mode sombre",
+    copyright: "Droits d'auteur © 2024 Island Coyote Tech Inc.",
     facebook: "Facebook",
     linkedin: "Linkedin",
-    close: "Close",
   },
   about: {
-    title_welcome: "Welcome to Island Coyote Tech Inc.",
+    title_welcome: "Bienvenue chez Island Coyote Tech Inc.",
     body_welcome_1:
       "Established in 2024 on Prince Edward Island, Canada, Island Coyote Tech Inc. isn't just a company; it's a result of our passion and skill. We're a small but strong team of experienced developers who love exploring new technology.",
     body_welcome_2_1: 'Why "Island Coyote Tech Inc.?"',

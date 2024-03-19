@@ -16,12 +16,11 @@
       </q-list>
     </q-card-section>
     <q-card-actions align="right">
-      <icon-button flat icon="bi-hand-thumbs-up-fill" color="primary" tooltip="OK" v-close-popup />
+      <q-btn flat color="primary" :label="$t('layout.close')" v-close-popup />
     </q-card-actions>
   </q-card>
 </template>
 <script setup>
-import IconButton from "src/components/IconButton.vue";
 
 const data = [
   {
