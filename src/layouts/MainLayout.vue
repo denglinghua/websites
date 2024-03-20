@@ -21,7 +21,7 @@
             </q-list>
           </q-menu>
         </q-btn>
-        <LanguageSwitch />
+        <LanguageSwitch class="q-ml-md" />
       </q-toolbar>
     </q-header>
     <q-page-container>
