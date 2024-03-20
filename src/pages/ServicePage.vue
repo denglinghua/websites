@@ -28,17 +28,18 @@
 </template>
 <script setup>
 import useGlobal from 'src/global';
+import { computed } from 'vue';
 const $t = useGlobal().$t;
-const services = ['data', 'web', 'consulting', 'outsource'].map((s) => ({
+const services = computed(() => ['data', 'web', 'consulting', 'outsource'].map((s) => ({
   title: $t(`service.${s}.title`),
   subTitle: $t(`service.${s}.subTitle`),
   text: $t(`service.${s}.text`),
   icon: $t(`service.${s}.icon`),
-}));
+})))
 
 </script>
 <style lang="sass" scoped>
 .service-card
   width: 250px
-  height: 290px
+  height: 320px
 </style>

@@ -13,6 +13,7 @@ export default {
     facebook: "Facebook",
     linkedin: "Linkedin",
     close: "Close",
+    language: "FR",
   },
   about: {
     title_welcome: "Welcome to Island Coyote Tech Inc.",
@@ -69,5 +70,9 @@ export default {
     email: "Email",
     phone: "Phone",
     copyTooltip: "Copy address to clipboard",
+  },
+  opensource: {
+    title:
+      "With deep appreciation for the open-source community, whose invaluable contributions have greatly facilitated the development of this website.",
   },
 };

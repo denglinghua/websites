@@ -12,6 +12,8 @@ export default {
     copyright: "Droits d'auteur © 2024 Island Coyote Tech Inc.",
     facebook: "Facebook",
     linkedin: "Linkedin",
+    close: "Fermer",
+    language: "EN",
   },
   about: {
     title_welcome: "Bienvenue chez Island Coyote Tech Inc.",
@@ -33,40 +35,44 @@ export default {
     sub_why_3: "Flexibilité",
     body_why_3:
       "Nous reconnaissons que chaque client est unique, tout comme ses besoins. Nos services sont conçus avec souplesse, nous permettant de nous adapter à vos exigences spécifiques et de fournir des solutions sur mesure qui correspondent à vos objectifs.",
-    contact: "Contact Us",
+    contact: "Contactez-nous",
   },
   service: {
     title:
-      "At Island Coyote Tech Inc., we excel in delivering <b>affordable</b>, <b>swift</b>, and <b>flexible</b> IT solutions tailored to your unique needs.",
+      "Chez Island Coyote Tech Inc., nous excellons dans la fourniture de solutions informatiques <b>abordables</b>, <b>rapides</b> et <b>flexibles</b> adaptées à vos besoins uniques.",
     data: {
-      title: "Data Analysis",
-      subTitle: "Every Number Matters",
+      title: "Analyse des données",
+      subTitle: "Chaque nombre compte",
       icon: "bi-graph-up-arrow",
-      text: "Uncover actionable insights from your data. Our expert analysts transform raw data into strategic intelligence, empowering you to make informed decisions.",
+      text: "Découvrez des idées exploitables à partir de vos données. Nos analystes experts transforment les données brutes en intelligence stratégique, vous permettant de prendre des décisions éclairées.",
     },
     web: {
-      title: "Website Building",
-      subTitle: "Every Pixel Matters",
+      title: "Construction de sites web",
+      subTitle: "Chaque pixel compte",
       icon: "bi-file-earmark",
-      text: "Craft a digital presence that captivates. We specialize in creating responsive, user-friendly websites tailored to your brand, ensuring a seamless online experience for your audience.",
+      text: "Créez une présence numérique captivante. Nous sommes spécialisés dans la création de sites web réactifs et conviviaux, adaptés à votre marque, garantissant une expérience en ligne fluide pour votre public.",
     },
     consulting: {
-      title: "Technical Consulting",
-      subTitle: "Every Insight Matters",
+      title: "Consultation technique",
+      subTitle: "Chaque point de vue compte",
       icon: "bi-compass",
-      text: "Strategic guidance for lasting success. Our seasoned consultants work closely with you to understand your business goals, offering tailored solutions that drive sustainable growth.",
+      text: "Des conseils stratégiques pour un succès durable. Nos consultants expérimentés travaillent en étroite collaboration avec vous pour comprendre vos objectifs commerciaux, en proposant des solutions sur mesure qui favorisent une croissance durable.",
     },
     outsource: {
-      title: "Outsource Services",
-      subTitle: "Every Task Matters",
+      title: "Services externalisés",
+      subTitle: "Chaque tâche compte",
       icon: "bi-card-checklist",
-      text: "Focus on what you do best, and leave the rest to us. Our outsourcing services are designed to streamline operations, reduce costs, and enhance overall efficiency.",
+      text: "Concentrez-vous sur ce que vous faites de mieux et laissez le reste à nous. Nos services d'externalisation sont conçus pour rationaliser les opérations, réduire les coûts et améliorer l'efficacité globale.",
     },
   },
   contact: {
     address: "Address",
     email: "Email",
-    phone: "Phone",
-    copyTooltip: "Copy address to clipboard",
+    phone: "Téléphone",
+    copyTooltip: "Copier l'adresse dans le presse-papiers",
+  },
+  opensource: {
+    title:
+      "Avec une profonde appréciation pour la communauté open source, dont les contributions inestimables ont grandement facilité le développement de ce site web.",
   },
 };

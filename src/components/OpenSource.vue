@@ -1,8 +1,7 @@
 <template>
   <q-card>
     <q-card-section>
-      With deep appreciation for the open-source community, whose invaluable
-      contributions have greatly facilitated the development of this website.
+      {{ $t('opensource.title') }}
     </q-card-section>
     <q-card-section>
       <q-list :bordered="false">

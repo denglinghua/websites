@@ -21,6 +21,7 @@
             </q-list>
           </q-menu>
         </q-btn>
+        <LanguageSwitch />
       </q-toolbar>
     </q-header>
     <q-page-container>
@@ -49,16 +50,17 @@
 </template>
 <script setup>
 import { QDialog } from "quasar";
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import OpenSource from "../components/OpenSource.vue";
 import DarkModeToggle from "src/components/DarkModeToggle.vue";
 import IconButton from "src/components/IconButton.vue";
+import LanguageSwitch from "src/components/LanguageSwitch.vue";
 import useGlobal from "src/global";
 
 const $t = useGlobal().$t
 
 const largeScreen = ref(false);
-const menus = [
+const menus = computed(() => [
   {
     name: $t("menu.home"),
     icon: "bi-house-door-fill",
@@ -79,7 +81,7 @@ const menus = [
     icon: "bi-person-lines-fill",
     route: "/contact",
   },
-];
+]);
 
 function onResize(size) {
   largeScreen.value = size.width > 1000;

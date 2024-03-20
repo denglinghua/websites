@@ -5,6 +5,7 @@ const i18n = createI18n({
   legacy: false,
   locale: "en-US",
   globalInjection: true,
+  warnHtmlInMessage: false,
   messages,
 });
 export default ({ app }) => {

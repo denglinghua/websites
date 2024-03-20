@@ -19,9 +19,10 @@
 </template>
 <script setup>
 import useGlobal from 'src/global';
+import { computed } from 'vue';
 const $t = useGlobal().$t;
-const strengths = [1, 2, 3].map((s) => ({
+const strengths = computed(() => [1, 2, 3].map((s) => ({
   title: $t(`about.sub_why_${s}`),
   text: $t(`about.body_why_${s}`),
-}));
+})))
 </script>
