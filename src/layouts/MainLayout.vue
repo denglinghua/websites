@@ -49,8 +49,9 @@
   </q-layout>
 </template>
 <script setup>
-import { QDialog } from "quasar";
+import { QDialog, useMeta } from "quasar";
 import { computed, ref } from "vue";
+import { useRouter } from "vue-router";
 import OpenSource from "../components/OpenSource.vue";
 import DarkModeToggle from "src/components/DarkModeToggle.vue";
 import IconButton from "src/components/IconButton.vue";
@@ -82,6 +83,24 @@ const menus = computed(() => [
     route: "/contact",
   },
 ]);
+
+function getRouteName(to) {
+  return menus.value.find((m) => m.route === to)?.name;
+}
+
+const pageTitle = ref(menus.value[0].name);
+useMeta(() => {
+  return {
+    title: pageTitle.value,
+    titleTemplate: (title) => `${title} | Island Coyote Tech Inc.`,
+  };
+});
+
+const router = useRouter();
+router.afterEach((to, from) => {
+  pageTitle.value = getRouteName(to.path);
+  console.log('pageTitle', pageTitle.value);
+});
 
 function onResize(size) {
   largeScreen.value = size.width > 1000;
