@@ -84,22 +84,17 @@ const menus = computed(() => [
   },
 ]);
 
-function getRouteName(to) {
+function getMenuName(to) {
   return menus.value.find((m) => m.route === to)?.name;
 }
 
-const pageTitle = ref(menus.value[0].name);
+const router = useRouter();
+const pageTitle = computed(() => getMenuName(router.currentRoute.value.path));
 useMeta(() => {
   return {
     title: pageTitle.value,
     titleTemplate: (title) => `${title} | Island Coyote Tech Inc.`,
   };
-});
-
-const router = useRouter();
-router.afterEach((to, from) => {
-  pageTitle.value = getRouteName(to.path);
-  console.log('pageTitle', pageTitle.value);
 });
 
 function onResize(size) {
