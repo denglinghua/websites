@@ -1,19 +1,19 @@
 export default {
   menu: {
-    home: "Home",
-    about: "About",
-    services: "Services",
-    contact: "Contact",
+    home: "HOME",
+    about: "ABOUT",
+    services: "SERVICES",
+    contact: "CONTACT",
   },
   layout: {
     openSource: "Thanks to open source",
     lightMode: "Light Mode",
     darkMode: "Dark Mode",
-    copyright: "Copyright © 2024 Island Coyote Tech Inc.",
+    copyright: "Copyright © %{year} Island Coyote Tech Inc.",
     facebook: "Facebook",
     linkedin: "Linkedin",
     close: "Close",
-    language: "FR",
+    language: "Français",
   },
   about: {
     title_welcome: "Welcome to Island Coyote Tech Inc.",

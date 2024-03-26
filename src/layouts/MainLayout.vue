@@ -7,14 +7,14 @@
           <span class="text-uppercase text-subtitle1 q-ml-sm">Island Coyote Tech Inc.</span>
         </q-toolbar-title>
         <q-tabs align="right" inline-label v-if="largeScreen">
-          <q-route-tab v-for="m in menus" :to="m.route" :label="m.name" :icon="m.icon" :key="m.name" />
+          <q-route-tab v-for="m in menus" :to="m.route" :label="m.name" :icon="m.icon" :key="m.name" :no-caps="true" />
         </q-tabs>
         <q-btn flat color="primary" icon="bi-list" v-else>
           <q-menu>
             <q-list style="min-width: 100px">
               <q-item clickable v-close-popup exact v-for="m in menus" :to="m.route" :key="m.name">
                 <q-item-section avatar>
-                  <q-icon color="primary" :name="m.icon" />
+                  <q-icon color="primary" :name="m.icon" :no-caps="true" />
                 </q-item-section>
                 <q-item-section>{{ m.name }}</q-item-section>
               </q-item>
@@ -32,7 +32,7 @@
     <q-footer class="header-footer text-primary q-mb-md">
       <q-toolbar>
         <q-toolbar-title class="text-caption">
-          {{ $t("layout.copyright") }}
+          {{ $t("layout.copyright", { year: year }) }}
         </q-toolbar-title>
         <q-space />
         <IconButton flat color="primary" icon="bi-facebook" :tooltip="$t('layout.facebook')" />
@@ -101,6 +101,7 @@ function onResize(size) {
   largeScreen.value = size.width > 1000;
 }
 
+const year = new Date().getFullYear();
 const showThanks = ref(false);
 </script>
 <style lang="scss" scoped>

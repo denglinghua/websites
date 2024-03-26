@@ -15,7 +15,8 @@
   <p v-for="s in strengths" :key="s.title">
     <b>{{ s.title }}: </b>{{ s.text }}
   </p>
-  <q-btn color="primary" flat icon-right="bi-arrow-right-square" :label="$t('about.contact')" dense to="contact" />
+  <q-btn color="primary" flat icon-right="bi-arrow-right-square" :no-caps="true" :label="$t('about.contact')" dense
+    to="contact" />
 </template>
 <script setup>
 import useGlobal from 'src/global';

@@ -15,7 +15,7 @@
       </q-list>
     </q-card-section>
     <q-card-actions align="right">
-      <q-btn flat color="primary" :label="$t('layout.close')" v-close-popup />
+      <q-btn flat color="primary" :label="$t('layout.close')" :no-caps="true" v-close-popup />
     </q-card-actions>
   </q-card>
 </template>
