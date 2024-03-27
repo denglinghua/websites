@@ -85,7 +85,8 @@ const menus = computed(() => [
 ]);
 
 function getMenuName(to) {
-  return menus.value.find((m) => m.route === to)?.name;
+  let name = menus.value.find((m) => m.route === to)?.name;
+  return name ? name : to.substring(1);
 }
 
 const router = useRouter();
