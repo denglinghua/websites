@@ -1,5 +1,6 @@
 <template>
-  <q-btn flat dense color="primary" icon="bi-translate" :label="$t('layout.language')" @click="changeLang" />
+  <q-btn flat dense color="primary" icon="bi-translate" :label="$t('layout.language')" :no-caps="true"
+    @click="changeLang" />
 </template>
 <script setup>
 import { useI18n } from "vue-i18n";

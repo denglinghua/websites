@@ -9,11 +9,11 @@ export default {
     openSource: "Merci à l'open source",
     lightMode: "Mode clair",
     darkMode: "Mode sombre",
-    copyright: "Droits d'auteur © 2024 Island Coyote Tech Inc.",
+    copyright: "Droits d'auteur © %{year} Island Coyote Tech Inc.",
     facebook: "Facebook",
     linkedin: "Linkedin",
     close: "Fermer",
-    language: "EN",
+    language: "English",
   },
   about: {
     title_welcome: "Bienvenue chez Island Coyote Tech Inc.",
