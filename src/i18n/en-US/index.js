@@ -9,7 +9,7 @@ export default {
     openSource: "Thanks to open source",
     lightMode: "Light Mode",
     darkMode: "Dark Mode",
-    copyright: "Copyright © %{year} Island Coyote Tech Inc.",
+    copyright: "Copyright © {year} Island Coyote Tech Inc.",
     facebook: "Facebook",
     linkedin: "Linkedin",
     close: "Close",

@@ -85,6 +85,7 @@ module.exports = configure(function (/* ctx */) {
             // runtimeOnly: false,
 
             // you need to set i18n resource including paths !
+            runtimeOnly: false,
             include: path.resolve(__dirname, "./src/i18n/**"),
           },
         ],
