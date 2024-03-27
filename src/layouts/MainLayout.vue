@@ -35,7 +35,7 @@
           {{ $t("layout.copyright", { year: year }) }}
         </q-toolbar-title>
         <q-space />
-        <IconButton flat color="primary" icon="bi-facebook" :tooltip="$t('layout.facebook')" />
+        <IconButton flat color="primary" icon="bi-facebook" @click="fb" :tooltip="$t('layout.facebook')" />
         <IconButton flat color="primary" icon="bi-linkedin" :tooltip="$t('layout.linkedin')" />
         <icon-button flat color="primary" icon="bi-heart-fill" @click="showThanks = true"
           :tooltip="$t('layout.openSource')" />
@@ -104,6 +104,10 @@ function onResize(size) {
 
 const year = new Date().getFullYear();
 const showThanks = ref(false);
+
+function fb() {
+  window.open("https://www.facebook.com/islandcoyotetech", "_blank");
+}
 </script>
 <style lang="scss" scoped>
 .layout-container {
