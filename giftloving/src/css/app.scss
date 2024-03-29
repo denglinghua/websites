@@ -1,0 +1,67 @@
+// app global css in SCSS form
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+
+@font-face {
+  font-family: "Proxima Nova Bold";
+  src: url("./fonts/Proxima-Nova-Bold.eot");
+  src: url("./fonts/Proxima-Nova-Bold.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/Proxima-Nova-Bold.woff") format("woff"),
+    url("./fonts/Proxima-Nova-Bold.ttf") format("truetype"),
+    url("./fonts/Proxima-Nova-Bold.svg#webfont") format("svg");
+}
+
+@font-face {
+  font-family: "Proxima Nova Semibold";
+  src: url("./fonts/Proxima-Nova-Semibold.eot");
+  src: url("./fonts/Proxima-Nova-Semibold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./fonts/Proxima-Nova-Semibold.woff") format("woff"),
+    url("./fonts/Proxima-Nova-Semibold.ttf") format("truetype"),
+    url("./fonts/Proxima-Nova-Semibold.svg#webfont") format("svg");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("./fonts/Proxima-Nova-Regular.eot");
+  src: url("./fonts/Proxima-Nova-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("./fonts/Proxima-Nova-Regular.woff") format("woff"),
+    url("./fonts/Proxima-Nova-Regular.ttf") format("truetype"),
+    url("./fonts/Proxima-Nova-Regular.svg#webfont") format("svg");
+}
+
+@font-face {
+  font-family: "Proxima Nova Thin";
+  src: url("./fonts/Proxima-Nova-Thin.eot");
+  src: url("./fonts/Proxima-Nova-Thin.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/Proxima-Nova-Thin.woff") format("woff"),
+    url("./fonts/Proxima-Nova-Thin.ttf") format("truetype"),
+    url("./fonts/Proxima-Nova-Thin.svg#webfont") format("svg");
+}
+
+.body--light {
+  --link-color: var(--q-primary);
+  --header-footer-bg: white;
+  --source-link-color: var(--q-primary);
+  --q-primary: #757575;
+  font-family: "Proxima Nova";
+}
+
+.body--dark {
+  --link-color: var(--q-primary);
+  --header-footer-bg: var(--q-dark);
+  --source-link-color: var(--q-positive);
+  --q-primary: #00b0ff;
+}
+
+.link {
+  color: var(--link-color);
+}
+
+.header-footer {
+  background-color: var(--header-footer-bg);
+}
+
+.source-link {
+  color: var(--source-link-color);
+}
