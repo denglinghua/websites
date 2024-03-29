@@ -41,5 +41,5 @@ const services = computed(() => ['data', 'web', 'consulting', 'outsource'].map((
 <style lang="sass" scoped>
 .service-card
   width: 250px
-  height: 320px
+  height: 360px
 </style>

@@ -1,9 +1,57 @@
-// app global css in SCSS form
+@font-face {
+  font-family: "Proxima Nova Light";
+  src: url("./fonts/Proxima-Nova-Light.eot");
+  src: url("./fonts/Proxima-Nova-Light.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/Proxima-Nova-Light.woff") format("woff"),
+    url("./fonts/Proxima-Nova-Light.ttf") format("truetype"),
+    url("./fonts/Proxima-Nova-Light.svg#webfont") format("svg");
+}
+
+@font-face {
+  font-family: "Proxima Nova Bold";
+  src: url("./fonts/Proxima-Nova-Bold.eot");
+  src: url("./fonts/Proxima-Nova-Bold.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/Proxima-Nova-Bold.woff") format("woff"),
+    url("./fonts/Proxima-Nova-Bold.ttf") format("truetype"),
+    url("./fonts/Proxima-Nova-Bold.svg#webfont") format("svg");
+}
+
+@font-face {
+  font-family: "Proxima Nova Semibold";
+  src: url("./fonts/Proxima-Nova-Semibold.eot");
+  src: url("./fonts/Proxima-Nova-Semibold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./fonts/Proxima-Nova-Semibold.woff") format("woff"),
+    url("./fonts/Proxima-Nova-Semibold.ttf") format("truetype"),
+    url("./fonts/Proxima-Nova-Semibold.svg#webfont") format("svg");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("./fonts/Proxima-Nova-Regular.eot");
+  src: url("./fonts/Proxima-Nova-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("./fonts/Proxima-Nova-Regular.woff") format("woff"),
+    url("./fonts/Proxima-Nova-Regular.ttf") format("truetype"),
+    url("./fonts/Proxima-Nova-Regular.svg#webfont") format("svg");
+}
+
+@font-face {
+  font-family: "Proxima Nova Thin";
+  src: url("./fonts/Proxima-Nova-Thin.eot");
+  src: url("./fonts/Proxima-Nova-Thin.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/Proxima-Nova-Thin.woff") format("woff"),
+    url("./fonts/Proxima-Nova-Thin.ttf") format("truetype"),
+    url("./fonts/Proxima-Nova-Thin.svg#webfont") format("svg");
+}
+
 .body--light {
   --link-color: var(--q-primary);
   --header-footer-bg: white;
   --source-link-color: var(--q-primary);
   --q-primary: #1976d2;
+  font-family: "Proxima Nova";
+  letter-spacing: 0.08em;
 }
 
 .body--dark {
@@ -11,6 +59,8 @@
   --header-footer-bg: var(--q-dark);
   --source-link-color: var(--q-positive);
   --q-primary: #00b0ff;
+  font-family: "Proxima Nova";
+  letter-spacing: 0.08em;
 }
 
 .link {
