@@ -22,7 +22,7 @@
     </q-header>
     <q-page-container>
       <q-page class="q-pa-md">
-        <router-view />
+        <router-view :key="$route.fullPath" />
       </q-page>
     </q-page-container>
     <q-footer class="header-footer text-primary q-mb-md">
