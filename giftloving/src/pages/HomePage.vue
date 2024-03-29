@@ -1,5 +1,5 @@
 <template>
-  <div class="q-my-xl text-h5 text-grey-6" align="center">
+  <div class="q-my-xl text-h5 slogan" align="center">
     Bringing Beauty to Your Home, Naturally.
   </div>
   <q-responsive :ratio="ratio" style="max-width: 100%;">
@@ -29,3 +29,10 @@ onMounted(() => { });
 
 onUnmounted(() => { });
 </script>
+<style lang="scss" scoped>
+.slogan {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: $grey-6;
+}
+</style>

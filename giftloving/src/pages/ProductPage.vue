@@ -1,10 +1,17 @@
 <template>
-  <div class="row justify-between" v-for="(row, idx) in productRows" :key="idx">
-    <ProductItem v-for="p in row" :product="p" :key="p.name" />
+  <div class="row justify-between">
+    <ProductItem v-for="(p, idx) in products" :key="idx" :product="p" @zoom="zoom" />
   </div>
+  <q-dialog v-model="zoomed" auto-close>
+    <q-card style="width: 100%;">
+      <q-card-section class="q-pa-sm">
+        <q-img :src="`ps/${zoomedProduct.image}`" :ratio="1" spinner-color="primary" fit="cover" />
+      </q-card-section>
+    </q-card>
+  </q-dialog>
 </template>
 <script setup>
-import { computed, ref } from "vue";
+import { ref } from "vue";
 import ProductItem from "src/components/ProductItem.vue";
 
 const products = [
@@ -55,25 +62,10 @@ const products = [
   },
 ];
 
-const nullProduct = {
-  id: 0,
-  name: "",
-  price: 0,
-  image: "",
-  description: "",
-};
-
-const productsOneRow = 3;
-const productRows = computed(() => {
-  const rows = [];
-  for (let i = 0; i < products.length; i += productsOneRow) {
-    let cols = [];
-    for (let j = 0; j < productsOneRow; j++) {
-      let p = products[i + j];
-      cols.push(p ? p : nullProduct);
-    }
-    rows.push(cols);
-  }
-  return rows;
-});
+const zoomed = ref(false);
+const zoomedProduct = ref(null);
+function zoom(product) {
+  zoomedProduct.value = product;
+  zoomed.value = true;
+}
 </script>

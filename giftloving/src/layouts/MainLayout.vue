@@ -10,14 +10,14 @@
         </q-tabs>
         <q-btn flat color="primary" icon="bi-list" v-else>
           <q-menu>
-            <q-list style="min-width: 100px">
+            <q-list style="min-width: 150px">
               <q-item clickable v-close-popup exact v-for="m in menus" :to="m.route" :key="m.name">
                 <q-item-section>{{ m.name }}</q-item-section>
               </q-item>
             </q-list>
           </q-menu>
         </q-btn>
-        <IconButton flat dense color="primary" icon="bi-facebook" @click="fb" :tooltip="$t('layout.facebook')" />
+        <IconButton flat dense color="primary" icon="bi-facebook" @click="fb" />
       </q-toolbar>
     </q-header>
     <q-page-container>
@@ -27,9 +27,7 @@
     </q-page-container>
     <q-footer class="header-footer text-primary q-mb-md">
       <q-toolbar>
-        <q-toolbar-title class="text-caption"> {{ $t("layout.copyright", {
-          year: year
-        }) }} </q-toolbar-title>
+        <q-toolbar-title class="text-caption cp"> Copyright © {{ year }} I&M GIFTLOVING LTD. </q-toolbar-title>
       </q-toolbar>
     </q-footer>
     <q-resize-observer @resize="onResize" />
@@ -40,14 +38,11 @@ import { useMeta } from "quasar";
 import { computed, ref } from "vue";
 import { useRouter } from "vue-router";
 import IconButton from "src/components/IconButton.vue";
-import useGlobal from "src/global";
-
-const $t = useGlobal().$t
 
 const largeScreen = ref(false);
 const menus = computed(() => [
   {
-    name: $t("menu.home"),
+    name: "HOME",
     route: "/",
   },
   {
@@ -59,7 +54,7 @@ const menus = computed(() => [
     route: "/home-decor",
   },
   {
-    name: $t("menu.contact"),
+    name: "CONTACT",
     route: "/contact",
   },
 ]);
@@ -83,10 +78,9 @@ function onResize(size) {
 }
 
 const year = new Date().getFullYear();
-const showThanks = ref(false);
 
 function fb() {
-  window.open("https://www.facebook.com/imgiftloving", "_blank");
+  //window.open("https://www.facebook.com/imgiftloving", "_blank");
 }
 </script>
 <style lang="scss" scoped>
@@ -104,5 +98,9 @@ function fb() {
   font-family: "Major Mono Display";
   font-weight: 400;
   font-style: normal;
+}
+
+.cp {
+  letter-spacing: 0.2em;
 }
 </style>

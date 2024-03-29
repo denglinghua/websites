@@ -2,6 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
 
 @font-face {
+  font-family: "Proxima Nova Light";
+  src: url("./fonts/Proxima-Nova-Light.eot");
+  src: url("./fonts/Proxima-Nova-Light.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/Proxima-Nova-Light.woff") format("woff"),
+    url("./fonts/Proxima-Nova-Light.ttf") format("truetype"),
+    url("./fonts/Proxima-Nova-Light.svg#webfont") format("svg");
+}
+
+@font-face {
   font-family: "Proxima Nova Bold";
   src: url("./fonts/Proxima-Nova-Bold.eot");
   src: url("./fonts/Proxima-Nova-Bold.eot?#iefix") format("embedded-opentype"),
@@ -44,7 +53,8 @@
   --header-footer-bg: white;
   --source-link-color: var(--q-primary);
   --q-primary: #757575;
-  font-family: "Proxima Nova";
+  font-family: "Proxima Nova Light", sans-serif;
+  letter-spacing: 0.1em;
 }
 
 .body--dark {
@@ -60,8 +70,4 @@
 
 .header-footer {
   background-color: var(--header-footer-bg);
-}
-
-.source-link {
-  color: var(--source-link-color);
 }
