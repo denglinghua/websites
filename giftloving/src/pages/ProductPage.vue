@@ -1,6 +1,9 @@
 <template>
-  <div class="row justify-between">
-    <ProductItem v-for="(p, idx) in products" :key="idx" :product="p" @zoom="zoom" />
+  <div class="row">
+    <TagSelect :tags="tags" v-model="filterTags" />
+  </div>
+  <div class="row justify-start">
+    <ProductItem v-for="(p, idx) in filterProducts" :key="idx" :product="p" @zoom="zoom" />
   </div>
   <q-dialog v-model="zoomed" auto-close>
     <q-card style="width: 100%;">
@@ -12,17 +15,22 @@
 </template>
 <script setup>
 import { ref } from "vue";
-import { useRouter } from "vue-router";
 
 import ProductItem from "src/components/ProductItem.vue";
-import catProducts from "src/data";
+import TagSelect from "src/components/TagSelect.vue";
+import productData from "src/data";
+import { computed } from "vue";
 
-const router = useRouter();
-const category = router.currentRoute.value.path.split("/")[1];
+const products = productData.products;
+const tags = productData.tags();
+const filterTags = ref([]);
 
-// console.log(category, catProducts);
-
-const products = catProducts[category];
+const filterProducts = computed(() => {
+  if (filterTags.value.length === 0) {
+    return products;
+  }
+  return productData.filterProducts(filterTags.value);
+});
 
 const zoomed = ref(false);
 const zoomedProduct = ref(null);

@@ -46,12 +46,16 @@ const menus = computed(() => [
     route: "/",
   },
   {
-    name: "DRIED FLORAL",
-    route: "/dried-floral",
+    name: "ABOUT",
+    route: "/about",
   },
   {
-    name: "HOME DECOR",
-    route: "/home-decor",
+    name: "PRODUCTS",
+    route: "/products",
+  },
+  {
+    name: "SERVICES",
+    route: "/services",
   },
   {
     name: "CONTACT",
