@@ -9,7 +9,7 @@
         <q-item-section>
           <q-item-label>Address</q-item-label>
           <div class="row items-center">
-            <q-item-label caption>{{ address }}</q-item-label>
+            <q-item-label>{{ address }}</q-item-label>
             <icon-button icon="bi-copy" size="xs" flat @click="copyToClipboard(address)"
               tooltip="Copy address to clipboard" />
           </div>
@@ -23,7 +23,7 @@
 
         <q-item-section>
           <q-item-label>Phone</q-item-label>
-          <q-item-label caption>
+          <q-item-label>
             <a href="tel:+19023308387" class="link">(902) 330-8888</a>
           </q-item-label>
         </q-item-section>
@@ -36,7 +36,7 @@
 
         <q-item-section>
           <q-item-label>Email</q-item-label>
-          <q-item-label caption>
+          <q-item-label>
             <a :href="'mailto:' + email" class="link">{{ email }}</a>
           </q-item-label>
         </q-item-section>
