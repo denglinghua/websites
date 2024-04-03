@@ -8,7 +8,6 @@
       </q-item>
       <q-item v-for="info in infoItems" :key="info.title">
         <q-item-section>
-          <q-item-label caption>{{ info.title }}</q-item-label>
           <div class="row items-center">
             <q-item-label>{{ info.content }}</q-item-label>
             <icon-button icon="bi-copy" size="xs" flat @click="copyToClipboard(info.content)" tooltip="Copy" />

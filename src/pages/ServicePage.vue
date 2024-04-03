@@ -15,7 +15,7 @@
     }}</q-item-label>
         </q-card-section>
         <q-card-section align="center" class="q-pt-none">
-          <q-item-label class="text-caption text-primary">{{
+          <q-item-label class="text-primary">{{
         s.subTitle
       }}</q-item-label>
         </q-card-section>

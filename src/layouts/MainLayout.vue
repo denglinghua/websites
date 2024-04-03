@@ -31,7 +31,7 @@
     </q-page-container>
     <q-footer class="header-footer text-primary q-mb-md">
       <q-toolbar>
-        <q-toolbar-title class="text-caption">
+        <q-toolbar-title class="text-body2">
           {{ $t("layout.copyright", { year: year }) }}
         </q-toolbar-title>
         <q-space />
