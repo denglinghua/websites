@@ -1,5 +1,5 @@
 <template>
-  <div class="column items-center">
+  <div class="column items-center q-mb-sm">
     <q-card class="about-card">
       <img src="img/about.jpg">
 

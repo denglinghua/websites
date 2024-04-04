@@ -1,5 +1,5 @@
 <template>
-  <div class="column items-center">
+  <div class="column items-center q-mb-sm">
     <q-card class="service-card">
       <q-card-section :horizontal="!isPhoneScreen()">
         <q-card-section class="q-pt-xs">
