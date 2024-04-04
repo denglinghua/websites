@@ -98,7 +98,7 @@ function fb() {
 }
 
 .title {
-  color: $secondary;
+  color: #AA8666;
   font-family: "Major Mono Display";
   font-weight: 400;
   font-style: normal;

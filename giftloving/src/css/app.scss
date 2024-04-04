@@ -55,6 +55,11 @@
   --q-primary: #757575;
   font-family: "Proxima Nova Light", sans-serif;
   letter-spacing: 0.1em;
+  font-size: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
 }
 
 .body--dark {

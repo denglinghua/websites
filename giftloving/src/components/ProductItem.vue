@@ -4,7 +4,8 @@
       <q-img :src="`ps/${product.image}`" :ratio="1" loading="lazy" spinner-color="primary" @click="zoom(product)"
         class="zoomable" />
     </q-card-section>
-    <q-card-section>
+    <q-card-section class="q-pt-none">
+      <div class="text-overline">$99.99</div>
       <div>{{ product.description }}</div>
     </q-card-section>
   </q-card>
@@ -21,7 +22,7 @@ function zoom(product) {
 <style lang="sass" scoped>
 .p-card
   width: 350px
-  height: 420px
+  height: 430px
 
 .zoomable
   cursor: zoom-in
