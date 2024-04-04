@@ -1,8 +1,7 @@
 <template>
   <div class="column items-center q-mb-sm">
     <q-card class="about-card">
-      <img src="img/about.jpg">
-
+      <q-img src="img/about.jpg" />
       <q-card-section>
         <div class="text-h6">Our Story</div>
       </q-card-section>
