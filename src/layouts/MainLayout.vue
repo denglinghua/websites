@@ -106,7 +106,7 @@ const year = new Date().getFullYear();
 const showThanks = ref(false);
 
 function fb() {
-  window.open("https://www.facebook.com/islandcoyotetech", "_blank");
+  window.open("https://www.facebook.com/islandcoyote", "_blank");
 }
 </script>
 <style lang="scss" scoped>

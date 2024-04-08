@@ -24,7 +24,7 @@ import IconButton from 'src/components/IconButton.vue'
 
 const contact = "Island Coyote Tech Inc.";
 const address = "155 Queen Street, Lower Level Room 3A, Charlottetown, PE C1A 4B4";
-const email = "hello" + "@" + "islandcoyotetech.com";
+const email = "hello" + "@" + "islandcoyote.com";
 const phone = "(902) 330-8387";
 
 const infoItems = [
