@@ -44,7 +44,7 @@
     </q-list>
   </q-card>
   <q-card class="q-mt-md q-ml-md" style="max-width: 600px">
-    <q-card-section class="q-pa-sm">
+    <q-card-section class="q-pa-none">
       <q-img src="ps/p2.png" />
     </q-card-section>
   </q-card>

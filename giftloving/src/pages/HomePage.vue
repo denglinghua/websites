@@ -1,29 +1,30 @@
 <template>
-  <div class="q-my-xl text-h5 slogan" align="center">
+  <div class="q-mt-md q-mb-xl text-h5 slogan" align="center">
     Bringing Beauty to Your Home, Naturally.
   </div>
   <q-responsive :ratio="ratio" style="max-width: 100%;">
     <q-carousel animated v-model="slide" navigation infinite :autoplay="autoplay" arrows transition-prev="slide-right"
-      transition-next="slide-left">
-      <q-carousel-slide :name="1" img-src="ps/p1.png" />
-      <q-carousel-slide :name="2" img-src="ps/p2.png" />
-      <q-carousel-slide :name="3" img-src="ps/p3.png" />
-      <q-carousel-slide :name="4" img-src="ps/p4.png" />
-      <q-carousel-slide :name="5" img-src="ps/p5.png" />
+      transition-next="slide-left" class="rounded-borders">
+      <q-carousel-slide v-for="(s, idx) in slides" :name="idx" :key="idx" :img-src="s.img" />
     </q-carousel>
   </q-responsive>
 </template>
 <script setup>
 import { ref, onMounted, onUnmounted, computed } from "vue";
+import { isSmallScreen } from "src/g";
 
 const slide = ref(1);
 const autoplay = ref(true);
 
-function isPhoneScreen() {
-  return window.innerWidth < window.innerHeight
-}
+const ratio = computed(() => (isSmallScreen() ? 1 : 16 / 9));
 
-const ratio = computed(() => (isPhoneScreen() ? 1 : 16 / 9));
+const slides = [
+  { name: 1, img: "ps/p1.png" },
+  { name: 2, img: "ps/p2.png" },
+  { name: 3, img: "ps/p3.png" },
+  { name: 4, img: "ps/p4.png" },
+  { name: 5, img: "ps/p5.png" },
+];
 
 onMounted(() => { });
 
