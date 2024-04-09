@@ -9,9 +9,10 @@
         <q-item-section>
           <q-item-label>Address</q-item-label>
           <div class="row items-center">
-            <q-item-label>{{ address }}</q-item-label>
-            <icon-button icon="bi-copy" size="xs" flat @click="copyToClipboard(address)"
-              tooltip="Copy address to clipboard" />
+            <q-item-label>{{ address }}
+              <icon-button icon="bi-copy" size="xs" flat @click="copyToClipboard(address)"
+                tooltip="Copy address to clipboard" />
+            </q-item-label>
           </div>
         </q-item-section>
       </q-item>
