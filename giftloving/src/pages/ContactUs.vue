@@ -25,7 +25,7 @@
         <q-item-section>
           <q-item-label>Phone</q-item-label>
           <q-item-label>
-            <a href="tel:+19023308387" class="link">(902) 330-8888</a>
+            <a href="tel:+19029168711" class="link">(902) 916-8711</a>
           </q-item-label>
         </q-item-section>
       </q-item>
@@ -55,6 +55,6 @@ import { copyToClipboard } from 'quasar'
 import IconButton from 'src/components/IconButton.vue'
 
 const email = "hello" + "@" + "imgiftloving.com";
-const address = "569 Capital Dr, Cornwall, PE C0A 1H8";
+const address = "569 Capital Dr Unit 2, Cornwall, PE C0A 1H8";
 
 </script>
