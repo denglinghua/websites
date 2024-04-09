@@ -9,9 +9,10 @@
         <q-item-section>
           <q-item-label>{{ $t('contact.address') }}</q-item-label>
           <div class=" row items-center">
-            <q-item-label class="text-primary">{{ address }}</q-item-label>
-            <icon-button icon="bi-copy" size="xs" flat @click="copyToClipboard(address)"
-              :tooltip="$t('contact.copyTooltip')" />
+            <q-item-label class="text-primary">{{ address }}
+              <icon-button icon="bi-copy" size="xs" flat @click="copyToClipboard(address)"
+                :tooltip="$t('contact.copyTooltip')" />
+            </q-item-label>
           </div>
         </q-item-section>
       </q-item>
