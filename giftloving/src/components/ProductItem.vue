@@ -2,7 +2,7 @@
   <q-card class="q-ma-md p-card">
     <q-card-section class="q-pa-none">
       <q-img :src="`ps/${product.image}`" :ratio="1" loading="lazy" spinner-color="primary" @click="zoom(product)"
-        class="zoomable" />
+        class="zoomable rounded-borders" />
     </q-card-section>
     <q-card-section class="q-pt-none">
       <div class="text-overline">$99.99</div>
