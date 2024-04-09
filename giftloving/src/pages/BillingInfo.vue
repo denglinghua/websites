@@ -24,12 +24,12 @@ import { copyToClipboard } from 'quasar'
 import IconButton from 'src/components/IconButton.vue'
 
 const contact = "I&M GIFTLOVING LTD.";
-const address = "569 Capital Dr, Cornwall, PE C0A 1H8";
+const address = "569 Capital Dr Unit 2, Cornwall, PE C0A 1H8";
 const email = "hello" + "@" + "imgiftloving.com";
-const phone = "(902) 330-8888";
+const phone = "(902) 916-8711";
 
 const infoItems = [
-  { "title": "Contact", "content": contact },
+  { "title": "Company", "content": contact },
   { "title": "Address", "content": address },
   { "title": "Phone", "content": phone },
   { "title": "Email", "content": email }
