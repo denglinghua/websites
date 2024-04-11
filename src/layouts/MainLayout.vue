@@ -35,8 +35,10 @@
           {{ $t("layout.copyright", { year: year }) }}
         </q-toolbar-title>
         <q-space />
+        <!--
         <IconButton flat color="primary" icon="bi-facebook" @click="fb" :tooltip="$t('layout.facebook')" />
         <IconButton flat color="primary" icon="bi-linkedin" :tooltip="$t('layout.linkedin')" />
+        -->
         <icon-button flat color="primary" icon="bi-heart-fill" @click="showThanks = true"
           :tooltip="$t('layout.openSource')" />
         <DarkModeToggle />

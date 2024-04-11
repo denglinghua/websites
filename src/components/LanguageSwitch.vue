@@ -1,16 +1,20 @@
 <template>
-  <q-btn flat dense color="primary" icon="bi-translate" :label="$t('layout.language')" :no-caps="true"
-    @click="changeLang" />
+  <q-btn-toggle v-model="selectLang" class="my-custom-toggle" no-caps dense unelevated toggle-color="primary"
+    color="grey-1" text-color="primary" :options="[
+    { label: 'EN', value: 'en-US' },
+    { label: 'FR', value: 'fr-CA' }
+  ]" />
 </template>
 <script setup>
+import { ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
-import { useRouter } from "vue-router";
 
-const router = useRouter();
 const i18n = useI18n({})
-function changeLang() {
-  const currentLang = i18n.locale.value;
-  i18n.locale.value = currentLang === "en-US" ? "fr-CA" : "en-US";
-  //router.go(0);
-}
+const currentLang = i18n.locale.value;
+const selectLang = ref(currentLang);
+
+watch(selectLang, (newVal) => {
+  i18n.locale.value = newVal;
+});
+
 </script>
