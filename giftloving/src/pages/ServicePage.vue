@@ -27,13 +27,13 @@ const services = [
     title: "Customize Your Space",
     description:
       "Tailor your home to perfection with our bespoke customization service. From unique furniture pieces to personalized decor accents, we'll bring your vision to life, creating a space that's truly yours.",
-    img: "img/service_1.jpg",
+    img: "img/custom.jpg",
   },
   {
     title: "Elevate Your Sale",
     description:
       "Maximize your property's potential with our professional home staging service. We'll transform your house into a captivating home that stands out in the market, helping you secure a faster sale at the best price.",
-    img: "img/service_2.jpg",
+    img: "img/staging.jpg",
   },
 ];
 </script>

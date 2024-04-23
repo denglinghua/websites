@@ -46,7 +46,7 @@
   </q-card>
   <q-card class="q-mt-md q-ml-md" style="max-width: 600px">
     <q-card-section class="q-pa-none">
-      <q-img src="ps/p2.png" class="rounded-borders" />
+      <q-img src="img/contact_us.jpg" class="rounded-borders" />
     </q-card-section>
   </q-card>
 </template>
