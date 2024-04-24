@@ -3,7 +3,7 @@
     <q-header class="header-footer text-primary" height-hint="80">
       <q-toolbar class="items-center">
         <q-toolbar-title class="items-center">
-          <span class="text-uppercase text-h6 q-ml-sm title">I&M GiftLoving </span>
+          <q-btn flat dense label="I&M GiftLoving" class="text-uppercase text-h6 q-ml-none title" to="/" />
         </q-toolbar-title>
         <q-tabs align="right" inline-label v-if="largeScreen">
           <q-route-tab v-for="m in menus" :to="m.route" :label="m.name" :key="m.name" />
@@ -84,7 +84,7 @@ function onResize(size) {
 const year = new Date().getFullYear();
 
 function fb() {
-  //window.open("https://www.facebook.com/imgiftloving", "_blank");
+  window.open("https://www.facebook.com/giftloving", "_blank");
 }
 </script>
 <style lang="scss" scoped>
