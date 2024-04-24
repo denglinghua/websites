@@ -21,7 +21,7 @@
       </q-toolbar>
     </q-header>
     <q-page-container>
-      <q-page class="q-pa-md">
+      <q-page class="q-pa-sm">
         <router-view :key="$route.fullPath" />
       </q-page>
     </q-page-container>

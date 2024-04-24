@@ -1,6 +1,6 @@
 <template>
   <div class="slogan" align="center">
-    Bringing Beauty to Your Home, Naturally.
+    Bringing Beauty to Your Home
   </div>
   <q-responsive :ratio="ratio" style="max-width: 100%;">
     <q-carousel animated v-model="slide" navigation infinite :autoplay="autoplay" arrows transition-prev="slide-right"
@@ -49,13 +49,11 @@ onUnmounted(() => { });
   text-transform: uppercase;
   color: $grey-6;
   font-size: 2em;
-  font-weight: 500;
-  margin-top: 16px;
+  font-weight: 550;
   margin-bottom: 16px;
 
   @media (max-width: 768px) {
-    font-size: 1em;
-    margin-top: 0px;
+    font-size: 1.1em;
     margin-bottom: 8px;
   }
 }
