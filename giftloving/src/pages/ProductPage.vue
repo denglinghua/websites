@@ -6,7 +6,7 @@
     <ProductItem v-for="(p, idx) in filterProducts" :key="idx" :product="p" @zoom="zoom" />
   </div>
   <q-dialog v-model="zoomed" auto-close>
-    <q-card style="width: 100%;">
+    <q-card style="width: 800px; max-width: 100%;">
       <q-card-section class="q-pa-sm">
         <q-img :src="`ps/${zoomedProduct.image}`" :ratio="1" spinner-color="primary" fit="cover" />
       </q-card-section>

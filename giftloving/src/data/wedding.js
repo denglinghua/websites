@@ -1,34 +1,37 @@
 const products = [
   {
-    name: "Dried Floral Arrangement",
+    name: "Deep Embrace",
+    price: 68,
     image: "wd01.JPG",
-    description:
-      "A beautiful dried floral arrangement that will last for years.",
+    description: "",
     tags: ["wedding"],
   },
   {
-    name: "Home Decor",
+    name: "Deep Embrace",
+    price: 68,
     image: "wd02.JPG",
-    description:
-      "A beautiful home decor item that will make your home look great.",
+    description: "",
     tags: ["wedding"],
   },
   {
-    name: "Candle",
+    name: "Deep Embrace",
+    price: 68,
     image: "wd03.JPG",
-    description: "A beautiful candle that will make your home smell great.",
+    description: "",
     tags: ["wedding"],
   },
   {
-    name: "Soap",
+    name: "Deep Embrace",
+    price: 68,
     image: "wd04.JPG",
-    description: "A beautiful soap that will make your skin feel great.",
+    description: "",
     tags: ["wedding"],
   },
   {
-    name: "Lotion",
+    name: "Deep Embrace",
+    price: 68,
     image: "wd05.JPG",
-    description: "A beautiful lotion that will make your skin feel great.",
+    description: "",
     tags: ["wedding"],
   },
 ];

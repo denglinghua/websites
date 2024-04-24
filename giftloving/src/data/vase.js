@@ -1,41 +1,44 @@
 const products = [
   {
-    name: "Dried Floral Arrangement",
+    name: "Spring Awakening",
+    price: 118,
     image: "sp01.JPG",
-    description:
-      "A beautiful dried floral arrangement that will last for years.",
+    description: "",
     tags: ["bouquet"],
   },
   {
-    name: "Home Decor",
+    name: "Spring Awakening",
+    price: 118,
     image: "sp02.JPG",
-    description:
-      "A beautiful home decor item that will make your home look great.",
+    description: "",
     tags: ["bouquet"],
   },
   {
-    name: "Candle",
+    name: "Spring Awakening",
+    price: 118,
     image: "sp03.JPG",
-    description: "A beautiful candle that will make your home smell great.",
+    description: "",
     tags: ["bouquet"],
   },
   {
-    name: "Soap",
+    name: "Spring Awakening",
+    price: 118,
     image: "sp04.JPG",
-    description: "A beautiful soap that will make your skin feel great.",
+    description: "",
     tags: ["bouquet"],
   },
   {
-    name: "Lotion",
+    name: "Spring Awakening",
+    price: 118,
     image: "sp05.JPG",
-    description: "A beautiful lotion that will make your skin feel great.",
+    description: "",
     tags: ["bouquet"],
   },
   {
-    name: "Dried Floral Arrangement",
+    name: "Spring Awakening",
+    price: 118,
     image: "sp06.JPG",
-    description:
-      "A beautiful dried floral arrangement that will last for years.",
+    description: "",
     tags: ["bouquet"],
   },
 ];

@@ -1,28 +1,30 @@
 const products = [
   {
-    name: "Dried Floral Arrangement",
+    name: "Moonlit Blossoms",
+    price: 118,
     image: "w01.JPG",
-    description:
-      "A beautiful dried floral arrangement that will last for years.",
+    description: "",
     tags: ["wreath"],
   },
   {
-    name: "Home Decor",
+    name: "Moonlit Blossoms",
+    price: 118,
     image: "w02.JPG",
-    description:
-      "A beautiful home decor item that will make your home look great.",
+    description: "",
     tags: ["wreath"],
   },
   {
-    name: "Candle",
+    name: "Moonlit Blossoms",
+    price: 118,
     image: "w03.JPG",
-    description: "A beautiful candle that will make your home smell great.",
+    description: "",
     tags: ["wreath"],
   },
   {
-    name: "Soap",
+    name: "Moonlit Blossoms",
+    price: 118,
     image: "w04.JPG",
-    description: "A beautiful soap that will make your skin feel great.",
+    description: "",
     tags: ["wreath"],
   },
 ];

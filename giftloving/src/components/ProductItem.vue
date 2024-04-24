@@ -5,8 +5,8 @@
         class="zoomable rounded-borders" />
     </q-card-section>
     <q-card-section class="q-pt-none">
-      <div class="text-overline">$99.99</div>
-      <div>{{ product.description }}</div>
+      <div class="text-overline">${{ product.price }}</div>
+      <div>{{ product.name }}</div>
     </q-card-section>
   </q-card>
 </template>

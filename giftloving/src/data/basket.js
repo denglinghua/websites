@@ -1,34 +1,37 @@
 const products = [
   {
-    name: "Dried Floral Arrangement",
+    name: "Monet's Garden",
+    price: 168,
     image: "b01.JPG",
-    description:
-      "A beautiful dried floral arrangement that will last for years.",
+    description: "",
     tags: ["arrangement"],
   },
   {
-    name: "Home Decor",
+    name: "Monet's Garden",
+    price: 168,
     image: "b02.JPG",
-    description:
-      "A beautiful home decor item that will make your home look great.",
+    description: "",
     tags: ["arrangement"],
   },
   {
-    name: "Candle",
+    name: "Monet's Garden",
+    price: 168,
     image: "b03.JPG",
-    description: "A beautiful candle that will make your home smell great.",
+    description: "",
     tags: ["arrangement"],
   },
   {
-    name: "Soap",
+    name: "Monet's Garden",
+    price: 168,
     image: "b04.JPG",
-    description: "A beautiful soap that will make your skin feel great.",
+    description: "",
     tags: ["arrangement"],
   },
   {
-    name: "Lotion",
+    name: "Monet's Garden",
+    price: 168,
     image: "b05.JPG",
-    description: "A beautiful lotion that will make your skin feel great.",
+    description: "",
     tags: ["arrangement"],
   },
 ];
