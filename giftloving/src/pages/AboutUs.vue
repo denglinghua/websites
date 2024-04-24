@@ -36,5 +36,5 @@
 <style lang="sass" scoped>
 .about-card
   width: 100%
-  max-width: 800px
+  max-width: 960px
 </style>
