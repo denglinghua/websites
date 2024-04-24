@@ -15,7 +15,7 @@
         </q-card-section>
       </q-card>
 
-      <q-separator class="q-mt-md q-mb-md" v-if="idx != services.length - 1" />
+      <q-separator class="q-mt-md" v-if="idx != services.length - 1" />
     </template>
   </div>
 </template>
