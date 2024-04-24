@@ -1,28 +1,30 @@
 <template>
   <div class="column items-center q-mb-sm">
     <q-card class="about-card">
-      <q-img src="img/about.jpg" />
-      <q-card-section>
-        <div class="text-h6">Our Story</div>
-      </q-card-section>
-
-      <q-card-section class="q-pt-none">
+      <q-img src="img/about.jpg" style="max-height: 540px" />
+      <q-card-section class="q-pt-md">
         <p>
-          At Imgiftloving, we have a passion for creating beautiful arrangements with dried flowers. Our business
-          started
-          as a small online store and has now grown to include a physical location in PE, Canada. We take pride in our
-          unique approach to floral design, using sustainable materials to create long-lasting arrangements that add a
-          touch of
-          elegance to any space.
+          Welcome to <b>I & M GIFTLOVING</b>, where we specialize in crafting exquisite dried and preserved collections.
+          Our passion lies in creating timeless pieces that capture the beauty of nature, from elegant basket flowers to
+          stunning bouquets and bundles.
         </p>
         <p>
-          We believe that every arrangement tells a story and we work with our clients to create personalized
-          arrangements
-          that reflect their individual style and personality. Our team of experienced florists is dedicated to
-          providing
-          exceptional customer service and ensuring that every customer leaves satisfied with their purchase.
-          Thank you for choosing Imgiftloving for your floral needs. We look forward to helping you create something
-          beautiful!
+          Every product you find here is meticulously designed and handcrafted by our skilled artisans. We believe in
+          the art of preservation, carefully selecting each element to ensure longevity and lasting beauty. With
+          attention to detail and a commitment to quality, we aim to bring the enchanting allure of nature into your
+          home.
+        </p>
+        <p>
+          At I & M GIFTLOVING, we take pride in our unique creations, each one reflecting our dedication to
+          craftsmanship and creativity. Whether you're searching for a statement piece for your own space or a
+          thoughtful gift for someone special, you'll discover a curated selection of handmade treasures that celebrate
+          the splendor of nature.
+        </p>
+        <p>
+          Thank you for choosing I & M GIFTLOVING. We invite you to <a href="/products">explore our collection</a> and
+          experience
+          the
+          timeless charm of our dried and preserved creations.
         </p>
       </q-card-section>
     </q-card>
