@@ -1,7 +1,9 @@
-import dried_floral from "./dried-floral";
-import home_decor from "./home-decor";
+import basket from "./basket";
+import vase from "./vase";
+import wreath from "./wreath";
+import wedding from "./wedding";
 
-const products = [...dried_floral, ...home_decor];
+const products = [...basket, ...vase, ...wreath, ...wedding];
 
 function tags() {
   let tags = [];
