@@ -1,42 +1,35 @@
 const products = [
   {
-    name: "Home Decor Arrangement",
-    image: "p1.png",
+    name: "Dried Floral Arrangement",
+    image: "b01.JPG",
     description:
       "A beautiful dried floral arrangement that will last for years.",
-    tags: ["dried floral", "arrangement"],
+    tags: ["arrangement"],
   },
   {
     name: "Home Decor",
-    image: "p2.png",
+    image: "b02.JPG",
     description:
       "A beautiful home decor item that will make your home look great.",
-    tags: ["home decor"],
+    tags: ["arrangement"],
   },
   {
     name: "Candle",
-    image: "p3.png",
+    image: "b03.JPG",
     description: "A beautiful candle that will make your home smell great.",
-    tags: ["candle"],
+    tags: ["arrangement"],
   },
   {
     name: "Soap",
-    image: "p4.png",
+    image: "b04.JPG",
     description: "A beautiful soap that will make your skin feel great.",
-    tags: ["soap"],
+    tags: ["arrangement"],
   },
   {
     name: "Lotion",
-    image: "p5.png",
+    image: "b05.JPG",
     description: "A beautiful lotion that will make your skin feel great.",
-    tags: ["lotion"],
-  },
-  {
-    name: "Dried Floral Arrangement",
-    image: "p1.png",
-    description:
-      "A beautiful dried floral arrangement that will last for years.",
-    tags: ["dried floral", "arrangement"],
+    tags: ["arrangement"],
   },
 ];
 
