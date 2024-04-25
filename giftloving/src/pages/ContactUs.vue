@@ -54,7 +54,7 @@
 import { copyToClipboard } from 'quasar'
 import IconButton from 'src/components/IconButton.vue'
 
-const email = "hello" + "@" + "imgiftloving.com";
+const email = "imgiftloving" + "@" + "gmail.com";
 const address = "569 Capital Dr Unit 2, Cornwall, PE C0A 1H8";
 
 </script>

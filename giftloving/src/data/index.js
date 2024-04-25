@@ -1,9 +1,9 @@
 import basket from "./basket";
-import vase from "./vase";
 import wreath from "./wreath";
+import bouquet from "./bouquet";
 import wedding from "./wedding";
 
-const products = [...basket, ...vase, ...wreath, ...wedding];
+const products = [...basket, ...wreath, ...bouquet, ...wedding];
 
 function tags() {
   let tags = [];
