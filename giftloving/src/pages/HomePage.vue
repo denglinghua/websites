@@ -5,7 +5,7 @@
   <q-responsive :ratio="ratio" style="max-width: 100%;">
     <q-carousel animated v-model="slide" navigation infinite :autoplay="autoplay" arrows transition-prev="slide-right"
       transition-next="slide-left" class="rounded-borders" swipeable>
-      <q-carousel-slide v-for="(s, idx) in slides" :name="idx" :key="idx" :img-src="imgDomain + s.img" />
+      <q-carousel-slide v-for="(s, idx) in slides" :name="idx" :key="idx" :img-src="s.img" />
     </q-carousel>
   </q-responsive>
 </template>
@@ -21,24 +21,28 @@ const imgDomain = getImgDomain();
 
 const slides = isSmallScreen() ?
   [
-    { name: 1, img: "img/v06.JPG" },
-    { name: 2, img: "img/v02.JPG" },
-    { name: 3, img: "img/v03.JPG" },
-    { name: 4, img: "img/v07.JPG" },
-    { name: 5, img: "img/v05.JPG" },
-    { name: 6, img: "img/v01.JPG" },
-    { name: 7, img: "img/v04.JPG" },
+    { name: 1, img: "v06.JPG" },
+    { name: 2, img: "v02.JPG" },
+    { name: 3, img: "v03.JPG" },
+    { name: 4, img: "v07.JPG" },
+    { name: 5, img: "v05.JPG" },
+    { name: 6, img: "v01.JPG" },
+    { name: 7, img: "v04.JPG" },
   ]
   :
   [
-    { name: 1, img: "img/h01.JPG" },
-    { name: 2, img: "img/h02.JPG" },
-    { name: 3, img: "img/h03.JPG" },
-    { name: 4, img: "img/h04.JPG" },
-    { name: 5, img: "img/h05.JPG" },
-    { name: 6, img: "img/h06.JPG" },
-    { name: 7, img: "img/h07.JPG" },
+    { name: 1, img: "h01.JPG" },
+    { name: 2, img: "h02.JPG" },
+    { name: 3, img: "h03.JPG" },
+    { name: 4, img: "h04.JPG" },
+    { name: 5, img: "h05.JPG" },
+    { name: 6, img: "h06.JPG" },
+    { name: 7, img: "h07.JPG" },
   ];
+
+slides.forEach((s) => {
+  s.img = `${imgDomain}img/home/${s.img}`;
+});
 
 onMounted(() => { });
 

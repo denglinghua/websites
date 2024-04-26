@@ -24,7 +24,7 @@ import { getImgDomain } from "src/g";
 const imgDomain = getImgDomain();
 const products = productData.products;
 products.forEach((p) => {
-  p.image = `${imgDomain}ps/${p.image}`;
+  p.image = `${imgDomain}img/ps/${p.image}`;
 });
 const tags = productData.tags();
 const filterTags = ref([]);
