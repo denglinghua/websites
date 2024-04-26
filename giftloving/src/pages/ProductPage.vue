@@ -8,7 +8,7 @@
   <q-dialog v-model="zoomed" auto-close>
     <q-card style="width: 800px; max-width: 100%;">
       <q-card-section class="q-pa-sm">
-        <q-img :src="zoomedProduct.image" :ratio="1" spinner-color="primary" fit="cover" />
+        <q-img :src="zoomedProduct.imgUrl" :ratio="1" spinner-color="primary" fit="cover" />
       </q-card-section>
     </q-card>
   </q-dialog>
@@ -24,7 +24,7 @@ import { getImgDomain } from "src/g";
 const imgDomain = getImgDomain();
 const products = productData.products;
 products.forEach((p) => {
-  p.image = `${imgDomain}img/ps/${p.image}`;
+  p.imgUrl = `${imgDomain}img/ps/${p.image}`;
 });
 const tags = productData.tags();
 const filterTags = ref([]);
