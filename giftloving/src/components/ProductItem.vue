@@ -1,7 +1,7 @@
 <template>
   <q-card class="q-ma-md p-card">
     <q-card-section class="q-pa-none">
-      <q-img :src="`ps/${product.image}`" :ratio="1" loading="lazy" spinner-color="primary" @click="zoom(product)"
+      <q-img :src="product.image" :ratio="1" loading="lazy" spinner-color="primary" @click="zoom(product)"
         class="zoomable rounded-borders" />
     </q-card-section>
     <q-card-section class="q-pt-none">

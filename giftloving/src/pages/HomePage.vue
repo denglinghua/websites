@@ -5,18 +5,19 @@
   <q-responsive :ratio="ratio" style="max-width: 100%;">
     <q-carousel animated v-model="slide" navigation infinite :autoplay="autoplay" arrows transition-prev="slide-right"
       transition-next="slide-left" class="rounded-borders" swipeable>
-      <q-carousel-slide v-for="(s, idx) in slides" :name="idx" :key="idx" :img-src="s.img" />
+      <q-carousel-slide v-for="(s, idx) in slides" :name="idx" :key="idx" :img-src="imgDomain + s.img" />
     </q-carousel>
   </q-responsive>
 </template>
 <script setup>
 import { ref, onMounted, onUnmounted, computed } from "vue";
-import { isSmallScreen } from "src/g";
+import { isSmallScreen, getImgDomain } from "src/g";
 
 const slide = ref(1);
 const autoplay = ref(2500);
 
 const ratio = computed(() => (isSmallScreen() ? 2 / 3 : 3 / 2));
+const imgDomain = getImgDomain();
 
 const slides = isSmallScreen() ?
   [

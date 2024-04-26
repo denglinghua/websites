@@ -2,4 +2,8 @@ function isSmallScreen() {
   return window.innerWidth < window.innerHeight;
 }
 
-export { isSmallScreen };
+function getImgDomain() {
+  return process.env.DEV ? "" : "https://img.giftloving.ca/";
+}
+
+export { isSmallScreen, getImgDomain };
