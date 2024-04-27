@@ -30,11 +30,15 @@ function getImgUrl(img, imgDomain) {
   return `${imgDomain}img/ps/${img}`;
 }
 
-const imgDomain = getImgDomain();
-products.forEach((product) => {
-  product.imgUrl = getImgUrl(product.image, imgDomain);
-  setSubImgs(product, imgDomain);
-});
+function initProducts() {
+  const imgDomain = getImgDomain();
+  for (let i = 0; i < products.length; i++) {
+    const product = products[i];
+    product.id = i;
+    product.imgUrl = getImgUrl(product.image, imgDomain);
+    setSubImgs(product, imgDomain);
+  }
+}
 
 function tags() {
   let tags = [];
@@ -53,5 +57,7 @@ function filterProducts(tags) {
     return product.tags.some((tag) => tags.includes(tag));
   });
 }
+
+initProducts();
 
 export default { products, tags, filterProducts };

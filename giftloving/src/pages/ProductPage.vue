@@ -3,7 +3,7 @@
     <TagSelect :tags="tags" v-model="filterTags" />
   </div>
   <div class="row justify-start">
-    <ProductItem v-for="(p, idx) in filterProducts" :key="idx" :product="p" @zoom="zoom" :slide="mobile" />
+    <ProductItem v-for="p in filterProducts" :key="p.id" :product="p" @zoom="zoom" :slide="mobile" />
   </div>
   <ProductZoom :product="zoomedProduct" :show="zoomed" v-if="!mobile" />
 </template>
