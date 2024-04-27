@@ -1,5 +1,5 @@
 <template>
-  <q-dialog v-model="showDialog" :auto-close="!slideMode">
+  <q-dialog v-model="showDialog" :auto-close="!slideMode" backdrop-filter="brightness(80%)">
     <q-card style="width: 800px; max-width: 100%;">
       <q-card-section class="q-pa-sm">
         <q-img :src="product.imgUrl" :ratio="1" spinner-color="primary" fit="cover" v-if="!slideMode" />
