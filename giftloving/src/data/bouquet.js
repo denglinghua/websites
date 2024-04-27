@@ -51,6 +51,30 @@ const products = [
     description: "",
     tags: ["bouquet"],
   },
+  {
+    name: "Spring Awakening",
+    price: 48,
+    image: "sp08.JPG",
+    subImages: 1,
+    description: "",
+    tags: ["bouquet"],
+  },
+  {
+    name: "Spring Awakening",
+    price: 48,
+    image: "sp09.JPG",
+    subImages: 1,
+    description: "",
+    tags: ["bouquet"],
+  },
+  {
+    name: "Spring Awakening",
+    price: 48,
+    image: "sp10.JPG",
+    subImages: 0,
+    description: "",
+    tags: ["bouquet"],
+  },
 ];
 
 export default products;

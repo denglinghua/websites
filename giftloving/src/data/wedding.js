@@ -34,6 +34,21 @@ const products = [
     description: "",
     tags: ["wedding"],
   },
+  {
+    name: "Deep Embrace",
+    price: 20,
+    image: "wd06.JPG",
+    subImages: 2,
+    description: "",
+    tags: ["wedding"],
+  },
+  {
+    name: "Deep Embrace",
+    price: 20,
+    image: "wd07.JPG",
+    description: "",
+    tags: ["wedding"],
+  },
 ];
 
 export default products;
