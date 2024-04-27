@@ -1,8 +1,11 @@
 <template>
-  <q-checkbox v-for="t in tags" v-model="selectTags" :val="t" :label="t" :key="t" />
+  <q-btn-group outline>
+    <q-btn v-for="t in ['all', ...tags]" :key="t" :label="t" flat dense @click="onClick(t)"
+      :class="t === selected ? 'selected' : ''" />
+  </q-btn-group>
 </template>
 <script setup>
-import { defineProps, ref, watch } from 'vue'
+import { defineProps, ref } from 'vue'
 
 const props = defineProps({
   tags: {
@@ -17,9 +20,17 @@ const props = defineProps({
 
 const emit = defineEmits(['update:model-value'])
 
-const selectTags = ref([]) // checkbox v-model
+const selected = ref('all')
 
-watch(selectTags, (newVal) => {
-  emit('update:model-value', newVal)
-})
+function onClick(val) {
+  selected.value = val
+  emit('update:model-value', val === 'all' ? [] : [val])
+}
 </script>
+
+<style lang="scss" scoped>
+.selected {
+  color: $secondary;
+  font-weight: bold;
+}
+</style>

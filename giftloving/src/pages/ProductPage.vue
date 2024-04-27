@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row justify-center">
     <TagSelect :tags="tags" v-model="filterTags" />
   </div>
   <div class="row justify-start">
