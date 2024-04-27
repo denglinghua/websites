@@ -3,7 +3,38 @@ import wreath from "./wreath";
 import bouquet from "./bouquet";
 import wedding from "./wedding";
 
+import { getImgDomain } from "src/g";
+
 const products = [...basket, ...wreath, ...bouquet, ...wedding];
+
+function setSubImgs(product, imgDomain) {
+  if (product.slides) {
+    return;
+  }
+
+  let slides = [product.image];
+  if (product.subImages) {
+    for (let i = 1; i <= product.subImages; i++) {
+      slides.push(subImgName(product.image, i));
+    }
+  }
+  product.slides = slides.map((img) => getImgUrl(img, imgDomain));
+}
+
+function subImgName(mainName, seqNo) {
+  const [name, extension] = mainName.split(".");
+  return `${name}_${seqNo}.${extension}`;
+}
+
+function getImgUrl(img, imgDomain) {
+  return `${imgDomain}img/ps/${img}`;
+}
+
+const imgDomain = getImgDomain();
+products.forEach((product) => {
+  product.imgUrl = getImgUrl(product.image, imgDomain);
+  setSubImgs(product, imgDomain);
+});
 
 function tags() {
   let tags = [];
