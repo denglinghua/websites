@@ -1,7 +1,7 @@
 <template>
   <q-card class="q-ma-md p-card">
     <q-card-section class="q-pa-none">
-      <q-carousel v-if="slide" v-model="slideIndex" animated :padding="false" control-color="grey-6"
+      <q-carousel v-if="slide" v-model="slideIndex" animated :padding="false" control-color="grey-3"
         :navigation="product.slides.length > 1" transition-prev="slide-right" transition-next="slide-left"
         class="rounded-borders" swipeable height="350px">
         <q-carousel-slide v-for="(s, idx) in product.slides" :name="idx" :key="idx" class="q-pa-none">
