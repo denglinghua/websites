@@ -4,7 +4,7 @@
       <q-card-section class="q-pa-sm">
         <q-img :src="product.imgUrl" :ratio="1" spinner-color="primary" fit="cover" v-if="!slideMode" />
         <q-responsive ratio="1" style="max-width: 100%;" v-else>
-          <q-carousel v-model="slide" animated navigation infinite arrows control-type="regular"
+          <q-carousel v-model="slide" animated navigation infinite arrows control-type="regular" control-color="grey-5"
             transition-prev="slide-right" transition-next="slide-left" class="rounded-borders" swipeable>
             <q-carousel-slide v-for="(s, idx) in product.slides" :name="idx" :key="idx" :img-src="s" class="slide"
               @click="close" />
