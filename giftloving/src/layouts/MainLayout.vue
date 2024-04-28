@@ -63,13 +63,13 @@ const menus = computed(() => [
   },
 ]);
 
-function getMenuName(to) {
-  let name = menus.value.find((m) => m.route === to)?.name;
-  return name ? name : to.substring(1);
+function getTitle() {
+  let title = router.currentRoute.value.name;
+  return title === 'home' ? "BRINGING BEAUTY TO YOUR HOME" : title.toUpperCase();
 }
 
 const router = useRouter();
-const pageTitle = computed(() => getMenuName(router.currentRoute.value.path));
+const pageTitle = computed(() => getTitle());
 useMeta(() => {
   return {
     title: pageTitle.value,
