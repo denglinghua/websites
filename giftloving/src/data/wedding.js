@@ -2,13 +2,6 @@ const products = [
   {
     name: "Deep Embrace",
     price: 20,
-    image: "wd01.JPG",
-    description: "",
-    tags: ["wedding"],
-  },
-  {
-    name: "Deep Embrace",
-    price: 20,
     image: "wd02.JPG",
     description: "",
     tags: ["wedding"],
@@ -46,6 +39,13 @@ const products = [
     name: "Deep Embrace",
     price: 20,
     image: "wd07.JPG",
+    description: "",
+    tags: ["wedding"],
+  },
+  {
+    name: "Deep Embrace",
+    price: 20,
+    image: "wd01.JPG",
     description: "",
     tags: ["wedding"],
   },
