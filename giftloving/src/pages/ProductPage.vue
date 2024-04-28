@@ -2,7 +2,7 @@
   <div class="row justify-center">
     <TagSelect :tags="tags" :filterTags="filterTags" />
   </div>
-  <div class="row justify-start">
+  <div class="row justify-center">
     <ProductItem v-for="p in filterProducts" :key="p.id" :product="p" @zoom="zoom" :slide="mobile" />
   </div>
   <ProductZoom :product="zoomedProduct" :show="zoomed" v-if="!mobile" />

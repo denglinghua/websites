@@ -25,7 +25,7 @@
         <router-view :key="$route.fullPath" />
       </q-page>
     </q-page-container>
-    <q-footer class="header-footer text-primary q-mb-md">
+    <q-footer class="header-footer text-primary q-mt-xs">
       <q-toolbar>
         <q-toolbar-title class="text-caption cp"> Copyright © {{ year }} I&M GIFTLOVING LTD. </q-toolbar-title>
       </q-toolbar>
