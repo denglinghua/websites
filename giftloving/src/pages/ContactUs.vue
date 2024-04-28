@@ -42,6 +42,17 @@
           </q-item-label>
         </q-item-section>
       </q-item>
+
+      <q-item>
+        <q-item-section avatar>
+          <q-icon color="primary" name="bi-clock-fill" />
+        </q-item-section>
+
+        <q-item-section>
+          <q-item-label caption>Business Hours</q-item-label>
+          <q-item-label>MON - FRI 9:30 AM - 5:00 PM</q-item-label>
+        </q-item-section>
+      </q-item>
     </q-list>
   </q-card>
   <q-card class="q-mt-md q-ml-md" style="max-width: 600px">
