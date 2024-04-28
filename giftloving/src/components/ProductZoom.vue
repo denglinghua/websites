@@ -4,8 +4,13 @@
       <q-card-section class="q-pa-sm">
         <q-img :src="product.imgUrl" :ratio="1" spinner-color="primary" fit="cover" v-if="!slideMode" />
         <q-responsive ratio="1" style="max-width: 100%;" v-else>
-          <q-carousel v-model="slide" animated navigation infinite arrows control-type="regular" control-color="grey-5"
-            transition-prev="slide-right" transition-next="slide-left" class="rounded-borders" swipeable>
+          <q-carousel v-model="slide" animated navigation infinite arrows transition-prev="slide-right"
+            transition-next="slide-left" class="rounded-borders" swipeable>
+            <template v-slot:navigation-icon="{ active, btnProps, onClick }">
+              <q-btn v-if="active" size="xs" :icon="btnProps.icon" color="secondary" flat round dense
+                @click="onClick" />
+              <q-btn v-else size="xs" :icon="btnProps.icon" color="grey-4" flat round dense @click="onClick" />
+            </template>
             <q-carousel-slide v-for="(s, idx) in product.slides" :name="idx" :key="idx" :img-src="s" class="slide"
               @click="close" />
           </q-carousel>
