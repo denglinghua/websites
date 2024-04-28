@@ -1,6 +1,6 @@
 const products = [
   {
-    name: "Moonlit Blossoms",
+    name: "Everlunar 01",
     price: 128,
     image: "w01.JPG",
     subImages: 1,
@@ -8,7 +8,7 @@ const products = [
     tags: ["wreath"],
   },
   {
-    name: "Moonlit Blossoms",
+    name: "Everlunar 02",
     price: 128,
     image: "w02.JPG",
     subImages: 1,
@@ -16,7 +16,7 @@ const products = [
     tags: ["wreath"],
   },
   {
-    name: "Moonlit Blossoms",
+    name: "Everlunar 03",
     price: 128,
     image: "w03.JPG",
     subImages: 1,
@@ -24,7 +24,7 @@ const products = [
     tags: ["wreath"],
   },
   {
-    name: "Moonlit Blossoms",
+    name: "Everlunar 04",
     price: 68,
     image: "w04.JPG",
     subImages: 1,
@@ -32,16 +32,16 @@ const products = [
     tags: ["wreath"],
   },
   {
-    name: "Moonlit Blossoms",
-    price: 68,
+    name: "Everlunar 05",
+    price: 38,
     image: "w05.JPG",
     subImages: 0,
     description: "",
     tags: ["wreath"],
   },
   {
-    name: "Moonlit Blossoms",
-    price: 68,
+    name: "Everlunar 06",
+    price: 38,
     image: "w06.JPG",
     subImages: 0,
     description: "",

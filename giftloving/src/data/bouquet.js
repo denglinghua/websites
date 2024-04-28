@@ -1,6 +1,6 @@
 const products = [
   {
-    name: "Spring Awakening",
+    name: "Everspring 01",
     price: 48,
     image: "sp01.JPG",
     subImages: 1,
@@ -8,28 +8,28 @@ const products = [
     tags: ["bouquet"],
   },
   {
-    name: "Spring Awakening",
+    name: "Everspring 02",
     price: 48,
     image: "sp02.JPG",
     description: "",
     tags: ["bouquet"],
   },
   {
-    name: "Spring Awakening",
+    name: "Everspring 03",
     price: 48,
     image: "sp03.JPG",
     description: "",
     tags: ["bouquet"],
   },
   {
-    name: "Spring Awakening",
+    name: "Everspring 04",
     price: 48,
     image: "sp04.JPG",
     description: "",
     tags: ["bouquet"],
   },
   {
-    name: "Spring Awakening",
+    name: "Everspring 05",
     price: 48,
     image: "sp05.JPG",
     subImages: 1,
@@ -37,7 +37,7 @@ const products = [
     tags: ["bouquet"],
   },
   {
-    name: "Spring Awakening",
+    name: "Everspring 06",
     price: 48,
     image: "sp06.JPG",
     subImages: 2,
@@ -45,7 +45,7 @@ const products = [
     tags: ["bouquet"],
   },
   {
-    name: "Spring Awakening",
+    name: "Everspring 07",
     price: 48,
     image: "sp07.JPG",
     subImages: 2,
@@ -53,7 +53,7 @@ const products = [
     tags: ["bouquet"],
   },
   {
-    name: "Spring Awakening",
+    name: "Everspring 08",
     price: 48,
     image: "sp12.JPG",
     subImages: 2,
@@ -61,7 +61,7 @@ const products = [
     tags: ["bouquet"],
   },
   {
-    name: "Spring Awakening",
+    name: "Everspring 09",
     price: 48,
     image: "sp11.JPG",
     subImages: 2,
@@ -69,7 +69,7 @@ const products = [
     tags: ["bouquet"],
   },
   {
-    name: "Spring Awakening",
+    name: "Everspring 10",
     price: 48,
     image: "sp08.JPG",
     subImages: 1,
@@ -77,7 +77,7 @@ const products = [
     tags: ["bouquet"],
   },
   {
-    name: "Spring Awakening",
+    name: "Everspring 11",
     price: 48,
     image: "sp09.JPG",
     subImages: 1,
@@ -85,7 +85,7 @@ const products = [
     tags: ["bouquet"],
   },
   {
-    name: "Spring Awakening",
+    name: "Everspring 12",
     price: 48,
     image: "sp10.JPG",
     subImages: 0,
