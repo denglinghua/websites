@@ -1,6 +1,6 @@
 <template>
-  <q-btn-group outline>
-    <q-btn v-for="t in ['all', ...tags]" :key="t" :label="t" flat dense @click="onClick(t)"
+  <q-btn-group outline v-model="selected">
+    <q-btn v-for="t in ['all', ...tags]" :key="t" :label="t" flat dense :to="toTag(t)"
       :class="t === selected ? 'selected' : ''" />
   </q-btn-group>
 </template>
@@ -12,19 +12,19 @@ const props = defineProps({
     type: Array,
     default: () => []
   },
-  modelValue: {
+  filterTags: {
     type: Array,
     default: () => []
-  },
+  }
 })
 
-const emit = defineEmits(['update:model-value'])
+const selected = ref(props.filterTags.length ? props.filterTags[0] : 'all')
 
-const selected = ref('all')
-
-function onClick(val) {
-  selected.value = val
-  emit('update:model-value', val === 'all' ? [] : [val])
+function toTag(tag) {
+  return {
+    name: 'product',
+    params: { tags: tag === 'all' ? '' : [tag] }
+  }
 }
 </script>
 
@@ -33,4 +33,6 @@ function onClick(val) {
   color: $secondary;
   font-weight: bold;
 }
+
+.content {}
 </style>

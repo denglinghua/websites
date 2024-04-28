@@ -3,12 +3,32 @@ const routes = [
     path: "/",
     component: () => import("layouts/MainLayout.vue"),
     children: [
-      { path: "", component: () => import("pages/HomePage.vue") },
-      { path: "products", component: () => import("pages/ProductPage.vue") },
-      { path: "about", component: () => import("pages/AboutUs.vue") },
-      { path: "services", component: () => import("pages/ServicePage.vue") },
-      { path: "contact", component: () => import("pages/ContactUs.vue") },
-      { path: "billing", component: () => import("pages/BillingInfo.vue") },
+      { name: "home", path: "", component: () => import("pages/HomePage.vue") },
+      {
+        name: "product",
+        path: "products/:tags*",
+        component: () => import("pages/ProductPage.vue"),
+      },
+      {
+        name: "about",
+        path: "about",
+        component: () => import("pages/AboutUs.vue"),
+      },
+      {
+        name: "service",
+        path: "services",
+        component: () => import("pages/ServicePage.vue"),
+      },
+      {
+        name: "contact",
+        path: "contact",
+        component: () => import("pages/ContactUs.vue"),
+      },
+      {
+        name: "billing",
+        path: "billing",
+        component: () => import("pages/BillingInfo.vue"),
+      },
     ],
   },
 

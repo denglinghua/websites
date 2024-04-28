@@ -6,12 +6,12 @@
           <q-btn flat dense label="I&M GiftLoving" class="text-uppercase text-h6 q-ml-none title" to="/" />
         </q-toolbar-title>
         <q-tabs align="right" inline-label v-if="largeScreen" dense>
-          <q-route-tab v-for="m in menus" :to="m.route" :label="m.name" :key="m.name" />
+          <q-route-tab v-for="m in menus" :to="{ name: m.route }" :label="m.name" :key="m.name" />
         </q-tabs>
         <q-btn flat color="primary" icon="bi-list" v-else>
           <q-menu>
             <q-list style="min-width: 150px">
-              <q-item clickable v-close-popup exact v-for="m in menus" :to="m.route" :key="m.name">
+              <q-item clickable v-close-popup exact v-for="m in menus" :to="{ name: m.route }" :key="m.name">
                 <q-item-section>{{ m.name }}</q-item-section>
               </q-item>
             </q-list>
@@ -43,23 +43,23 @@ const largeScreen = ref(false);
 const menus = computed(() => [
   {
     name: "HOME",
-    route: "/",
+    route: "home",
   },
   {
     name: "ABOUT",
-    route: "/about",
+    route: "about",
   },
   {
     name: "PRODUCTS",
-    route: "/products",
+    route: "product",
   },
   {
     name: "SERVICES",
-    route: "/services",
+    route: "service",
   },
   {
     name: "CONTACT",
-    route: "/contact",
+    route: "contact",
   },
 ]);
 
