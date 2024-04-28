@@ -1,11 +1,12 @@
 <template>
   <q-btn-group outline v-model="selected">
-    <q-btn v-for="t in ['all', ...tags]" :key="t" :label="t" flat dense :to="toTag(t)"
+    <q-btn v-for="t in ['all', ...tags]" :key="t" :label="t" flat dense :to="toTag(t)" :size="size"
       :class="t === selected ? 'selected' : ''" />
   </q-btn-group>
 </template>
 <script setup>
 import { defineProps, ref } from 'vue'
+import { isSmallScreen } from 'src/g';
 
 const props = defineProps({
   tags: {
@@ -19,6 +20,7 @@ const props = defineProps({
 })
 
 const selected = ref(props.filterTags.length ? props.filterTags[0] : 'all')
+const size = isSmallScreen() ? 'sm' : 'md'
 
 function toTag(tag) {
   return {
@@ -33,6 +35,4 @@ function toTag(tag) {
   color: $secondary;
   font-weight: bold;
 }
-
-.content {}
 </style>
