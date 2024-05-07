@@ -1,7 +1,7 @@
 <template>
   <div class="column items-center q-mb-sm">
     <q-card class="about-card">
-      <q-img src="img/about.jpg" style="max-height: 540px" />
+      <q-img src="img/about.jpg" style="max-height: 50vh" />
       <q-card-section class="q-pt-md">
         <p>
           Welcome to <b>I & M GIFTLOVING</b>, where we specialize in crafting exquisite dried and preserved collections.

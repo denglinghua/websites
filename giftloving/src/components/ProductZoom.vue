@@ -1,6 +1,6 @@
 <template>
   <q-dialog v-model="showDialog" :auto-close="!slideMode" backdrop-filter="brightness(80%)">
-    <q-card style="width: 800px; max-width: 100%;">
+    <q-card :style="{ width: `${winHeight}px`, maxWidth: '100%' }">
       <q-card-section class="q-pa-sm">
         <q-img :src="product.imgUrl" :ratio="1" spinner-color="primary" fit="cover" v-if="!slideMode" />
         <q-responsive ratio="1" style="max-width: 100%;" v-else>
@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-import { ref, watch } from "vue";
+import { ref, watch, onMounted, onUnmounted } from "vue";
 
 const props = defineProps(["product", "show"]);
 const showDialog = ref(false);
@@ -40,6 +40,24 @@ watch(() => props.show, () => {
 function close() {
   showDialog.value = false;
 }
+
+const winHeight = ref(zoomWinHeight());
+function updateHeight() {
+  winHeight.value = zoomWinHeight();
+};
+
+function zoomWinHeight() {
+  const x = Math.min(window.innerHeight - 80, 800);
+  return x;
+}
+
+onMounted(() => {
+  window.addEventListener('resize', updateHeight);
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', updateHeight);
+})
 </script>
 
 <style scoped>

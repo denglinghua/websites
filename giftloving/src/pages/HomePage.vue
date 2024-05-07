@@ -2,7 +2,7 @@
   <div class="slogan" align="center">
     Bringing Beauty to Your Home
   </div>
-  <q-responsive :ratio="ratio" style="max-width: 100%;">
+  <q-responsive :ratio="ratio" style="max-height: 75vh;">
     <q-carousel animated v-model="slide" navigation infinite :autoplay="autoplay" arrows transition-prev="slide-right"
       transition-next="slide-left" class="rounded-borders" swipeable>
       <q-carousel-slide v-for="(s, idx) in slides" :name="idx" :key="idx" :img-src="s.img" />
