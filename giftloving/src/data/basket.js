@@ -42,6 +42,7 @@ const products = [
     name: "Everbloom 06",
     price: 168,
     image: "b06.JPG",
+    subImages: 1,
     description: "",
     tags: ["arrangement"],
   },

@@ -73,7 +73,7 @@ const pageTitle = computed(() => getTitle());
 useMeta(() => {
   return {
     title: pageTitle.value,
-    titleTemplate: (title) => `${title} | I & M GiftLoving`,
+    titleTemplate: (title) => `${title} | I&M GiftLoving`,
   };
 });
 

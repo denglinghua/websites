@@ -1,4 +1,4 @@
-I & M giftloving Ltd. company website
+I&M giftloving Ltd. company website
 
 ## Install yarn, node required.
 
