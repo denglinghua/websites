@@ -92,6 +92,30 @@ const products = [
     description: "",
     tags: ["bouquet"],
   },
+  {
+    name: "Everspring 13",
+    price: 48,
+    image: "sp13.JPG",
+    subImages: 2,
+    description: "",
+    tags: ["bouquet"],
+  },
+  {
+    name: "Everspring 14",
+    price: 48,
+    image: "sp14.JPG",
+    subImages: 2,
+    description: "",
+    tags: ["bouquet"],
+  },
+  {
+    name: "Everspring 15",
+    price: 48,
+    image: "sp15.JPG",
+    subImages: 2,
+    description: "",
+    tags: ["bouquet"],
+  },
 ];
 
 export default products;
