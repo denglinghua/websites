@@ -9,7 +9,7 @@
               {{ s.description }}
             </div>
           </q-card-section>
-          <q-card-section class="col-7 flex flex-center">
+          <q-card-section class="col-6 flex flex-center">
             <q-img class="rounded-borders" :src="s.img" />
           </q-card-section>
         </q-card-section>
