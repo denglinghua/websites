@@ -50,7 +50,7 @@
 
         <q-item-section>
           <q-item-label caption>Business Hours</q-item-label>
-          <q-item-label>MON - FRI 9:30 AM - 5:00 PM</q-item-label>
+          <q-item-label>MON - FRI 9:30 AM - 4:30 PM</q-item-label>
         </q-item-section>
       </q-item>
     </q-list>

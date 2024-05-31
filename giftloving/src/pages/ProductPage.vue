@@ -3,9 +3,12 @@
     <TagSelect :tags="tags" :filterTags="filterTags" />
   </div>
   <div class="row justify-center">
-    <ProductItem v-for="p in filterProducts" :key="p.id" :product="p" @zoom="zoom" :slide="mobile" />
+    <ProductItem v-for="p in filterProducts" :key="p.id" :product="p" @zoom="zoom" @reserve="reserve" :slide="mobile" />
   </div>
   <ProductZoom :product="zoomedProduct" :show="zoomed" v-if="!mobile" />
+  <q-dialog v-model="reserved" nopadding>
+    <ReserveProduct :product="reserveProduct" />
+  </q-dialog>
 </template>
 <script setup>
 import { ref } from "vue";
@@ -15,6 +18,7 @@ import ProductItem from "src/components/ProductItem.vue";
 import TagSelect from "src/components/TagSelect.vue";
 import productData from "src/data";
 import ProductZoom from "src/components/ProductZoom.vue";
+import ReserveProduct from "src/components/ReserveProduct.vue";
 import { isSmallScreen } from "src/g";
 
 const router = useRouter();
@@ -33,5 +37,13 @@ const zoomedProduct = ref(null);
 function zoom(product) {
   zoomedProduct.value = product;
   zoomed.value = new Date().getTime();
+}
+
+const reserved = ref(false);
+const reserveProduct = ref(null);
+function reserve(product) {
+  console.log("reserve", product);
+  reserveProduct.value = product;
+  reserved.value = true;
 }
 </script>

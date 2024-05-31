@@ -14,10 +14,13 @@
       <q-img v-else :src="product.imgUrl" :ratio="1" loading="lazy" spinner-color="primary" @click="zoom(product)"
         class="zoomable rounded-borders" />
     </q-card-section>
-    <q-card-section class="q-pt-none">
-      <div class="text-overline">${{ product.price }}</div>
-      <div>{{ product.name }}</div>
+    <q-card-section class="q-pa-sm">
+      {{ product.name }}
     </q-card-section>
+    <q-card-actions class="q-pt-none justify-between">
+      <div>${{ product.price }}</div>
+      <q-btn color="secondary" label="Reserve" size="sm" @click="reserve(product)" />
+    </q-card-actions>
   </q-card>
 </template>
 
@@ -25,11 +28,15 @@
 import { ref, defineProps, defineEmits } from "vue";
 
 const props = defineProps(["product", "slide"]);
-const emit = defineEmits(["zoom"]);
+const emit = defineEmits(["zoom", "reserve"]);
 const slideIndex = ref(0);
 
 function zoom(product) {
   emit("zoom", product);
+}
+
+function reserve(product) {
+  emit("reserve", product);
 }
 </script>
 <style lang="sass" scoped>
