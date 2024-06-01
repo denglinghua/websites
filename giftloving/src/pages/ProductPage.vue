@@ -6,7 +6,7 @@
     <ProductItem v-for="p in filterProducts" :key="p.id" :product="p" @zoom="zoom" @reserve="reserve" :slide="mobile" />
   </div>
   <ProductZoom :product="zoomedProduct" :show="zoomed" v-if="!mobile" />
-  <q-dialog v-model="reserved" nopadding>
+  <q-dialog v-model="reserved">
     <ReserveProduct :product="reserveProduct" />
   </q-dialog>
 </template>
@@ -42,7 +42,6 @@ function zoom(product) {
 const reserved = ref(false);
 const reserveProduct = ref(null);
 function reserve(product) {
-  console.log("reserve", product);
   reserveProduct.value = product;
   reserved.value = true;
 }
