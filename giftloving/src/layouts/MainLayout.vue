@@ -84,7 +84,7 @@ function onResize(size) {
 const year = new Date().getFullYear();
 
 function fb() {
-  window.open("https://www.facebook.com/imgiftloving", "_blank");
+  window.open("https://www.facebook.com/giftlovingca", "_blank");
 }
 </script>
 <style lang="scss" scoped>
