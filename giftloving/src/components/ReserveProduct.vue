@@ -60,8 +60,9 @@ const post = getCurrentInstance().appContext.config.globalProperties.$api.post
 function submit() {
   const data = {
     access_key: "59bd57db-8ca0-40e9-8771-64a2a9d25f5b",
+    subject: `New Reservation - ${name.value} - ${props.product.name}`,
     product: props.product.name,
-    productImg: "https://giftloving.ca" + props.product.imgUrl,
+    productImg: props.product.imgUrl,
     name: name.value,
     phone: phone.value,
     email: email.value,
