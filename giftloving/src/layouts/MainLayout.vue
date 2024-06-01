@@ -5,7 +5,7 @@
         <q-toolbar-title class="items-center">
           <q-btn flat dense label="I&M GiftLoving" class="text-uppercase text-h6 q-ml-none title" to="/" />
         </q-toolbar-title>
-        <q-tabs align="right" inline-label v-if="largeScreen" dense>
+        <q-tabs align="right" inline-label v-if="largeScreen" dense no-caps>
           <q-route-tab v-for="m in menus" :to="{ name: m.route }" :label="m.name" :key="m.name" />
         </q-tabs>
         <q-btn flat color="primary" icon="bi-list" v-else>
@@ -42,23 +42,23 @@ import IconButton from "src/components/IconButton.vue";
 const largeScreen = ref(false);
 const menus = computed(() => [
   {
-    name: "HOME",
+    name: "Home",
     route: "home",
   },
   {
-    name: "ABOUT",
+    name: "About",
     route: "about",
   },
   {
-    name: "PRODUCTS",
+    name: "Products",
     route: "product",
   },
   {
-    name: "SERVICES",
+    name: "Services",
     route: "service",
   },
   {
-    name: "CONTACT",
+    name: "Contact",
     route: "contact",
   },
 ]);
