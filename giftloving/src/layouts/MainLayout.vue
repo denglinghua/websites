@@ -6,7 +6,9 @@
           <q-btn flat dense label="I&M GiftLoving" class="text-uppercase text-h6 q-ml-none title" to="/" />
         </q-toolbar-title>
         <q-tabs align="right" inline-label v-if="largeScreen" dense no-caps>
-          <q-route-tab v-for="m in menus" :to="{ name: m.route }" :label="m.name" :key="m.name" />
+          <q-route-tab v-for="m in menus" :to="{ name: m.route }" :key="m.name">
+            <span class="text-subtitle1">{{ m.name }}</span>
+          </q-route-tab>
         </q-tabs>
         <q-btn flat color="primary" icon="bi-list" v-else>
           <q-menu>

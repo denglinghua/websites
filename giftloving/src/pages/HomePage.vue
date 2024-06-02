@@ -51,10 +51,9 @@ onUnmounted(() => { });
 <style lang="scss" scoped>
 .slogan {
   letter-spacing: 0.2em;
-  text-transform: uppercase;
   color: $grey-6;
   font-size: 2em;
-  font-weight: 550;
+  font-weight: 500;
   margin-bottom: 16px;
 
   @media (max-width: 768px) {

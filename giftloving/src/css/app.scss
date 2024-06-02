@@ -53,11 +53,11 @@
   --header-footer-bg: white;
   --source-link-color: var(--q-primary);
   --q-primary: #757575;
-  font-family: "Proxima Nova Light", sans-serif;
+  font-family: "Proxima Nova", sans-serif;
   letter-spacing: 0.1em;
-  font-size: 1rem;
-
-  @media (max-width: 768px) {
+  font-size: 1.2rem;
+  @media screen and (max-width: 768px) {
+    font-family: "Proxima Nova Light", sans-serif;
     font-size: 0.9rem;
   }
 }

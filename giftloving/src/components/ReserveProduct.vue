@@ -17,8 +17,8 @@
           <q-input v-model="address" label="Address" hint="Deliver : Charlottetown, Stratford, Cornwall."
             :rules="requiredRules" v-if="delivery == 'Delivery'" />
           <div class="row q-mt-md">
-            <q-btn label="Reserve" type="submit" color="secondary" no-caps dense />
-            <q-btn label="Cancel" class="q-ml-md" color="primary" no-caps flat dense v-close-popup />
+            <q-btn label="Reserve" type="submit" color="secondary" no-caps />
+            <q-btn label="Cancel" class="q-ml-md" color="primary" no-caps flat v-close-popup />
           </div>
         </q-form>
       </div>
