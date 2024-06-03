@@ -46,3 +46,8 @@ function reserve(product) {
   reserved.value = true;
 }
 </script>
+<style lang="scss">
+.q-dialog__backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}
+</style>
