@@ -5,7 +5,7 @@ export default ({ app, router }) => {
   app.use(
     VueGtag,
     {
-      config: { id: "G-HDBYWHYG03" },
+      config: { id: "AW-16593452488" },
     },
     router
   );
