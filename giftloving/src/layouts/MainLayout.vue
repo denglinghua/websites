@@ -5,8 +5,10 @@
         <q-toolbar-title class="items-center">
           <q-btn flat dense label="I&M GiftLoving" class="text-uppercase text-h6 q-ml-none title" to="/" />
         </q-toolbar-title>
-        <q-tabs align="right" inline-label v-if="largeScreen" dense>
-          <q-route-tab v-for="m in menus" :to="{ name: m.route }" :label="m.name" :key="m.name" />
+        <q-tabs align="right" inline-label v-if="largeScreen" dense no-caps>
+          <q-route-tab v-for="m in menus" :to="{ name: m.route }" :key="m.name">
+            <span class="text-subtitle1">{{ m.name }}</span>
+          </q-route-tab>
         </q-tabs>
         <q-btn flat color="primary" icon="bi-list" v-else>
           <q-menu>
@@ -42,23 +44,23 @@ import IconButton from "src/components/IconButton.vue";
 const largeScreen = ref(false);
 const menus = computed(() => [
   {
-    name: "HOME",
+    name: "Home",
     route: "home",
   },
   {
-    name: "ABOUT",
+    name: "About",
     route: "about",
   },
   {
-    name: "PRODUCTS",
+    name: "Products",
     route: "product",
   },
   {
-    name: "SERVICES",
+    name: "Services",
     route: "service",
   },
   {
-    name: "CONTACT",
+    name: "Contact",
     route: "contact",
   },
 ]);
@@ -84,7 +86,7 @@ function onResize(size) {
 const year = new Date().getFullYear();
 
 function fb() {
-  window.open("https://www.facebook.com/imgiftloving", "_blank");
+  window.open("https://www.facebook.com/giftlovingca", "_blank");
 }
 </script>
 <style lang="scss" scoped>

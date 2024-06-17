@@ -19,7 +19,7 @@
     </q-card-section>
     <q-card-actions class="q-pt-none justify-between">
       <div>${{ product.price }}</div>
-      <q-btn color="secondary" label="Reserve" size="sm" @click="reserve(product)" />
+      <q-btn color="secondary" label="Reserve" no-caps dense size="md" @click="reserve(product)" />
     </q-card-actions>
   </q-card>
 </template>

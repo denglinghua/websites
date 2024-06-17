@@ -1,51 +1,37 @@
 <template>
-  <q-tab-panels v-model="panel" animated class="shadow-2 rounded-borders">
-    <q-tab-panel name="order" class="q-pa-xs">
-      <q-card class="my-card">
-        <img :src="product.imgUrl">
-        <q-card-section class="q-pt-sm q-pb-none">
-          <div class="text-subtitle2">{{ product.name }}</div>
-        </q-card-section>
+  <q-tab-panels v-model="panel" animated class="shadow-2 rounded-borders my-card">
+    <q-tab-panel name="order" class="q-pa-sm ">
+      <div class="column q-gutter-xs">
+        <div class="row justify-center">
+          <q-img :src="product.imgUrl" width="200px" class="rounded-borders">
+            <div class="absolute-bottom text-subtitle2 text-center">
+              {{ product.name }}
+            </div>
+          </q-img>
+        </div>
         <q-form @submit="submit">
-          <q-card-section class="q-py-none">
-            <q-input v-model="name" label="Name" :rules="requiredRules" />
-          </q-card-section>
-
-          <q-card-section class="q-py-none">
-            <q-input v-model="phone" label="Phone" :rules="requiredRules" />
-          </q-card-section>
-
-          <q-card-section class="q-py-none">
-            <q-input v-model="email" label="Email" :rules="emailRules" />
-          </q-card-section>
-
-          <q-card-section class="q-pt-md q-pb-none">
-            <q-option-group v-model="delivery" :options="options" color="primary" inline dense />
-          </q-card-section>
-
-          <q-card-section class="q-py-none" v-if="delivery == 'Delivery'">
-            <q-input v-model="address" label="Address" hint="Deliver : Charlottetown, Stratford, Cornwall."
-              :rules="requiredRules" />
-          </q-card-section>
-          <q-card-actions class="q-pt-md">
-            <q-btn label="Reserve" type="submit" color="secondary" dense />
-            <q-btn label="Cancel" color="primary" flat dense v-close-popup />
-          </q-card-actions>
+          <q-input v-model="name" label="Name" :rules="requiredRules" />
+          <q-input v-model="phone" label="Phone" :rules="requiredRules" />
+          <q-input v-model="email" label="Email" :rules="emailRules" />
+          <q-option-group v-model="delivery" :options="options" color="primary" inline dense />
+          <q-input v-model="address" label="Address" hint="Deliver : Charlottetown, Stratford, Cornwall."
+            :rules="requiredRules" v-if="delivery == 'Delivery'" />
+          <div class="row q-mt-md">
+            <q-btn label="Reserve" type="submit" color="secondary" no-caps />
+            <q-btn label="Cancel" class="q-ml-md" color="primary" no-caps flat v-close-popup />
+          </div>
         </q-form>
-      </q-card>
+      </div>
     </q-tab-panel>
     <q-tab-panel name="success">
-      <q-card class="my-card">
-        <q-card-section class="q-pt-md q-pb-none">
-          <div class="text-h6">Thank you for your reservation!</div>
-        </q-card-section>
-        <q-card-section class="q-py-none">
-          <div class="text-subtitle2">We will contact you soon.</div>
-        </q-card-section>
-        <q-card-actions class="q-pt-md">
-          <q-btn label="Close" color="primary" dense v-close-popup />
-        </q-card-actions>
-      </q-card>
+      <div>
+        <div class="q-mb-md justify-center">
+          <q-icon name="bi-check-circle-fill" size="2em" color="positive" />
+        </div>
+        <div class="text-h6">Thank you for your reservation!</div>
+        <div class="text-subtitle1">We will contact you soon.</div>
+        <q-btn label="Close" class="q-mt-md" color="primary" no-caps v-close-popup />
+      </div>
     </q-tab-panel>
   </q-tab-panels>
 </template>
@@ -74,8 +60,9 @@ const post = getCurrentInstance().appContext.config.globalProperties.$api.post
 function submit() {
   const data = {
     access_key: "59bd57db-8ca0-40e9-8771-64a2a9d25f5b",
+    subject: `New Reservation - ${name.value} - ${props.product.name}`,
     product: props.product.name,
-    productImg: "https://giftloving.ca" + props.product.imgUrl,
+    productImg: props.product.imgUrl,
     name: name.value,
     phone: phone.value,
     email: email.value,
@@ -83,7 +70,7 @@ function submit() {
     address: address.value,
   };
 
-  console.log(data);
+  // console.log(data);
 
   post("https://api.web3forms.com/submit", data)
     .then((res) => {
@@ -100,6 +87,4 @@ function submit() {
 .my-card
   width: 100%
   max-width: 480px
-  box-shadow: none !important
-  border: none !important
 </style>
