@@ -1,0 +1,18 @@
+0. ssh -i ~/ssh/$KEY_FILE $USER@$IP
+1. scp -i ~/ssh/$KEY_FILE -r ~/source/giftloving/dist/spa/* $USER@$IP:/var/www/giftloving.ca/html
+2. Add A record @ -> ip
+3. Add CNAME record www -> @
+4. config apache2:
+https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04
+sudo a2ensite mysite
+systemctl reload apache2
+https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-20-04
+
+https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04
+
+sudo ln -s /etc/nginx/sites-available/giftloving.ca /etc/nginx/sites-enabled/
+https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-20-04
+
+sudo certbot --nginx -d giftloving.ca -d www.igiftloving.ca
+
+check config : sudo nginx -t
