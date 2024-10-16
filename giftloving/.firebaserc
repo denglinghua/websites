@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "giftloving"
-  }
+    "default": "w-giftloving",
+    "w-giftloving": "w-giftloving"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
