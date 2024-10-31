@@ -39,6 +39,8 @@
         <IconButton flat color="primary" icon="bi-facebook" @click="fb" :tooltip="$t('layout.facebook')" />
         <IconButton flat color="primary" icon="bi-linkedin" :tooltip="$t('layout.linkedin')" />
         -->
+        <icon-button flat color="primary" icon="bi-chat-square-dots-fill" @click="showContact = true"
+          :tooltip="$t('layout.sendMessage')" />
         <icon-button flat color="primary" icon="bi-heart-fill" @click="showThanks = true"
           :tooltip="$t('layout.openSource')" />
         <DarkModeToggle />
@@ -48,6 +50,9 @@
     <q-dialog v-model="showThanks">
       <open-source />
     </q-dialog>
+    <q-dialog v-model="showContact">
+      <contact-form v-model="showContact" />
+    </q-dialog>
   </q-layout>
 </template>
 <script setup>
@@ -55,6 +60,7 @@ import { QDialog, useMeta } from "quasar";
 import { computed, ref } from "vue";
 import { useRouter } from "vue-router";
 import OpenSource from "../components/OpenSource.vue";
+import ContactForm from "../components/ContactForm.vue";
 import DarkModeToggle from "src/components/DarkModeToggle.vue";
 import IconButton from "src/components/IconButton.vue";
 import LanguageSwitch from "src/components/LanguageSwitch.vue";
@@ -106,10 +112,12 @@ function onResize(size) {
 
 const year = new Date().getFullYear();
 const showThanks = ref(false);
+const showContact = ref(false);
 
 function fb() {
   window.open("https://www.facebook.com/islandcoyote", "_blank");
 }
+
 </script>
 <style lang="scss" scoped>
 .layout-container {

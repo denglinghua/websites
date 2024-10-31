@@ -7,6 +7,7 @@ export default {
   },
   layout: {
     openSource: "Merci à l'open source",
+    sendMessage: "Envoyez-nous un message",
     lightMode: "Mode clair",
     darkMode: "Mode sombre",
     copyright: "Droits d'auteur © {year} Island Coyote Tech Inc.",
@@ -70,6 +71,11 @@ export default {
     email: "Email",
     phone: "Téléphone",
     copyTooltip: "Copier l'adresse dans le presse-papiers",
+    fullName: "Nom complet",
+    message: "Votre message",
+    send: "Envoyer",
+    cancel: "Annuler",
+    msgSent: "Message envoyé, nous vous contacterons bientôt. Merci!",
   },
   opensource: {
     title:
