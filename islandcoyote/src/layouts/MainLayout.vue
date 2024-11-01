@@ -47,10 +47,10 @@
       </q-toolbar>
     </q-footer>
     <q-resize-observer @resize="onResize" />
-    <q-dialog v-model="showThanks">
+    <q-dialog v-model="showThanks" :backdrop-filter="backdropFilter">
       <open-source />
     </q-dialog>
-    <q-dialog v-model="showContact">
+    <q-dialog v-model="showContact" :backdrop-filter="backdropFilter">
       <contact-form v-model="showContact" />
     </q-dialog>
   </q-layout>
@@ -67,6 +67,8 @@ import LanguageSwitch from "src/components/LanguageSwitch.vue";
 import useGlobal from "src/global";
 
 const $t = useGlobal().$t
+
+const backdropFilter = "blur(4px) saturate(150%)"
 
 const largeScreen = ref(false);
 const menus = computed(() => [
