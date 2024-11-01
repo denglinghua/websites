@@ -3,7 +3,8 @@ function isSmallScreen() {
 }
 
 function getImgDomain() {
-  return process.env.DEV ? "/" : "https://img.giftloving.ca/";
+  return "/";
+  // return process.env.DEV ? "/" : "https://img.giftloving.ca/";
 }
 
 export { isSmallScreen, getImgDomain };
