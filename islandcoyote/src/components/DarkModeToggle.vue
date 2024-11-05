@@ -10,6 +10,9 @@ import useGlobal from "src/global";
 const $q = useQuasar();
 const $t = useGlobal().$t
 
+// random  dark mode
+$q.dark.set(Math.random() > 0.5);
+
 const icon = computed(() =>
   $q.dark.isActive ? "bi-brightness-high-fill" : "bi-moon-stars-fill"
 );
