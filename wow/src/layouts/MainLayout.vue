@@ -98,7 +98,7 @@ function fb() {
 }
 
 .title {
-  color: #AA8666;
+  color: #5b4d45;
   font-family: "Monoton", sans-serif;
   font-weight: 500;
   font-style: normal;

@@ -156,7 +156,7 @@ const data = [
     ],
   },
   {
-    category: "shoes &socks",
+    category: "shoes & socks",
     files: [
       "sandals1",
       "sandals10",
