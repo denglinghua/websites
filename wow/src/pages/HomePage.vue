@@ -20,21 +20,21 @@ const ratio = computed(() => (isSmallScreen() ? 2 / 3 : 3 / 2));
 
 const slides = isSmallScreen() ?
   [
-    { name: 1, img: "v01.JPG" },
-    { name: 2, img: "v02.JPG" },
-    { name: 3, img: "v03.JPG" },
-    { name: 4, img: "v04.JPG" },
-    { name: 5, img: "v05.JPG" },
-    { name: 6, img: "v06.JPG" },
-    { name: 7, img: "v07.JPG" },
-    { name: 8, img: "v08.JPG" },
+    { name: 1, img: "v01.jpg" },
+    { name: 2, img: "v02.jpg" },
+    { name: 3, img: "v03.jpg" },
+    { name: 4, img: "v04.jpg" },
+    { name: 5, img: "v05.jpg" },
+    { name: 6, img: "v06.jpg" },
+    { name: 7, img: "v07.jpg" },
+    { name: 8, img: "v08.jpg" },
   ]
   :
   [
-    { name: 1, img: "main1.JPG" },
-    { name: 2, img: "main2.JPG" },
-    { name: 3, img: "main3.JPG" },
-    { name: 4, img: "main4.JPG" },
+    { name: 1, img: "main1.jpg" },
+    { name: 2, img: "main2.jpg" },
+    { name: 3, img: "main3.jpg" },
+    { name: 4, img: "main4.jpg" },
   ];
 
 slides.forEach((s) => {
