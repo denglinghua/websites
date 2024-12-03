@@ -11,9 +11,10 @@
 </template>
 
 <script setup>
-import { defineProps } from "vue";
+import { defineProps, defineEmits } from "vue";
 
 const props = defineProps(["product", "slide"]);
+const emit = defineEmits(["zoom"]);
 
 function zoom(product) {
   if (props.slide) {

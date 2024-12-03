@@ -204,7 +204,7 @@ module.exports = configure(function (/* ctx */) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: "gift_loving_website",
+        appId: "wowhometextile_website",
       },
     },
 

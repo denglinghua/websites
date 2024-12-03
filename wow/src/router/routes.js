@@ -24,11 +24,6 @@ const routes = [
         path: "contact",
         component: () => import("pages/ContactUs.vue"),
       },
-      {
-        name: "billing",
-        path: "billing",
-        component: () => import("pages/BillingInfo.vue"),
-      },
     ],
   },
 

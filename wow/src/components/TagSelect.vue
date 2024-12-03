@@ -1,7 +1,7 @@
 <template>
   <q-btn-group outline v-model="selected">
-    <q-btn v-for="t in tags" :key="t" flat dense :to="toTag(t)" :size="size" :class="t === selected ? 'selected' : ''"
-      no-caps>
+    <q-btn v-for="t in tags" :key="t" flat dense :to="toTag(t)" :size="size"
+      :class="t === selected ? 'selected' : 'regular'" no-caps>
       {{ toPascalCase(t) }}
     </q-btn>
   </q-btn-group>
@@ -42,5 +42,9 @@ function toPascalCase(str) {
 .selected {
   color: $secondary;
   font-weight: bold;
+}
+
+.regular {
+  color: $grey-6;
 }
 </style>

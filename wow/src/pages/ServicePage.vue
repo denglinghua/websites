@@ -18,7 +18,6 @@
   </div>
 </template>
 <script setup>
-import { isSmallScreen } from "src/g";
 </script>
 <style lang="sass" scoped>
 .service-card
