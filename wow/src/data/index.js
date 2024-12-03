@@ -17,7 +17,8 @@ function getProductName(file) {
   // remove the sequence number from the file name
   // xx, -xx, _xx
   const name = file.replace(/[-_]\d+$/, "");
-  return name;
+  // remove the digits at the end of the file name
+  return name.replace(/[0-9]{1,2}$/, "");
 }
 
 function getProductImageUrl(cat, file) {
