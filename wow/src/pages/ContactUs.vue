@@ -55,6 +55,6 @@ import { copyToClipboard } from 'quasar'
 import IconButton from 'src/components/IconButton.vue'
 
 const email = "contact" + "@" + "wowhometextile.com";
-const address = "590 N River Rd, Charlottetown, PE C1E 1J7";
+const address = "590 N River Rd, Charlottetown, PE C1E 1K1";
 
 </script>
