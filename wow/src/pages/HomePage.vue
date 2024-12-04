@@ -2,7 +2,7 @@
   <div class="slogan" align="center">
     QUANTITY COMFORT STYLE
   </div>
-  <q-responsive :ratio="ratio" style="max-height: 75vh;">
+  <q-responsive :ratio="ratio">
     <q-carousel animated v-model="slide" navigation infinite :autoplay="autoplay" arrows transition-prev="slide-right"
       transition-next="slide-left" class="rounded-borders" swipeable>
       <q-carousel-slide v-for="(s, idx) in slides" :name="idx" :key="idx" :img-src="s.img" />

@@ -44,7 +44,7 @@
       </q-item>
     </q-list>
   </q-card>
-  <q-card class="q-mt-md q-ml-md" style="max-width: 700px">
+  <q-card class="q-mt-md q-ml-md" style="max-width: 800px">
     <q-card-section class="q-pa-none">
       <q-img src="img/contact_us.jpg" class="rounded-borders" />
     </q-card-section>

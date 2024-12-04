@@ -24,7 +24,7 @@ import { isSmallScreen } from "src/g";
 const router = useRouter();
 //console.log(router.currentRoute.value);
 const queryTags = router.currentRoute.value.params.tags;
-const filterTags = queryTags || ['accessories'];
+const filterTags = queryTags || ['bedding'];
 
 const mobile = isSmallScreen();
 const tags = productData.tags();

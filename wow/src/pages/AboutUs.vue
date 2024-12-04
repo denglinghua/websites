@@ -1,7 +1,7 @@
 <template>
   <div class="column items-center q-mb-sm">
     <q-card class="about-card">
-      <q-img src="img/about.jpg" style="max-height: 50vh" />
+      <q-img src="img/about.jpg" />
       <q-card-section class="q-pt-md">
         <p>
           <b>WOW Home Textile</b> specializes in the retail and custom processing of high-quality home textiles.

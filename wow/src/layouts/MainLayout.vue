@@ -3,7 +3,7 @@
     <q-header class="header-footer text-primary" height-hint="80">
       <q-toolbar class="items-center">
         <q-toolbar-title class="items-center">
-          <q-btn flat dense label="WOW Home Textile" class="text-uppercase text-h6 q-ml-none title" to="/" />
+          <q-btn flat dense label="WOW Home Textile" class="text-uppercase text-h5 q-ml-none title" to="/" />
         </q-toolbar-title>
         <q-tabs align="right" inline-label v-if="largeScreen" dense no-caps>
           <q-route-tab v-for="m in menus" :to="{ name: m.route }" :key="m.name">

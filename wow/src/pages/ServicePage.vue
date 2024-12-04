@@ -11,7 +11,10 @@
         </div>
       </q-card-section>
       <q-card-section class="col-6 flex flex-center">
-        <q-img class="rounded-borders" src="/img/service/customize1.jpg" />
+        <q-img class="rounded-borders" src="/img/service/customize2.jpg" />
+      </q-card-section>
+      <q-card-section class="col-6 flex flex-center">
+        <q-img class="rounded-borders" src="/img/service/customize3.jpg" />
       </q-card-section>
     </q-card>
 
