@@ -8,6 +8,8 @@ npm install --global yarn
 
 yarn global add @quasar/cli
 
+## export PATH="$PATH:$(yarn global bin)"
+
 ## Install the dependencies
 
 ```bash

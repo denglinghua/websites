@@ -1,5 +1,5 @@
 {
-  "name": "gitf_loving_website",
+  "name": "wow_textitle_website",
   "version": "1.0.0",
   "description": "WOW Home Textile specializes in the retail and custom processing of high-quality home textiles. Our main products include bedding, tablecloths, curtains, towels, bath towels, shower curtains, socks, silk scarves, and various textile-related decorations. Our bedding products primarily feature cotton materials, ensuring comfort and durability.",
   "productName": "WOW Home Textile",
@@ -33,7 +33,7 @@
     "prettier": "^2.5.1"
   },
   "engines": {
-    "node": "^20 || ^18 || ^16",
+    "node": "^22 || ^20 || ^18 || ^16",
     "npm": ">= 6.13.4",
     "yarn": ">= 1.21.1"
   }
