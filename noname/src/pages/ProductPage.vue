@@ -3,9 +3,9 @@
     <TagSelect :tags="tags" :filterTag="filterTag" />
   </div>
   <div class="row justify-center">
-    <ProductItem v-for="p in filterProducts" :key="p.id" :product="p" @zoom="zoom" :slide="mobile" />
+    <ProductItem v-for="p in filterProducts" :key="p.id" :product="p" @zoom="zoom" :zoomable="!mobile" />
   </div>
-  <ProductZoom :product="zoomedProduct" :show="zoomed" v-if="!mobile" />
+  <ProductZoom :product="zoomedProduct" :productList="filterProducts" :show="zoomed" v-if="!mobile" />
 </template>
 <script setup>
 import { ref } from "vue";
