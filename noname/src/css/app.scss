@@ -1,0 +1,21 @@
+// app global css in SCSS form
+@import url("https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+.body--light {
+  --link-color: var(--q-primary);
+  --header-footer-bg: #0089f7;
+  --header-footer-color: #ffffff;
+  --source-link-color: var(--q-primary);
+  //--q-primary: #333333;
+  font-family: "Fahkwang", sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 1rem;
+  @media screen and (max-width: 768px) {
+    font-family: "Fahkwang", sans-serif;
+    font-size: 0.9rem;
+  }
+}
+
+.link {
+  color: var(--link-color);
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://abc.com/</loc>
+    <lastmod>2024-12-02</lastmod>
+  </url>
+  <url>
+    <loc>https://abc.com/about</loc>
+    <lastmod>2024-12-02</lastmod>
+  </url>
+  <url>
+    <loc>https://abc.com/contact</loc>
+    <lastmod>2024-12-02</lastmod>
+  </url>
+  <url>
+    <loc>https://abc.com/services</loc>
+    <lastmod>2024-12-02</lastmod>
+  </url>
+  <url>
+    <loc>https://abc.com/products</loc>
+    <lastmod>2024-12-02</lastmod>
+  </url>
+</urlset>
