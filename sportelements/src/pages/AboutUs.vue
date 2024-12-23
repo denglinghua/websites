@@ -4,7 +4,8 @@
       <q-img src="img/about.jpg" />
       <q-card-section class="q-pt-md">
         <p>
-          At <b>ABC Company</b> , we are passionate about empowering athletes and fitness enthusiasts to reach their
+          At <b>Sport Elements
+          </b> , we are passionate about empowering athletes and fitness enthusiasts to reach their
           full
           potential. Founded on the belief that sportswear should combine performance, comfort, and style, our mission
           is to provide high-quality activewear that supports your every move, on and off the field.

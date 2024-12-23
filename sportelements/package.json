@@ -1,8 +1,8 @@
 {
-  "name": "abc_company_website",
+  "name": "sport_elements_website",
   "version": "1.0.0",
-  "description": "ABC Company description",
-  "productName": "ABC Company",
+  "description": "Sport Elements Inc. description",
+  "productName": "Sport Elements Inc. ",
   "author": "denglinghua",
   "private": true,
   "scripts": {

@@ -30,7 +30,8 @@
     </q-page-container>
     <q-footer class="footer q-mt-xs">
       <q-toolbar class="center">
-        <q-toolbar-title class="text-caption cp"> Copyright © {{ year }} ABC Company </q-toolbar-title>
+        <q-toolbar-title class="text-caption cp"> Copyright © {{ year }} Sport Elements Inc.
+        </q-toolbar-title>
         <q-space />
         <IconButton flat color="primary" icon="bi-facebook" @click="fb" tooltip="Facebook" />
         <icon-button flat color="primary" icon="bi-chat-square-dots-fill" @click="showContact = true"
@@ -80,7 +81,7 @@ const pageTitle = computed(() => getTitle());
 useMeta(() => {
   return {
     title: pageTitle.value,
-    titleTemplate: (title) => `${title} | ABC Company`,
+    titleTemplate: (title) => `${title} | Sport Elements`,
   };
 });
 
@@ -97,7 +98,7 @@ function onResize(size) {
 const year = new Date().getFullYear();
 
 function fb() {
-  window.open("https://www.facebook.com/abc", "_blank");
+  window.open("https://www.facebook.com/profile.php?id=61569271494662", "_blank");
 }
 
 const showContact = ref(false);

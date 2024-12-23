@@ -42,7 +42,7 @@ const loading = ref(false);
 function send() {
   const data = {
     access_key: "cc0a9fc3-def8-4ca9-baef-a4030093b7fd",
-    subject: `A message from abc.com - ${fullName.value}`,
+    subject: `A message from sport-elements.com - ${fullName.value}`,
     Name: fullName.value,
     Email: email.value,
     Phone: phone.value,

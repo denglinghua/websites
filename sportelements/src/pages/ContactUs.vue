@@ -25,7 +25,7 @@
         <q-item-section>
           <q-item-label caption>Phone</q-item-label>
           <q-item-label>
-            <a href="tel:+1902888888" class="link">(902) 888-888</a>
+            <a href="tel:+19023303560" class="link">(902) 330-3560</a>
           </q-item-label>
         </q-item-section>
       </q-item>
@@ -46,9 +46,9 @@
   </q-card>
   <q-card class="q-mt-lg q-ml-md" style="max-width: 800px">
     <q-card-section class="q-pa-none">
-      <iframe class="map"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d782.9944428356407!2d-63.09861655784637!3d46.230547801757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b5e52566082aaa7%3A0x10ae3d7c1c50d8f3!2sMike%20%26%20Andreea&#39;s%20NOFRILLS%20Stratford!5e0!3m2!1sen!2sca!4v1734899456726!5m2!1sen!2sca"
-        width="100%" height="400" style="border: 0" allowfullscreen="false" loading="lazy"
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2759.9735764662787!2d-63.1011380230568!3d46.2308701710969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b5e5256f55d5ca9%3A0xbbdf051db62c91bf!2s27%20Hopeton%20Rd%2C%20Stratford%2C%20PE%20C1B%201T6!5e0!3m2!1sen!2sca!4v1734918890186!5m2!1sen!2sca"
+        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </q-card-section>
   </q-card>
@@ -57,7 +57,7 @@
 import { copyToClipboard } from 'quasar'
 import IconButton from 'src/components/IconButton.vue'
 
-const email = "contact" + "@" + "abc.com";
-const address = "ABC Rd, Stratford, PE C1E 1K1";
+const email = "contact" + "@" + "sport-elements.com";
+const address = "27 Hopeton Rd, Stratford, PE C1B 1T6";
 
 </script>

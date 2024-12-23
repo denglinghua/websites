@@ -1,4 +1,4 @@
-ABC company website
+Sport Elements Inc. website
 
 ## Install yarn, node required.
 
