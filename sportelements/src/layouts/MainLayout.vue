@@ -75,7 +75,7 @@ const menus = computed(() => [
 
 function getTitle() {
   let title = router.currentRoute.value.name;
-  return title === 'home' ? "OUTDOOR APPAREL ACCESSORIES" : title.toUpperCase();
+  return title === 'home' ? "Outdoor Apparel Accessories" : title.toUpperCase();
 }
 
 const router = useRouter();
