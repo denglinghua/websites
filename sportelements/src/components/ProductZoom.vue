@@ -4,7 +4,7 @@
       <q-card-section class="q-pa-sm">
         <q-responsive ratio="1" style="max-width: 100%;">
           <q-carousel v-model="slide" ref="carousel" animated arrows transition-prev="slide-right"
-            transition-next="slide-left" class="rounded-borders" control-color="orange" control-type="unelevated"
+            transition-next="slide-left" class="rounded-borders" control-color="primary" control-type="unelevated"
             swipeable>
             <q-carousel-slide v-for="(p, idx) in productList" :name="idx" :key="idx" :img-src="p.imgUrl" class="slide"
               @click="close" />
