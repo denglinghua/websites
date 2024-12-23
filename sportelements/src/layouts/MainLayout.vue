@@ -4,7 +4,7 @@
       <q-toolbar class="items-center header center">
         <q-toolbar-title class="items-center">
           <q-btn to="/" flat dense>
-            <img src="sport_elements.png" class="logo" />
+            <img src="/sport_elements.png" class="logo" />
           </q-btn>
         </q-toolbar-title>
         <q-tabs align="right" inline-label v-if="largeScreen" no-caps>
@@ -32,7 +32,6 @@
       <q-toolbar class="center">
         <q-toolbar-title class="text-caption cp"> Copyright © {{ year }} Sport Elements Inc.
         </q-toolbar-title>
-        <q-space />
         <IconButton flat color="primary" icon="bi-facebook" @click="fb" tooltip="Facebook" />
         <icon-button flat color="primary" icon="bi-chat-square-dots-fill" @click="showContact = true"
           tooltip="Send us a message" />
@@ -145,5 +144,9 @@ const backdropFilter = "blur(4px) saturate(150%)"
 
 .cp {
   letter-spacing: 0.2em;
+
+  @media screen and (max-width: 768px) {
+    letter-spacing: 0.1em;
+  }
 }
 </style>
