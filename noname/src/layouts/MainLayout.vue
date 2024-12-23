@@ -3,7 +3,9 @@
     <q-header class="header" height-hint="80">
       <q-toolbar class="items-center header center">
         <q-toolbar-title class="items-center">
-          <q-btn flat dense label="ABC" class="text-uppercase text-h5 q-ml-none title" to="/" />
+          <q-btn to="/" flat dense>
+            <img src="sport_elements.png" class="logo" />
+          </q-btn>
         </q-toolbar-title>
         <q-tabs align="right" inline-label v-if="largeScreen" no-caps>
           <q-route-tab v-for="m in menus" :to="{ name: m.route }" :key="m.name">
@@ -114,6 +116,16 @@ const backdropFilter = "blur(4px) saturate(150%)"
   height: 80px;
 
   @media screen and (max-width: 768px) {
+    height: 60px;
+  }
+}
+
+.logo {
+  height: 75px;
+  padding-top: 10px;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 5px;
     height: 60px;
   }
 }
