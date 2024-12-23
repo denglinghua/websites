@@ -1,6 +1,8 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header class="header" height-hint="80">
+    <q-header class="header">
+      <q-bar dense class="bar">
+      </q-bar>
       <q-toolbar class="items-center header center">
         <q-toolbar-title class="items-center">
           <q-btn to="/" flat dense>
@@ -12,9 +14,9 @@
             <span class="text-h6">{{ m.name }}</span>
           </q-route-tab>
         </q-tabs>
-        <q-btn flat style="color:var(--header-footer-color)" icon="bi-list" v-else>
+        <q-btn flat size="lg" class="primary" icon="bi-list" v-else>
           <q-menu>
-            <q-list style="min-width: 150px;background-color:var(--header-footer-bg);color:var(--header-footer-color);">
+            <q-list style="min-width: 150px;">
               <q-item clickable v-close-popup exact v-for="m in menus" :to="{ name: m.route }" :key="m.name">
                 <q-item-section>{{ m.name }}</q-item-section>
               </q-item>
@@ -28,7 +30,7 @@
         <router-view :key="$route.fullPath" />
       </q-page>
     </q-page-container>
-    <q-footer class="footer q-mt-xs">
+    <q-footer class="bar q-mt-xs">
       <q-toolbar class="center">
         <q-toolbar-title class="text-caption cp"> Copyright © {{ year }} Sport Elements Inc.
         </q-toolbar-title>
@@ -111,13 +113,8 @@ const backdropFilter = "blur(4px) saturate(150%)"
 }
 
 .header {
-  background-color: var(--header-footer-bg);
-  color: var(--header-footer-color);
-  height: 80px;
-
-  @media screen and (max-width: 768px) {
-    height: 60px;
-  }
+  background-color: $grey-1;
+  color: $primary;
 }
 
 .logo {
@@ -131,9 +128,9 @@ const backdropFilter = "blur(4px) saturate(150%)"
   }
 }
 
-.footer {
-  background-color: var(--header-footer-bg);
-  color: var(--header-footer-color);
+.bar {
+  background-color: $blue-4;
+  color: white;
 }
 
 .title {
