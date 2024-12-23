@@ -1,7 +1,8 @@
 <template>
   <q-layout view="hHh lpR fFf">
     <q-header class="header">
-      <q-bar dense class="bar">
+      <q-bar dense class="bar justify-center">
+        Gear Up for Every Adventure
       </q-bar>
       <q-toolbar class="items-center header center">
         <q-toolbar-title class="items-center">
@@ -74,7 +75,7 @@ const menus = computed(() => [
 
 function getTitle() {
   let title = router.currentRoute.value.name;
-  return title === 'home' ? "QUANTITY COMFORT STYLE" : title.toUpperCase();
+  return title === 'home' ? "OUTDOOR APPAREL ACCESSORIES" : title.toUpperCase();
 }
 
 const router = useRouter();
