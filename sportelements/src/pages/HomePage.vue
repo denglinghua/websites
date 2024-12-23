@@ -30,7 +30,7 @@ import { ref, onMounted, onUnmounted, computed } from "vue";
 import { useRouter } from "vue-router";
 import { isSmallScreen } from "src/g";
 
-const slide = ref(1);
+const slide = ref(0);
 const autoplay = ref(2500);
 
 const ratio = computed(() => (isSmallScreen() ? 2 / 3 : 3 / 2));
