@@ -27,7 +27,7 @@
       </q-toolbar>
     </q-header>
     <q-page-container>
-      <q-page class="q-pa-md" :class="{ 'center': !fullscreen }">
+      <q-page class="q-pa-sm" :class="{ 'center': !fullscreen }">
         <router-view :key="$route.fullPath" />
       </q-page>
     </q-page-container>
