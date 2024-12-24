@@ -1,7 +1,17 @@
 <template>
   <div class="column items-center q-mb-sm">
     <q-card class="about-card">
-      <q-img src="img/about.jpg" />
+      <q-card-section :horizontal="!m" class="q-pb-none">
+        <q-img src="/img/home/vmain.png" :class="{ 'q-ml-xl': !m }" style="max-width: 500px; max-height: 500px" />
+        <q-card-section>
+          <div class="column text-uppercase text-h2 slogan" :class="{ 'q-ml-xl': !m, 'q-mt-xl': !m }">
+            <div>Gear Up</div>
+            <div>for</div>
+            <div>Every</div>
+            <div>Adventure</div>
+          </div>
+        </q-card-section>
+      </q-card-section>
       <q-card-section class="q-pt-md">
         <p>
           At <b>Sport Elements
@@ -27,10 +37,24 @@
   </div>
 </template>
 <script setup>
+import { isSmallScreen } from "src/g";
 
+const m = isSmallScreen();
 </script>
-<style lang="sass" scoped>
-.about-card
-  width: 100%
+<style lang="scss" scoped>
+.about-card {
+  width: 100%;
   max-width: 960px
+}
+
+.slogan {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 600;
+  line-height: 1.5em;
+  color: $grey-6;
+
+  @media screen and (max-width: 768px) {
+    line-height: 1.1em;
+  }
+}
 </style>
