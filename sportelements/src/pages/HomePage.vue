@@ -12,12 +12,12 @@
       <h3>Our products</h3>
     </div>
     <div class="text-center q-my-sm row justify-center">
-      <q-card v-for="(p, idx) in productCategories" :key="idx" class="q-ma-md p-card cursor-pointer"
-        @click="navCat(p.cat)">
+      <q-card v-for="(p, idx) in productData.categories" :key="idx" class="q-ma-md p-card cursor-pointer"
+        @click="navCat(p.category)">
         <q-card-section class="q-pa-none">
-          <q-img :src="p.img" :ratio="1" loading="lazy" spinner-color="primary" class="zoomable rounded-borders">
+          <q-img :src="p.cover" :ratio="1" loading="lazy" spinner-color="primary" class="zoomable rounded-borders">
             <div class="absolute-bottom text-subtitle2 text-center text-capitalize">
-              {{ p.cat }}
+              {{ p.category }}
             </div>
           </q-img>
         </q-card-section>
@@ -29,6 +29,7 @@
 import { ref, onMounted, onUnmounted, computed } from "vue";
 import { useRouter } from "vue-router";
 import { isSmallScreen } from "src/g";
+import productData from "src/data";
 
 const slide = ref(0);
 const autoplay = ref(2500);
@@ -38,30 +39,23 @@ const ratio = computed(() => (isSmallScreen() ? 2 / 3 : 3 / 2));
 const slides = isSmallScreen() ?
   [
     { name: 0, img: "vmain.png" },
-    { name: 1, img: "cycling01.avif" },
-    { name: 2, img: "skiing01.jpg" },
-    { name: 3, img: "soccer01.jpg" },
-    { name: 4, img: "swimming.jpg" },
+    { name: 1, img: "vcycling.jpg" },
+    { name: 2, img: "vskiing.jpg" },
+    { name: 3, img: "vhiking.webp" },
+    { name: 4, img: "vsoccer.jpg" },
   ]
   :
   [
     { name: 0, img: "main.jpg" },
-    { name: 1, img: "cycling01.avif" },
-    { name: 2, img: "skiing01.jpg" },
-    { name: 3, img: "soccer01.jpg" },
-    { name: 4, img: "swimming.jpg" },
+    { name: 1, img: "cycling.avif" },
+    { name: 2, img: "skiing.jpg" },
+    { name: 3, img: "hiking.webp" },
+    { name: 4, img: "soccer.jpg" },
   ];
 
 slides.forEach((s) => {
   s.img = `/img/home/${s.img}`;
 });
-
-const productCategories = [
-  { cat: "cycling", img: "/img/home/cycling01.avif" },
-  { cat: "skiing", img: "/img/home/skiing01.jpg" },
-  { cat: "soccer", img: "/img/home/soccer01.jpg" },
-  { cat: "swimming", img: "/img/home/swimming.jpg" },
-];
 
 const router = useRouter();
 function navCat(cat) {

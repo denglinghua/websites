@@ -3,6 +3,7 @@ import data from "./product.js";
 const categories = data.map((item) => {
   const cat = {};
   cat.category = item.category;
+  cat.cover = item.cover;
   cat.items = item.files.map((file) => {
     const item = {};
     item.id = file;
