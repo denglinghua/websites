@@ -130,7 +130,7 @@ const backdropFilter = "blur(4px) saturate(150%)"
 }
 
 .bar {
-  background-color: $blue-4;
+  background-color: $blue-3 ; //#A2DBF5;
   color: white;
 }
 
