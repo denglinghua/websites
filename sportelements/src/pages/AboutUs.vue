@@ -2,7 +2,7 @@
   <div class="column items-center q-mb-sm">
     <q-card class="about-card">
       <q-card-section :horizontal="!m" class="q-pb-none">
-        <q-img src="/img/home/vmain.png" :class="{ 'q-ml-xl': !m }" style="max-width: 500px; max-height: 500px" />
+        <q-img src="/img/home/vmain.avif" :class="{ 'q-ml-xl': !m }" style="max-width: 500px; max-height: 500px" />
         <q-card-section>
           <div class="column text-uppercase text-h2 slogan" :class="{ 'q-ml-xl': !m, 'q-mt-xl': !m }">
             <div>Gear Up</div>

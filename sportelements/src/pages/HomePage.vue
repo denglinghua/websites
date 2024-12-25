@@ -38,7 +38,7 @@ const ratio = computed(() => (isSmallScreen() ? 2 / 3 : 3 / 2));
 
 const slides = isSmallScreen() ?
   [
-    { name: 0, img: "vmain.png" },
+    { name: 0, img: "vmain.avif" },
     { name: 1, img: "vcycling.jpg" },
     { name: 2, img: "vskiing.jpg" },
     { name: 3, img: "vhiking.webp" },
@@ -46,7 +46,7 @@ const slides = isSmallScreen() ?
   ]
   :
   [
-    { name: 0, img: "main.jpg" },
+    { name: 0, img: "main.avif" },
     { name: 1, img: "cycling.avif" },
     { name: 2, img: "skiing.jpg" },
     { name: 3, img: "hiking.webp" },
