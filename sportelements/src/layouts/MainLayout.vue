@@ -10,7 +10,7 @@
             <img src="/sport_elements.png" class="logo" />
           </q-btn>
         </q-toolbar-title>
-        <q-tabs align="right" inline-label v-if="largeScreen" no-caps>
+        <q-tabs align="right" inline-label v-if="!$mb" no-caps>
           <q-route-tab v-for="m in menus" :to="{ name: m.route }" :key="m.name">
             <span class="text-h6">{{ m.name }}</span>
           </q-route-tab>
@@ -40,7 +40,6 @@
           tooltip="Send us a message" />
       </q-toolbar>
     </q-footer>
-    <q-resize-observer @resize="onResize" />
     <q-dialog v-model="showContact" :backdrop-filter="backdropFilter">
       <contact-form v-model="showContact" />
     </q-dialog>
@@ -48,12 +47,18 @@
 </template>
 <script setup>
 import { useMeta } from "quasar";
-import { computed, ref, watch } from "vue";
+import { computed, ref, watch, getCurrentInstance } from "vue";
 import { useRouter } from "vue-router";
 import IconButton from "src/components/IconButton.vue";
 import ContactForm from "src/components/ContactForm.vue";
+import { isSmallScreen } from "src/g";
 
-const largeScreen = ref(false);
+function setMobile() {
+  getCurrentInstance().appContext.config.globalProperties.$mb = isSmallScreen();
+}
+
+setMobile();
+
 const menus = computed(() => [
   {
     name: "Home",
@@ -92,10 +97,6 @@ const fullscreen = ref(true);
 watch(router.currentRoute, (current) => {
   fullscreen.value = fullPages.includes(current.name);
 }, { immediate: true });
-
-function onResize(size) {
-  largeScreen.value = size.width > 1000;
-}
 
 const year = new Date().getFullYear();
 

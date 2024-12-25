@@ -1,10 +1,10 @@
 <template>
   <div class="column items-center q-mb-sm">
     <q-card class="about-card">
-      <q-card-section :horizontal="!m" class="q-pb-none">
-        <q-img src="/img/home/vmain.avif" :class="{ 'q-ml-xl': !m }" style="max-width: 500px; max-height: 500px" />
+      <q-card-section :horizontal="!$mb" class="q-pb-none">
+        <q-img src="/img/home/vmain.avif" :class="{ 'q-ml-xl': !$mb }" style="max-width: 500px; max-height: 500px" />
         <q-card-section>
-          <div class="column text-uppercase text-h2 slogan" :class="{ 'q-ml-xl': !m, 'q-mt-xl': !m }">
+          <div class="column text-uppercase text-h2 slogan" :class="{ 'q-ml-xl': !$mb, 'q-mt-xl': !$mb }">
             <div>Gear Up</div>
             <div>for</div>
             <div>Every</div>
@@ -37,9 +37,6 @@
   </div>
 </template>
 <script setup>
-import { isSmallScreen } from "src/g";
-
-const m = isSmallScreen();
 </script>
 <style lang="scss" scoped>
 .about-card {

@@ -1,6 +1,6 @@
 <template>
   <q-btn-group outline v-model="selected">
-    <q-btn v-for="t in tags" :key="t" flat :dense="isSmallScreen()" :to="toTag(t)" :size="size"
+    <q-btn v-for="t in tags" :key="t" flat :dense="$mb" :to="toTag(t)" :size="$mb ? 'sm' : 'lg'"
       :class="t === selected ? 'selected' : 'regular'" no-caps>
       {{ toPascalCase(t) }}
     </q-btn>
@@ -8,7 +8,6 @@
 </template>
 <script setup>
 import { defineProps, ref } from 'vue'
-import { isSmallScreen } from 'src/g';
 
 const props = defineProps({
   tags: {
@@ -22,7 +21,6 @@ const props = defineProps({
 })
 
 const selected = ref(props.filterTag)
-const size = isSmallScreen() ? 'sm' : 'lg'
 
 function toTag(tag) {
   return {

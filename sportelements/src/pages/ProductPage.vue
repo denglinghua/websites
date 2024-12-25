@@ -3,9 +3,9 @@
     <TagSelect :tags="tags" :filterTag="filterTag" />
   </div>
   <div class="row justify-center">
-    <ProductItem v-for="p in filterProducts" :key="p.id" :product="p" @zoom="zoom" :zoomable="!mobile" />
+    <ProductItem v-for="p in filterProducts" :key="p.id" :product="p" @zoom="zoom" :zoomable="!$mb" />
   </div>
-  <ProductZoom :product="zoomedProduct" :productList="filterProducts" :show="zoomed" v-if="!mobile" />
+  <ProductZoom :product="zoomedProduct" :productList="filterProducts" :show="zoomed" v-if="!$mb" />
 </template>
 <script setup>
 import { ref } from "vue";
@@ -15,7 +15,6 @@ import ProductItem from "src/components/ProductItem.vue";
 import TagSelect from "src/components/TagSelect.vue";
 import productData from "src/data";
 import ProductZoom from "src/components/ProductZoom.vue";
-import { isSmallScreen } from "src/g";
 
 const router = useRouter();
 //console.log(router.currentRoute.value);
@@ -25,7 +24,6 @@ if (queryTags) {
   filterTag = queryTags[0];
 }
 
-const mobile = isSmallScreen();
 const tags = productData.tags();
 const filterProducts = productData.filterProducts(filterTag);
 
