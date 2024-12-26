@@ -1,6 +1,6 @@
 <template>
   <q-btn-group outline v-model="selected">
-    <q-btn v-for="t in tags" :key="t" flat :dense="$mb" :to="toTag(t)" :size="$mb ? 'sm' : 'lg'"
+    <q-btn v-for="t in tags" :key="t" flat :dense="$mb && false" :to="toTag(t)" :size="$mb ? 'md' : 'lg'"
       :class="t === selected ? 'selected' : 'regular'" no-caps>
       {{ toPascalCase(t) }}
     </q-btn>
