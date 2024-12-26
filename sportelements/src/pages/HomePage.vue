@@ -12,11 +12,11 @@
       <h3>Our products</h3>
     </div>
     <div class="text-center q-my-sm row justify-center">
-      <q-card v-for="(p, idx) in productData.categories" :key="idx" class="q-ma-md p-card cursor-pointer"
+      <q-card v-for="(p, idx) in productData.categories" :key="idx" class="q-my-md q-mx-lg p-card cursor-pointer"
         @click="navCat(p.category)">
         <q-card-section class="q-pa-none">
           <q-img :src="p.cover" :ratio="1" loading="lazy" spinner-color="primary" class="zoomable rounded-borders">
-            <div class="absolute-bottom text-subtitle2 text-center text-capitalize">
+            <div class="absolute-bottom text-h5 text-center text-capitalize">
               {{ p.category }}
             </div>
           </q-img>
@@ -42,7 +42,6 @@ const slides = isSmallScreen() ?
     { name: 1, img: "vcycling.jpg" },
     { name: 2, img: "vskiing.jpg" },
     { name: 3, img: "vhiking.webp" },
-    { name: 4, img: "vsoccer.jpg" },
   ]
   :
   [
@@ -50,7 +49,6 @@ const slides = isSmallScreen() ?
     { name: 1, img: "cycling.avif" },
     { name: 2, img: "skiing.jpg" },
     { name: 3, img: "hiking.webp" },
-    { name: 4, img: "soccer.jpg" },
   ];
 
 slides.forEach((s) => {
@@ -81,7 +79,7 @@ onUnmounted(() => { });
 }
 
 .p-card {
-  width: 300px;
-  height: 300px;
+  width: 360px;
+  height: 360px;
 }
 </style>

@@ -14,11 +14,6 @@ const data = [
     cover: "/img/home/hiking-cover.jpg",
     files: ["hk01.avif", "hk02.avif", "hk03.avif", "hk04.avif"],
   },
-  {
-    category: "soccer",
-    cover: "/img/home/soccer-cover.jpg",
-    files: ["sc01.avif", "sc02.avif", "sc03.avif", "sc04.avif"],
-  },
 ];
 
 export default data;
