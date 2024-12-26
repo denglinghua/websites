@@ -12,22 +12,23 @@
       <h3>Our products</h3>
     </div>
     <div class="text-center q-my-sm row justify-center">
-      <q-card v-for="(p, idx) in productData.categories" :key="idx" class="q-my-md q-mx-lg p-card cursor-pointer"
-        @click="navCat(p.category)">
-        <q-card-section class="q-pa-none">
-          <q-img :src="p.cover" :ratio="1" loading="lazy" spinner-color="primary" class="zoomable rounded-borders">
-            <div class="absolute-bottom text-h5 text-center text-capitalize">
-              {{ p.category }}
-            </div>
-          </q-img>
-        </q-card-section>
-      </q-card>
+      <q-btn v-for="(p, idx) in productData.categories" :key="idx" class="q-my-md q-mx-lg q-pa-xs" flat color="primary"
+        :to="{ name: 'product', params: { tags: [p.category] } }">
+        <q-card class="p-card">
+          <q-card-section class="q-pa-none">
+            <q-img :src="p.cover" :ratio="1" loading="lazy" spinner-color="primary" class="zoomable rounded-borders">
+              <div class="absolute-bottom text-h5 text-center text-capitalize">
+                {{ p.category }}
+              </div>
+            </q-img>
+          </q-card-section>
+        </q-card>
+      </q-btn>
     </div>
   </div>
 </template>
 <script setup>
 import { ref, onMounted, onUnmounted, computed } from "vue";
-import { useRouter } from "vue-router";
 import { isSmallScreen } from "src/g";
 import productData from "src/data";
 
@@ -54,11 +55,6 @@ const slides = isSmallScreen() ?
 slides.forEach((s) => {
   s.img = `/img/home/${s.img}`;
 });
-
-const router = useRouter();
-function navCat(cat) {
-  router.push({ name: "product", params: { tags: [cat] } });
-}
 
 onMounted(() => { });
 
