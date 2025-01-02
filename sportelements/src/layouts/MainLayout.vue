@@ -120,12 +120,12 @@ const backdropFilter = "blur(4px) saturate(150%)"
 }
 
 .logo {
-  height: 75px;
-  padding-top: 10px;
-  padding-bottom: 5px;
+  height: 60px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 
   @media screen and (max-width: 768px) {
-    padding-top: 5px;
+    padding-top: 2px;
     height: 60px;
   }
 }

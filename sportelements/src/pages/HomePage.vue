@@ -1,6 +1,6 @@
 <template>
-  <div class="q-mt-sm">
-    <q-responsive :ratio="ratio" style="max-height: 700px;">
+  <div>
+    <q-responsive :ratio="ratio" :style="{ 'max-height': $mb ? '500px' : '700px' }">
       <q-carousel animated v-model="slide" navigation infinite :autoplay="autoplay" arrows transition-prev="slide-right"
         transition-next="slide-left" class="rounded-borders" swipeable>
         <q-carousel-slide v-for="(s, idx) in slides" :name="idx" :key="idx" :img-src="s.img" />
