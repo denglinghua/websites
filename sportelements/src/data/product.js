@@ -50,7 +50,7 @@ const data = [
   },
   {
     category: "casual",
-    cover: "/img/home/skiing-cover.jpg",
+    cover: "/img/home/casual-cover.webp",
     files: [
       "casual01.avif",
       "casual02.avif",
@@ -66,7 +66,7 @@ const data = [
   },
   {
     category: "others",
-    cover: "/img/home/skiing-cover.jpg",
+    cover: null,
     files: ["others01.avif", "others02.avif", "others03.avif", "others04.avif"],
   },
 ];

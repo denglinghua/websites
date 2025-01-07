@@ -12,7 +12,7 @@
       <h3>Our products</h3>
     </div>
     <div class="text-center q-my-sm row justify-center">
-      <q-btn v-for="(p, idx) in productData.categories" :key="idx" class="q-my-md q-mx-lg q-pa-xs" flat color="primary"
+      <q-btn v-for="(p, idx) in homeCategories" :key="idx" class="q-my-md q-mx-lg q-pa-xs" flat color="primary"
         :to="{ name: 'product', params: { tags: [p.category] } }">
         <q-card class="p-card">
           <q-card-section class="q-pa-none">
@@ -55,6 +55,9 @@ const slides = isSmallScreen() ?
 slides.forEach((s) => {
   s.img = `/img/home/${s.img}`;
 });
+
+// show categories with cover images, c.cover is not null
+const homeCategories = productData.categories.filter((c) => c.cover);
 
 onMounted(() => { });
 
