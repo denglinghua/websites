@@ -15,6 +15,8 @@ const data = [
     category: "skiing",
     cover: "/img/home/skiing-cover.jpg",
     files: [
+      "skiing14.avif",
+      "skiing15.avif",
       "skiing01.avif",
       "skiing02.avif",
       "skiing03.avif",
