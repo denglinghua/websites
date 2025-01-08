@@ -48,6 +48,7 @@
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: 600;
   line-height: 1.5em;
+  letter-spacing: 3px;
   color: $grey-6;
 
   @media screen and (max-width: 768px) {
