@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHh lpR fFf">
+  <q-layout view="hHh lpR fff">
     <q-header class="header">
       <q-bar class="bar justify-center">
         Gear Up for Every Adventure
