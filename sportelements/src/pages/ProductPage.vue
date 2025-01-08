@@ -10,6 +10,7 @@
 <script setup>
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+import { useMeta, format } from 'quasar'
 
 import ProductItem from "src/components/ProductItem.vue";
 import TagSelect from "src/components/TagSelect.vue";
@@ -26,6 +27,12 @@ if (queryTags) {
 
 const tags = productData.tags();
 const filterProducts = productData.filterProducts(filterTag);
+
+useMeta(() => {
+  return {
+    title: filterTag === 'all' ? 'Products' : format.capitalize(filterTag),
+  }
+})
 
 // if the device is mobile, no popup zoom window, as the image cannot be zoomed because of the small screen
 const zoomed = ref(0);

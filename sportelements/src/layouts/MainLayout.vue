@@ -46,7 +46,7 @@
   </q-layout>
 </template>
 <script setup>
-import { useMeta } from "quasar";
+import { useMeta, format } from "quasar";
 import { computed, ref, watch, getCurrentInstance } from "vue";
 import { useRouter } from "vue-router";
 import IconButton from "src/components/IconButton.vue";
@@ -80,7 +80,7 @@ const menus = computed(() => [
 
 function getTitle() {
   let title = router.currentRoute.value.name;
-  return title === 'home' ? "Outdoor Apparel Accessories" : title.toUpperCase();
+  return title === 'home' ? "Outdoor Apparel Accessories" : format.capitalize(title);
 }
 
 const router = useRouter();
