@@ -2,9 +2,9 @@
   <div class="column items-center q-mb-sm">
     <q-card class="about-card">
       <q-card-section :horizontal="!$mb" class="q-pb-none">
-        <q-img src="/img/about.avif" :class="{ 'q-ml-xl': !$mb }" style="max-width: 400px; max-height: 500px" />
+        <q-img src="/img/about.avif" :class="{ 'q-ml-xl': !$mb }" style="max-width: 320px; max-height: 400px" />
         <q-card-section>
-          <div class="column text-uppercase text-h2 slogan" :class="$mb ? [] : ['q-ml-xl', 'q-mt-xl']">
+          <div class="column text-uppercase text-h2 slogan" :class="$mb ? [] : ['q-ml-xl', 'q-mt-sm']">
             <div>Gear Up</div>
             <div>for</div>
             <div>Every</div>
@@ -14,24 +14,21 @@
       </q-card-section>
       <q-card-section class="q-pt-md">
         <p>
-          At <b>Sport Elements
-          </b> , we are passionate about empowering athletes and fitness enthusiasts to reach their
-          full
-          potential. Founded on the belief that sportswear should combine performance, comfort, and style, our mission
-          is to provide high-quality activewear that supports your every move, on and off the field.
+          Welcome to <b>Sport Elements
+          </b> , your go-to destination for premium sports gear and outdoor apparel.
         </p>
         <p>
-          Whether you’re training for a marathon, hitting the gym, or enjoying outdoor adventures, our apparel is
-          designed
-          to keep up with your active lifestyle. We use premium fabrics and innovative designs to ensure durability,
-          breathability, and flexibility—all while making you look and feel great.
+          We specialize in cycling, hiking, skiing, and outdoor casual clothing, offering high-quality products that
+          combine functionality and style. Our carefully curated selection brings something unique to the local market,
+          catering to those who value comfort, durability, and individuality in their outdoor adventures.
         </p>
         <p>
-          We’re not just about clothes; we’re about building a community that inspires movement, celebrates
-          achievements,
-          and encourages everyone to embrace a healthier, more active life.</p>
+          At Sport Elements, we are passionate about helping you gear up for your next journey. Whether you're
+          conquering trails, hitting the slopes, or enjoying a casual day outdoors, we have the perfect apparel to match
+          your lifestyle.</p>
         <p>
-          Join us on this journey and let’s make every moment count—together.</p>
+          <a href="/products">Explore our collection</a> and experience the difference in quality and design!
+        </p>
       </q-card-section>
     </q-card>
   </div>
