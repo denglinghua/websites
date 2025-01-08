@@ -1,8 +1,8 @@
 <template>
   <div class="column items-center q-mb-sm">
-    <q-card class="about-card">
+    <q-card class="about-card" flat>
       <q-card-section :horizontal="!$mb" class="q-pb-none">
-        <q-img src="/img/about.avif" :class="{ 'q-ml-xl': !$mb }" style="max-width: 320px; max-height: 400px" />
+        <q-img src="/img/about.avif" :class="{ 'q-ml-lg': !$mb }" style="max-width: 320px; max-height: 400px" />
         <q-card-section>
           <div class="column text-uppercase text-h2 slogan" :class="$mb ? [] : ['q-ml-xl', 'q-mt-sm']">
             <div>Gear Up</div>
