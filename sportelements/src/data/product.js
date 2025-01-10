@@ -9,6 +9,11 @@ const data = [
       "cycling04.avif",
       "cycling05.avif",
       "cycling06.avif",
+      "cycling07.avif",
+      "cycling08.avif",
+      "cycling09.avif",
+      "cycling10.avif",
+      "cycling11.avif",
     ],
   },
   {
@@ -46,6 +51,11 @@ const data = [
       "hiking08.avif",
       "hiking09.avif",
       "hiking10.avif",
+      "hiking11.avif",
+      "hiking12.avif",
+      "hiking13.avif",
+      "hiking14.avif",
+      "hiking15.avif",
     ],
   },
   {
