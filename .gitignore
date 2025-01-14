@@ -1,3 +1,5 @@
 .DS_Store
 .thumbs.db
 do_cloud_server
+.firebase
+.cache
